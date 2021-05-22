@@ -1,0 +1,90 @@
+CRITICAL - 2021-05-16 23:32:00 --> Invalid file: v_daftar.php
+#0 C:\xampp\htdocs\root-project\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_daftar.php')
+#1 C:\xampp\htdocs\root-project\system\Common.php(1119): CodeIgniter\View\View->render('v_daftar', Array, true)
+#2 C:\xampp\htdocs\root-project\app\Controllers\Boostrap.php(7): view('v_daftar')
+#3 C:\xampp\htdocs\root-project\system\CodeIgniter.php(918): App\Controllers\Boostrap->index()
+#4 C:\xampp\htdocs\root-project\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Boostrap))
+#5 C:\xampp\htdocs\root-project\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\root-project\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\root-project\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2021-05-16 23:32:02 --> Invalid file: v_daftar.php
+#0 C:\xampp\htdocs\root-project\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_daftar.php')
+#1 C:\xampp\htdocs\root-project\system\Common.php(1119): CodeIgniter\View\View->render('v_daftar', Array, true)
+#2 C:\xampp\htdocs\root-project\app\Controllers\Boostrap.php(7): view('v_daftar')
+#3 C:\xampp\htdocs\root-project\system\CodeIgniter.php(918): App\Controllers\Boostrap->index()
+#4 C:\xampp\htdocs\root-project\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Boostrap))
+#5 C:\xampp\htdocs\root-project\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\root-project\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\root-project\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2021-05-16 23:32:17 --> Invalid file: v_daftar.php
+#0 C:\xampp\htdocs\root-project\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_daftar.php')
+#1 C:\xampp\htdocs\root-project\system\Common.php(1119): CodeIgniter\View\View->render('v_daftar', Array, true)
+#2 C:\xampp\htdocs\root-project\app\Controllers\Boostrap.php(7): view('v_daftar')
+#3 C:\xampp\htdocs\root-project\system\CodeIgniter.php(918): App\Controllers\Boostrap->index()
+#4 C:\xampp\htdocs\root-project\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Boostrap))
+#5 C:\xampp\htdocs\root-project\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\root-project\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\root-project\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2021-05-16 23:32:19 --> Invalid file: v_daftar.php
+#0 C:\xampp\htdocs\root-project\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_daftar.php')
+#1 C:\xampp\htdocs\root-project\system\Common.php(1119): CodeIgniter\View\View->render('v_daftar', Array, true)
+#2 C:\xampp\htdocs\root-project\app\Controllers\Boostrap.php(7): view('v_daftar')
+#3 C:\xampp\htdocs\root-project\system\CodeIgniter.php(918): App\Controllers\Boostrap->index()
+#4 C:\xampp\htdocs\root-project\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Boostrap))
+#5 C:\xampp\htdocs\root-project\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\root-project\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\root-project\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2021-05-16 23:32:19 --> Invalid file: v_daftar.php
+#0 C:\xampp\htdocs\root-project\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_daftar.php')
+#1 C:\xampp\htdocs\root-project\system\Common.php(1119): CodeIgniter\View\View->render('v_daftar', Array, true)
+#2 C:\xampp\htdocs\root-project\app\Controllers\Boostrap.php(7): view('v_daftar')
+#3 C:\xampp\htdocs\root-project\system\CodeIgniter.php(918): App\Controllers\Boostrap->index()
+#4 C:\xampp\htdocs\root-project\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Boostrap))
+#5 C:\xampp\htdocs\root-project\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\root-project\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\root-project\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2021-05-16 23:32:19 --> Invalid file: v_daftar.php
+#0 C:\xampp\htdocs\root-project\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_daftar.php')
+#1 C:\xampp\htdocs\root-project\system\Common.php(1119): CodeIgniter\View\View->render('v_daftar', Array, true)
+#2 C:\xampp\htdocs\root-project\app\Controllers\Boostrap.php(7): view('v_daftar')
+#3 C:\xampp\htdocs\root-project\system\CodeIgniter.php(918): App\Controllers\Boostrap->index()
+#4 C:\xampp\htdocs\root-project\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Boostrap))
+#5 C:\xampp\htdocs\root-project\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\root-project\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\root-project\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2021-05-16 23:32:19 --> Invalid file: v_daftar.php
+#0 C:\xampp\htdocs\root-project\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_daftar.php')
+#1 C:\xampp\htdocs\root-project\system\Common.php(1119): CodeIgniter\View\View->render('v_daftar', Array, true)
+#2 C:\xampp\htdocs\root-project\app\Controllers\Boostrap.php(7): view('v_daftar')
+#3 C:\xampp\htdocs\root-project\system\CodeIgniter.php(918): App\Controllers\Boostrap->index()
+#4 C:\xampp\htdocs\root-project\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Boostrap))
+#5 C:\xampp\htdocs\root-project\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\root-project\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\root-project\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2021-05-16 23:32:20 --> Invalid file: v_daftar.php
+#0 C:\xampp\htdocs\root-project\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_daftar.php')
+#1 C:\xampp\htdocs\root-project\system\Common.php(1119): CodeIgniter\View\View->render('v_daftar', Array, true)
+#2 C:\xampp\htdocs\root-project\app\Controllers\Boostrap.php(7): view('v_daftar')
+#3 C:\xampp\htdocs\root-project\system\CodeIgniter.php(918): App\Controllers\Boostrap->index()
+#4 C:\xampp\htdocs\root-project\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Boostrap))
+#5 C:\xampp\htdocs\root-project\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\root-project\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\root-project\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2021-05-16 23:32:20 --> Invalid file: v_daftar.php
+#0 C:\xampp\htdocs\root-project\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_daftar.php')
+#1 C:\xampp\htdocs\root-project\system\Common.php(1119): CodeIgniter\View\View->render('v_daftar', Array, true)
+#2 C:\xampp\htdocs\root-project\app\Controllers\Boostrap.php(7): view('v_daftar')
+#3 C:\xampp\htdocs\root-project\system\CodeIgniter.php(918): App\Controllers\Boostrap->index()
+#4 C:\xampp\htdocs\root-project\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Boostrap))
+#5 C:\xampp\htdocs\root-project\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\root-project\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\root-project\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}

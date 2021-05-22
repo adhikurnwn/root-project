@@ -1,0 +1,31 @@
+CRITICAL - 2021-05-10 01:09:28 --> Undefined variable: session
+#0 C:\xampp\htdocs\root-project\app\Views\cover.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 30, Array)
+#1 C:\xampp\htdocs\root-project\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\root-project\system\Common.php(1119): CodeIgniter\View\View->render('cover', Array, true)
+#3 C:\xampp\htdocs\root-project\app\Controllers\Home.php(7): view('cover')
+#4 C:\xampp\htdocs\root-project\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\root-project\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\root-project\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\root-project\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\root-project\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-05-10 03:23:55 --> Call to undefined function set_value()
+#0 C:\xampp\htdocs\root-project\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\root-project\system\Common.php(1119): CodeIgniter\View\View->render('login', Array, true)
+#2 C:\xampp\htdocs\root-project\app\Controllers\Home.php(8): view('login', Array)
+#3 C:\xampp\htdocs\root-project\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\root-project\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\root-project\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\root-project\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\root-project\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2021-05-10 03:25:20 --> Invalid file: home.php
+#0 C:\xampp\htdocs\root-project\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home.php')
+#1 C:\xampp\htdocs\root-project\system\Common.php(1119): CodeIgniter\View\View->render('home', Array, true)
+#2 C:\xampp\htdocs\root-project\app\Controllers\Home.php(8): view('home', Array)
+#3 C:\xampp\htdocs\root-project\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\root-project\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\root-project\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\root-project\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\root-project\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
