@@ -267,13 +267,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </div>
               <div class="card-body">
                 <strong><i class="fas fa-desktop"></i> Personal Computer</strong>
-                <p class="text"> - Model :<span class="text-muted"> </span>
+                <p class="text" style = "padding-left:20px;">Model<span style = "padding-left:80px";>:</span><span class="text-muted"> </span>
                 </br>
-                - Merk  :<span class="text-muted"> </span>
+                Merk<span style = "padding-left:88px";>:</span><span class="text-muted"> </span>
                 </br>
-                - Nomor Seri  :<span class="text-muted"> </span>
+                Nomor Seri<span style = "padding-left:45px";>:</span><span class="text-muted"> </span>
                 </br>
-                - Processor  :<span class="text-muted"> </span>
+                Processor<span style = "padding-left:55px";>:</span><span class="text-muted"> </span>
+                </br>
+                Hardisk<span style = "padding-left:69px";>:</span><span class="text-muted"> </span>
+                </br>
+                SSD<span style = "padding-left:93px";>:</span><span class="text-muted"> </span>
+                </br>
+                RAM<span style = "padding-left:91px";>:</span><span class="text-muted"> </span>
+                </br>
+                Monitor<span style = "padding-left:67px";>:</span><span class="text-muted"> </span>
+                </br>
+                OS<span style = "padding-left:100px";>:</span><span class="text-muted"> </span>
+                </br>
+                IP Address<span style = "padding-left:50px";>:</span><span class="text-muted"> </span>
                </p>
                
                 <hr>
