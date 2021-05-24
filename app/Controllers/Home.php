@@ -20,6 +20,18 @@ class Home extends BaseController
         return view('v_user/v_UserCover', ['session' => $session]);
 	}
 
+	public function userJobOrder()
+	{
+		$session = session();
+        return view('v_user/v_UserJobOrder', ['session' => $session]);
+	}
+
+	public function userJobPreventive()
+	{
+		$session = session();
+        return view('v_user/v_UserPreventive', ['session' => $session]);
+	}
+
 	public function register()
 	{
 		$session = session();

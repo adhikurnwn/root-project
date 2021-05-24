@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIMANIS | Dashboard User</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')?>">
+  <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')?>">
+  <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css')?>"> 
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/fontawesome-free/css/all.min.css')?>">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')?>">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')?>">
+  <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/fontawesome-free/css/all.min.css')?>">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="<?= base_url('assets_adminlte/dist/css/adminlte.min.css')?>">
+  <link href="<?= base_url('assets_adminlte/dist/img/olymplast.jpg')?>" rel="shortcut icon">
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-light navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="<?= base_url('Home/dashboarduser')?>" class="nav-link">Home</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+      <!-- Messages Dropdown Menu -->
+     
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <span class="fas fa-tv"></span>
+        </a>
+      </li>
+      
+       <!-- Nav Item - User Information -->
+       <li class="nav-item dropdown no-arrow">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Accounting - Riki</span>
+                  <img class="img-profile rounded-circle" width="20" height="20"
+                     src="<?= base_url('assets_adminlte/dist/img/user2-160x160.jpg')?> ">
+            </a>
+            <!-- Dropdown - User Information -->
+            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                   <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalLogout">
+                      <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Logout
+                   </a>
+            </div>
+     </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-light elevation-4">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link">
+      <img src="<?= base_url('assets_adminlte/dist/img/olymplast.jpg')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">SIMANIS</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="<?= base_url('assets_adminlte/dist/img/user2-160x160.jpg')?>" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Accounting - Riki</a>
+        </div>
+      </div>
+      <!-- SidebarSearch Form -->
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item">
+            <a href="<?= base_url('Home/dashboarduser')?>" class="nav-link">
+              <i class="nav-icon fas fa-home"></i>
+              <p>Dashboard</p>
+              <i class=""></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?= base_url('Home/userJobOrder')?>" class="nav-link active">
+              <i class="nav-icon fas fa-clipboard-check"></i>
+              <p>Job Order</p>
+              <i class=" "></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?= base_url('Home/userPreventive')?>" class="nav-link">
+              <i class="nav-icon fas fa-calendar-alt"></i>
+              <p>Preventive / Maintenance</p>
+              <i class=" "></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+    </section>
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+          <div class="col-8">
+            <a class="btn btn-success btn-sm" href="#" data-toggle="modal" data-target="#TambahJobRequest">
+              <i class="fas fa-plus-square"></i>&nbsp; JOB REQUEST</a>
+          </div>
+</br>
+        <!-- /.card --> 
+        <!---BAATAS-->
+        <div class="row">
+            <div class="col-12">
+            <div class="card">
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="tabel1" class="table table-bordered table-striped" cellspacing="0" width="150%">
+                  <thead>
+                  <tr>
+                    <th>Tanggal</th>
+                    <th>Job Request</th>
+                    <th>Permasalahan</th>
+                    <th>Keterangan</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                  </thead>
+                  <tbody>   
+                  <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> 
+                        <a class="btn btn-primary btn-sm" href="#" data-toggle="modal" data-target="#editData">
+                        <i class="fas fa-eye"></i> Detail </a>
+
+                        <a class="btn btn-info btn-sm" href="#" data-toggle="modal" data-target="#editData">
+                        <i class="fas fa-pencil-alt"></i> Edit </a>
+
+                        <a class="btn btn-danger btn-sm" href="#" data-toggle="modal" data-target="#hapusData">
+                        <i class="fas fa-print"></i> Cetak </a>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <!--<h1 class="m-0">Halaman Utama</h1>-->
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+</div>
+<div class="modal fade" id="TambahJobRequest">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title"><i>Silahkan Lengkapi Data Dibawah ini!</i></h6>
+            </div>
+            <div class="modal-body">
+              <!--Form JOB REQUEST-->
+            <div class="row">
+              <div class="col-md-6">
+              <div class="form-group">
+                  <label>Tanggal Dan Jam:</label>
+                    <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                        <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#reservationdatetime"/>
+                        <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                      <label for="exampleInputRounded0">User</label>
+                      <input type="text" class="form-control rounded-0" id="exampleInputRounded0" disabled>
+                </div>
+                <div class="form-group">
+                        <label>Permasalahan</label>
+                        <textarea class="form-control" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                  <label>Tanggal Dan Jam Selesai:</label>
+                    <div class="input-group date" id="reservationdatetime2" data-target-input="nearest">
+                        <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#reservationdatetime" disabled/>
+                        <div class="input-group-append" data-target="#reservationdatetime" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <!--BATAS ROW-->
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="exampleSelectRounded0">Department</label>
+                  <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                    <option> </option>
+                    <option> </option>
+                    <option> </option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleSelectRounded0">Job Request</label>
+                  <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                    <option> </option>
+                    <option> </option>
+                    <option> </option>
+                  </select>
+                </div>
+                <div class="form-group">
+                        <label>Keterangan</label>
+                        <textarea class="form-control" rows="3" disabled></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="exampleSelectRounded0">Status Job Request</label>
+                  <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                    <option> </option>
+                    <option> </option>
+                    <option> </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!--END JOB REQUEST-->
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
+              <button type="button" class="btn btn-primary"><i class="fas fa-save"></i>&nbsp; Simpan dan Mengajukan</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+  </div>
+
+
+
+
+ 
+  <div class="modal fade" id="modalLogout">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title">KONFIRMASI!</h6>
+            </div>
+            <div class="modal-body">
+              <p><strong><i>Anda yakin akan keluar dari sistem ini?</i></strong></p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
+              <button type="button" class="btn btn-danger">Ya</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+    <div class="p-3">
+      <h5>Title</h5>
+      <p>Sidebar content</p>
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="float-right d-none d-sm-inline">
+      IT TEAM DEVELOPMENT
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2021 <a href="https://olymplast.co.id/">PT. CAHAYA BINTANG PLASTINDO</a>.</strong> All rights reserved.
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+<!-- PAGE PLUGINS -->
+<!-- jQuery -->
+<script src="<?= base_url('assets_adminlte/plugins/jquery/jquery.min.js')?>"></script>
+<!-- Bootstrap 4 -->
+<script src="<?= base_url('assets_adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="<?= base_url('assets_adminlte/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')?>"></script>
+<!-- DataTables  & Plugins -->
+<script src="<?= base_url('assets_adminlte/plugins/datatables/jquery.dataTables.min.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/datatables-responsive/js/dataTables.responsive.min.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/datatables-buttons/js/dataTables.buttons.min.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/datatables-buttons/js/buttons.bootstrap4.min.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/jszip/jszip.min.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/pdfmake/pdfmake.min.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/pdfmake/vfs_fonts.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/datatables-buttons/js/buttons.html5.min.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/datatables-buttons/js/buttons.print.min.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/datatables-buttons/js/buttons.colVis.min.js')?>"></script>
+<!-- AdminLTE App -->
+<script src="<?= base_url('assets_adminlte/dist/js/adminlte.min.js')?>"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="<?php echo base_url();?>/public/dist/js/demo.js"></script>
+<script type="text/javascript">
+    $(function () {
+    $('#datetimepicker1').datetimepicker();
+  });
+</script>
+<script>
+ $(document).ready(function() {
+    var table = $('#tabel1').DataTable( {
+    scrollY: "300px",
+    scrollX: true,
+    scrollCollapse: true
+    } );
+  } );
+</script>
+
+</body>
+</html>

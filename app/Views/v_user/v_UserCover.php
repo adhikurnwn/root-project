@@ -30,7 +30,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Home</a>
+        <a href="<?= base_url('Home/dashboarduser')?>" class="nav-link">Home</a>
       </li>
     </ul>
 
@@ -55,18 +55,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                  <a class="dropdown-item" href="#">
-                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                        Profile
-                  </a>
-                  <div class="dropdown-divider"></div>
-                   <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                   <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-default">
                       <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                         Logout
                    </a>
             </div>
      </li>
-
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -95,117 +89,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            <a href="#" class="nav-link active">
+            <a href="<?= base_url('Home/dashboarduser')?>" class="nav-link active">
               <i class="nav-icon fas fa-home"></i>
               <p>Dashboard</p>
               <i class=""></i>
             </a>
           </li>
-          <li class="nav-item menu-close">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-archive "></i>
-              <p>
-                Stok IT
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-            <li class="nav-item">
-                <a href="#" class="nav-link">
-                &emsp;<i class="nav-icon fas fa-boxes"></i>
-                  <p>Stok Komputer</p>
-                </a>
-            </li>  
-            <li class="nav-item">
-                <a href="#" class="nav-link">
-                &emsp;<i class="nav-icon fas fa-cubes"></i>
-                  <p>Stok Sparepart</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                &emsp;<i class="nav-icon fas fa-cart-plus"></i>
-                  <p>Stok Masuk</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                &emsp;<i class="nav-icon fas fa-cart-arrow-down"></i>
-                  <p>Stok Keluar</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                &emsp;<i class="nav-icon fas fa-truck-moving"></i>
-                  <p>Mutasi Stok</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                &emsp;<i class="nav-icon fas fa-exclamation-circle"></i>
-                  <p>Barang Non-aktif</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                &emsp;<i class="nav-icon fas fa-book"></i>
-                  <p>Laporan Stok</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item menu-close">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-chart-line"></i>
-              <p>
-               IT Report
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                &emsp;<i class="nav-icon fas fa-tools"></i>
-                  <p>Perbaikan</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                &emsp;<i class="nav-icon fas fa-toolbox"></i>
-                  <p>Preventive</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                &emsp;<i class="nav-icon fas fa-trailer"></i>
-                  <p>Permintaan</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item menu-close">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-server"></i>
-              <p>
-               Master Data
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                &emsp;<i class="nav-icon fas fa-barcode"></i>
-                  <p>Kode Invetaris IT</p>
-                </a>
-              </li>
-            </ul>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-cogs"></i>
-              <p>Pengaturan Sistem</p>
+            <a href="<?= base_url('Home/userJobOrder')?>" class="nav-link">
+              <i class="nav-icon fas fa-clipboard-check"></i>
+              <p>Job Order</p>
               <i class=" "></i>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="<?= base_url('Home/userPreventive')?>" class="nav-link">
+              <i class="nav-icon fas fa-calendar-alt"></i>
+              <p>Preventive / Maintenance</p>
+              <i class=" "></i>
+            </a>
           </li>
         </ul>
       </nav>
@@ -235,9 +137,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="row">
           <div class="col-12 col-sm-6 col-md-6">
             <div class="info-box">
-              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-users"></i></span>
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-calendar-alt"></i></span>
               <div class="info-box-content">
-                <span class="info-box-text">PREVENTIVE</span>
+                <span class="info-box-text">PREVENTIVE / MAINTENANCE</span>
                 <span class="info-box-number">
                   -
                 </span>
@@ -249,7 +151,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- /.col -->
           <div class="col-12 col-sm-6 col-md-6">
             <div class="info-box mb-3">
-              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-warehouse"></i></span>
+              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-clipboard-check"></i></span>
               <div class="info-box-content">
                 <span class="info-box-text">JOB ORDER</span>
                 <span class="info-box-number">-</span>              
@@ -267,42 +169,53 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </div>
               <div class="card-body">
                 <strong><i class="fas fa-desktop"></i> Personal Computer</strong>
-                <p class="text" style = "padding-left:20px;">Model<span style = "padding-left:80px";>:</span><span class="text-muted"> </span>
-                </br>
-                Merk<span style = "padding-left:88px";>:</span><span class="text-muted"> </span>
-                </br>
-                Nomor Seri<span style = "padding-left:45px";>:</span><span class="text-muted"> </span>
-                </br>
-                Processor<span style = "padding-left:55px";>:</span><span class="text-muted"> </span>
-                </br>
-                Hardisk<span style = "padding-left:69px";>:</span><span class="text-muted"> </span>
-                </br>
-                SSD<span style = "padding-left:93px";>:</span><span class="text-muted"> </span>
-                </br>
-                RAM<span style = "padding-left:91px";>:</span><span class="text-muted"> </span>
-                </br>
-                Monitor<span style = "padding-left:67px";>:</span><span class="text-muted"> </span>
-                </br>
-                OS<span style = "padding-left:100px";>:</span><span class="text-muted"> </span>
-                </br>
-                IP Address<span style = "padding-left:50px";>:</span><span class="text-muted"> </span>
+                <p class="text">Model<span style = "padding-left:98px";>:</span><span class="text-muted"> </span>
+                <hr>
+                Merk<span style = "padding-left:106px";>:</span><span class="text-muted"> </span>
+                <hr>
+                Nomor Seri<span style = "padding-left:63px";>:</span><span class="text-muted"> </span>
+                <hr>
+                Processor<span style = "padding-left:73px";>:</span><span class="text-muted"> </span>
+                <hr>
+                Hardisk<span style = "padding-left:87px";>:</span><span class="text-muted"> </span>
+                <hr>
+                SSD<span style = "padding-left:111px";>:</span><span class="text-muted"> </span>
+                <hr>
+                RAM<span style = "padding-left:110px";>:</span><span class="text-muted"> </span>
+                <hr>
+                Monitor<span style = "padding-left:86px";>:</span><span class="text-muted"> </span>
+                <hr>
+                OS<span style = "padding-left:120px";>:</span><span class="text-muted">  </span>
+                <hr>
+                IP Address<span style = "padding-left:69px";>:</span><span class="text-muted"> </span>
+                <hr>
+                Tanggal Perolehan<span style = "padding-left:15px";>:</span><span class="text-muted"> </span>
                </p>
                
+                <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+                <strong><i class="fas fa-laptop"></i> Laptop / Notebook</strong>
+                <p class="text">Model<span style = "padding-left:98px";>:</span><span class="text-muted"> </span>
                 <hr>
-                <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
-                  <p class="text-muted">Malibu, California</p>
+                Merk<span style = "padding-left:106px";>:</span><span class="text-muted"> </span>
                 <hr>
-                <strong><i class="fas fa-pencil-alt mr-1"></i> Skills</strong>
-                  <p class="text-muted">
-                    <span class="tag tag-danger">UI Design</span>
-                    <span class="tag tag-success">Coding</span>
-                    <span class="tag tag-info">Javascript</span>
-                    <span class="tag tag-warning">PHP</span>
-                    <span class="tag tag-primary">Node.js</span>
-                  </p>
-                  <hr>
-               <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>
+                Nomor Seri<span style = "padding-left:63px";>:</span><span class="text-muted"> </span>
+                <hr>
+                Processor<span style = "padding-left:73px";>:</span><span class="text-muted"> </span>
+                <hr>
+                Hardisk<span style = "padding-left:87px";>:</span><span class="text-muted"> </span>
+                <hr>
+                SSD<span style = "padding-left:111px";>:</span><span class="text-muted"> </span>
+                <hr>
+                RAM<span style = "padding-left:110px";>:</span><span class="text-muted"> </span>
+                <hr>
+                OS<span style = "padding-left:120px";>:</span><span class="text-muted">  </span>
+                <hr>
+                IP Address<span style = "padding-left:69px";>:</span><span class="text-muted"> </span>
+                <hr>
+                Tanggal Perolehan<span style = "padding-left:15px";>:</span><span class="text-muted"> </span>
+               </p>
+                <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+              
               </div>
               <!-- /.card-body -->
             </div>
@@ -311,25 +224,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <h3 class="card-title">PT. CAHAYA BINTANG PLASTINDO (CBP)</h3>
               </div>
               <div class="card-body">
-                <strong><i class="fas fa-desktop"></i> Personal Computer</strong>
-                  <p class="text-muted">
-                    Pc Build Up HP
-                  </p>
+                <strong><i class="fas fa-print"></i> Printer</strong>
+                <p class="text">Model<span style = "padding-left:97px";>:</span><span class="text-muted"> </span>
                 <hr>
-                <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
-                  <p class="text-muted">Malibu, California</p>
+                Merk<span style = "padding-left:106px";>:</span><span class="text-muted"> </span>
                 <hr>
-                <strong><i class="fas fa-pencil-alt mr-1"></i> Skills</strong>
-                  <p class="text-muted">
-                    <span class="tag tag-danger">UI Design</span>
-                    <span class="tag tag-success">Coding</span>
-                    <span class="tag tag-info">Javascript</span>
-                    <span class="tag tag-warning">PHP</span>
-                    <span class="tag tag-primary">Node.js</span>
-                  </p>
-                  <hr>
+                Nomor Seri<span style = "padding-left:63px";>:</span><span class="text-muted"> </span>
+                <hr>
+                Spesifikasi<span style = "padding-left:68px";>:</span><span class="text-muted"> </span>
+                <hr>
+                Tanggal Perolehan<span style = "padding-left:15px";>:</span><span class="text-muted"> </span>
+               </p>
+                <hr style="height:2px;border-width:0;color:gray;background-color:gray">
                <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>
+                <p class="text-muted"> </p>
               </div>
               <!-- /.card-body -->
             </div>
@@ -337,10 +245,27 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </div>
       </div>
   </div>
-
-    <!-- /.content -->
-    <!-- /.content-wrapper -->
-
+  <!-- /.content -->
+  <!-- /.content-wrapper -->
+  <div class="modal fade" id="modal-default">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title">KONFIRMASI!</h6>
+            </div>
+            <div class="modal-body">
+              <p><strong><i>Anda yakin akan keluar dari sistem ini?</i></strong></p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
+              <button type="button" class="btn btn-danger">Ya</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+  </div>
+      <!-- /.modal -->
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
