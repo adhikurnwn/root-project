@@ -11,6 +11,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- daterange picker -->
+  <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/daterangepicker/daterangepicker.css')?>">
   <!-- DataTables -->
   <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')?>">
   <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')?>">
@@ -42,10 +44,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </ul>
 
     <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-      <!-- Navbar Search -->
-      <!-- Messages Dropdown Menu -->
-     
+    <ul class="navbar-nav ml-auto">     
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
           <span class="fas fa-tv"></span>
@@ -130,13 +129,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </section>
     <section class="content">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-          <div class="col-8">
-            <a class="btn btn-success btn-sm" href="#" data-toggle="modal" data-target="#TambahJobRequest">
-              <i class="fas fa-plus-square"></i>&nbsp; JOB REQUEST</a>
-          </div>
-</br>
         <!-- /.card --> 
         <!---BAATAS-->
         <div class="row">
@@ -144,6 +136,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="card">
               <!-- /.card-header -->
               <div class="card-body">
+              <h4><i class="fas fa-history"></i>&nbsp; History Job Order<span>
+                  <a class="btn btn-success btn-sm" style="float:right" href="#" data-toggle="modal" data-target="#TambahJobRequest">
+                  <i class="fas fa-plus-square"></i>&nbsp; JOB REQUEST</a></span>
+              </h4>
+              <hr>
                 <table id="tabel1" class="table table-bordered table-striped" cellspacing="0" width="150%">
                   <thead>
                   <tr>
@@ -162,15 +159,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td> </td>
                     <td> </td>
                     <td> </td>
-                    <td> 
-                        <a class="btn btn-primary btn-sm" href="#" data-toggle="modal" data-target="#editData">
-                        <i class="fas fa-eye"></i> Detail </a>
-
-                        <a class="btn btn-info btn-sm" href="#" data-toggle="modal" data-target="#editData">
-                        <i class="fas fa-pencil-alt"></i> Edit </a>
-
-                        <a class="btn btn-danger btn-sm" href="#" data-toggle="modal" data-target="#hapusData">
-                        <i class="fas fa-print"></i> Cetak </a>
+                    <td class="text-left py-1 align-middle">
+                      <div class="btn-group btn-group-sm">
+                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#detailData"><i class="fas fa-eye"></i></a>
+                        <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#approve"><i class="fas fa-share"></i></a>
+                        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#editData"><i class="fas fa-edit"></i></a>
+                        <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#cetakData"><i class="fas fa-print"></i></a>
+                      </div>
                     </td>
                   </tr>
                   </tbody>
@@ -182,8 +177,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </div>
         </div> 
         </div>
-      </div>
-    </div>
   </div>
 </section>
     
@@ -200,6 +193,31 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </div><!-- /.container-fluid -->
     </div>
 </div>
+
+<!--MODAL APPROVE JOB ORDER-->
+<div class="modal fade" id="approve" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Alert!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p><i><strong>Apakah anda yakin dengan data yang akan ingin dikonfirmasi?</strong></i></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+        <button type="button" class="btn btn-primary">Ya, minta persetujuan</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--MODAL TAMBAH DATA JOB ORDER-->
 <div class="modal fade" id="TambahJobRequest">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
@@ -213,7 +231,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="form-group">
                   <label>Tanggal Dan Jam:</label>
                     <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
-                        <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#reservationdatetime"/>
+                        <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker1"/>
                         <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
                             <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
                         </div>
@@ -229,9 +247,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </div>
                 <div class="form-group">
                   <label>Tanggal Dan Jam Selesai:</label>
-                    <div class="input-group date" id="reservationdatetime2" data-target-input="nearest">
-                        <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#reservationdatetime" disabled/>
-                        <div class="input-group-append" data-target="#reservationdatetime" data-toggle="datetimepicker">
+                    <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
+                        <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker2"/>
+                        <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
                             <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
                         </div>
                     </div>
@@ -273,7 +291,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
-              <button type="button" class="btn btn-primary"><i class="fas fa-save"></i>&nbsp; Simpan dan Mengajukan</button>
+              <button type="button" class="btn btn-primary"><i class="fas fa-save"></i>&nbsp; Simpan Job Request</button>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -281,15 +299,175 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- /.modal-dialog -->
   </div>
 
+ <!--MODAL DETAIL DATA-->
+ <div class="modal fade" id="detailData">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title"><i>Detail Job Request / Order</i></h6>
+            </div>
+            <div class="modal-body">
+              <!--Form JOB REQUEST-->
+            <div class="row">
+              <div class="col-md-6">
+              <div class="form-group">
+                  <label>Tanggal Dan Jam:</label>
+                    <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                        <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker1" disabled/>
+                        <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                      <label for="exampleInputRounded0">User</label>
+                      <input type="text" class="form-control rounded-0" id="exampleInputRounded0" disabled>
+                </div>
+                <div class="form-group">
+                        <label>Permasalahan</label>
+                        <textarea class="form-control" rows="3" disabled></textarea>
+                </div>
+                <div class="form-group">
+                  <label>Tanggal Dan Jam Selesai:</label>
+                    <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
+                        <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker2" disabled/>
+                        <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <!--BATAS ROW-->
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="exampleSelectRounded0">Department</label>
+                  <select class="custom-select rounded-0" id="exampleSelectRounded0" disabled>
+                    <option> </option>
+                    <option> </option>
+                    <option> </option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleSelectRounded0">Job Request</label>
+                  <select class="custom-select rounded-0" id="exampleSelectRounded0" disabled>
+                    <option> </option>
+                    <option> </option>
+                    <option> </option>
+                  </select>
+                </div>
+                <div class="form-group">
+                        <label>Keterangan</label>
+                        <textarea class="form-control" rows="3" disabled></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="exampleSelectRounded0">Status Job Request</label>
+                  <select class="custom-select rounded-0" id="exampleSelectRounded0" disabled>
+                    <option> </option>
+                    <option> </option>
+                    <option> </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!--END JOB REQUEST-->
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default center-block" data-dismiss="modal">Keluar</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+  </div>
 
+  <!--MODAL EDIT DATA-->
+ <div class="modal fade" id="editData">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title"><i>Edit Job Request / Order</i></h6>
+            </div>
+            <div class="modal-body">
+              <!--Form JOB REQUEST-->
+            <div class="row">
+              <div class="col-md-6">
+              <div class="form-group">
+                  <label>Tanggal Dan Jam:</label>
+                    <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                        <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker1" disabled/>
+                        <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                      <label for="exampleInputRounded0">User</label>
+                      <input type="text" class="form-control rounded-0" id="exampleInputRounded0" disabled>
+                </div>
+                <div class="form-group">
+                        <label>Permasalahan</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                  <label>Tanggal Dan Jam Selesai:</label>
+                    <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
+                        <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker2" disabled/>
+                        <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <!--BATAS ROW-->
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="exampleSelectRounded0">Department</label>
+                  <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                    <option> </option>
+                    <option> </option>
+                    <option> </option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleSelectRounded0">Job Request</label>
+                  <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                    <option> </option>
+                    <option> </option>
+                    <option> </option>
+                  </select>
+                </div>
+                <div class="form-group">
+                        <label>Keterangan</label>
+                        <textarea class="form-control" rows="3" disabled></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="exampleSelectRounded0">Status Job Request</label>
+                  <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                    <option> </option>
+                    <option> </option>
+                    <option> </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!--END JOB REQUEST-->
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Keluar</button>
+              <button type="button" class="btn btn-primary"><i class="fas fa-save"></i>&nbsp; Simpan Perubahan</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+  </div>
 
-
- 
+ <!--MODAL LOG OUT-->
   <div class="modal fade" id="modalLogout">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h6 class="modal-title">KONFIRMASI!</h6>
+              <h6 class="modal-title">Alert!</h6>
             </div>
             <div class="modal-body">
               <p><strong><i>Anda yakin akan keluar dari sistem ini?</i></strong></p>
@@ -324,14 +502,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <strong>Copyright &copy; 2021 <a href="https://olymplast.co.id/">PT. CAHAYA BINTANG PLASTINDO</a>.</strong> All rights reserved.
   </footer>
 </div>
-<!-- ./wrapper -->
 
-<!-- REQUIRED SCRIPTS -->
 <!-- PAGE PLUGINS -->
 <!-- jQuery -->
 <script src="<?= base_url('assets_adminlte/plugins/jquery/jquery.min.js')?>"></script>
 <!-- Bootstrap 4 -->
 <script src="<?= base_url('assets_adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
+<!-- InputMask -->
+<script src="<?= base_url('assets_adminlte/plugins/moment/moment.min.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/inputmask/jquery.inputmask.min.js')?>"></script>
+<!-- date-range-picker -->
+<script src="<?= base_url('assets_adminlte/plugins/daterangepicker/daterangepicker.js')?>"></script>
 <!-- Tempusdominus Bootstrap 4 -->
 <script src="<?= base_url('assets_adminlte/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')?>"></script>
 <!-- DataTables  & Plugins -->
@@ -352,10 +533,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url();?>/public/dist/js/demo.js"></script>
 <script type="text/javascript">
-    $(function () {
+  $(function () {
     $('#datetimepicker1').datetimepicker();
   });
+
+  $(function () {
+    $('#datetimepicker2').datetimepicker();
+  });
+
 </script>
+
 <script>
  $(document).ready(function() {
     var table = $('#tabel1').DataTable( {
@@ -364,6 +551,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     scrollCollapse: true
     } );
   } );
+
+
 </script>
 
 </body>

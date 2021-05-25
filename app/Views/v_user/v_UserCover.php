@@ -251,7 +251,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h6 class="modal-title">KONFIRMASI!</h6>
+              <h6 class="modal-title">Alert!</h6>
             </div>
             <div class="modal-body">
               <p><strong><i>Anda yakin akan keluar dari sistem ini?</i></strong></p>
