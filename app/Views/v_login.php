@@ -46,12 +46,12 @@
         <form class="p-4 p-md-5 border rounded-3 bg-light">
         <h1 class="display-12 fw-bold lh-5 mb-4">Login</h1>        
         <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatigEmail" placeholder="ex. steve@gmail.com">
+            <input type="email" autocomplete="off" class="form-control" id="floatigEmail" placeholder="ex. steve@gmail.com">
             <label for="floatingUsername">Email</label>
         </div>
 
         <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="@$%jhon_due2509">
+            <input type="password" autocomplet="off" class="form-control" id="floatingPassword" placeholder="@$%jhon_due2509">
             <label for="floatingInput">Password</label>
         </div>
           <button class="w-100 btn btn-lg btn-primary" type="submit">Masuk</button>

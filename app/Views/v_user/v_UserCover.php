@@ -38,7 +38,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
       <!-- Messages Dropdown Menu -->
-     
+      <!-- Dropdown - Alerts -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">-</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header">Pemberitahuan</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-envelope mr-2"></i>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer" data-toggle="modal" data-target="#modal-notifikasi">Lihat semua pemberitahuan</a>
+        </div>
+      </li>
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
           <span class="fas fa-tv"></span>
@@ -55,7 +70,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                   <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-default">
+                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-ubahpass">
+                      <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Ubah Password
+                  </a>
+                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-logout">
                       <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                         Logout
                    </a>
@@ -66,11 +85,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-light elevation-4">
+  <aside class="main-sidebar sidebar-light-light elevation-4">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
       <img src="<?= base_url('assets_adminlte/dist/img/olymplast.jpg')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">SIMANIS</span>
+      <span class="brand-text font-weight-light"><strong>SIMANIS</strong></span>
     </a>
 
     <!-- Sidebar -->
@@ -247,7 +266,79 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </div>
   <!-- /.content -->
   <!-- /.content-wrapper -->
-  <div class="modal fade" id="modal-default">
+<!--CONTENT MODAL-->
+<!--MODAL UBAH PASSWORD-->
+  <div class="modal fade" id="modal-ubahpass">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title"><i>Pengaturan Akun</i></h6>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                  <label for="exampleInputBorder">Username</label>
+                  <input type="text" class="form-control form-control-border" id="exampleInputBorder" disabled>
+              </div>
+              <div class="form-group">
+                  <label for="exampleInputBorder">Password Lama</label>
+                  <input type="text" autocomplete="off" class="form-control form-control-border" id="exampleInputBorder">
+              </div>
+              <div class="form-group">
+                  <label for="exampleInputBorder">Password Baru</label>
+                  <input type="text" autocomplete="off" class="form-control form-control-border" id="exampleInputBorder">
+              </div>
+              <div class="form-group">
+                  <label for="exampleInputBorder">Konfirmasi Password</label>
+                  <input type="text" autocomplete="off" class="form-control form-control-border" id="exampleInputBorder">
+              </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
+              <button type="button" class="btn btn-danger">Ya</button>
+            </div>
+          </div>
+        </div>
+  </div>
+<!--MODAL PEMBERITAHUAN-->
+<div class="modal fade" id="modal-notifikasi">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title"><i>Pemberitahuan</i></h6>
+            </div>
+            <div class="modal-body">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">Transaksi</th>
+                  <th scope="col" width = "200px">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"> </th>
+                  <td> </td>
+                  <td><a href=" " class = "fas fa-hand-point-right"> Lihat detail transaksi</a></td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Kembali</button>
+            </div>
+          </div>
+        </div>
+  </div>
+
+
+
+
+
+
+
+<!--MODAL LOG OUT-->
+  <div class="modal fade" id="modal-logout">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">

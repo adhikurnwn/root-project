@@ -58,21 +58,21 @@
           <div class="form-group row">
           <h1 class="display-12 fw-bold lh-5 mb-4">Buat Akun</h1>
               <div class="form-floating mb-3 col-sm-6 mb-sm-0">
-                 <input type="text" name="firstname" class="form-control" id="floatingFirstName" placeholder="ex. Steven" value="<?= set_value('firstname') ?>">
+                 <input type="text" autocomplete="off" name="firstname" class="form-control" id="floatingFirstName" placeholder="ex. Steven" value="<?= set_value('firstname') ?>">
                  <label for="floatingFirstName">&nbsp; Nama Depan</label>
               </div>
               <div class="form-floating mb-3 col-sm-6">
-                  <input type="text" class="form-control" name="lastname" id="floatingLastName" placeholder="ex. Jobs" value="<?= set_value('lastname') ?>">
+                  <input type="text" autocomplete="off" class="form-control" name="lastname" id="floatingLastName" placeholder="ex. Jobs" value="<?= set_value('lastname') ?>">
                   <label for="floatingLastName">&nbsp; Nama Belakang</label>
               </div>
         </div>  
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" name="name" id="floatingUsername" placeholder="ex. Steve" value="<?= set_value('name') ?>">
+            <input type="text" autocomplete="off" class="form-control" name="name" id="floatingUsername" placeholder="ex. Steve" value="<?= set_value('name') ?>">
             <label for="floatingUsername">Username</label>
         </div>
         
         <div class="form-floating mb-3">
-            <input type="email" class="form-control" name="email" id="floatigEmail" placeholder="ex. steve@gmail.com" value="<?= set_value('email') ?>">
+            <input type="email" autocomplete="off" class="form-control" name="email" id="floatigEmail" placeholder="ex. steve@gmail.com" value="<?= set_value('email') ?>">
             <label for="floatingEmail">Email</label>
         </div>
 
@@ -93,11 +93,11 @@
         </div>
     </br>
         <div class="form-floating mb-3">
-            <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="@$%jhon_due2509" value="<?= set_value('password') ?>">
+            <input type="password" autocomplete="off" name="password" class="form-control" id="floatingPassword" placeholder="@$%jhon_due2509" value="<?= set_value('password') ?>">
             <label for="floatingPassword">Password</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="password" name="confpassword" class="form-control" id="floatingConfPassword" placeholder="@$%jhon_due2509">
+            <input type="password" autocomplete="off" name="confpassword" class="form-control" id="floatingConfPassword" placeholder="@$%jhon_due2509">
             <label for="floatingConfPassword">Konfirmasi Password</label>
         </div>
 
