@@ -71,7 +71,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                   <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-ubahpass">
-                      <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i>
+                      <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                         Ubah Password
                   </a>
                   <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-logout">
@@ -188,53 +188,41 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </div>
               <div class="card-body">
                 <strong><i class="fas fa-desktop"></i> Personal Computer</strong>
-                <p class="text">Model<span style = "padding-left:98px";>:</span><span class="text-muted"> </span>
-                <hr>
-                Merk<span style = "padding-left:106px";>:</span><span class="text-muted"> </span>
-                <hr>
-                Nomor Seri<span style = "padding-left:63px";>:</span><span class="text-muted"> </span>
-                <hr>
-                Processor<span style = "padding-left:73px";>:</span><span class="text-muted"> </span>
-                <hr>
-                Hardisk<span style = "padding-left:87px";>:</span><span class="text-muted"> </span>
-                <hr>
-                SSD<span style = "padding-left:111px";>:</span><span class="text-muted"> </span>
-                <hr>
-                RAM<span style = "padding-left:110px";>:</span><span class="text-muted"> </span>
-                <hr>
-                Monitor<span style = "padding-left:86px";>:</span><span class="text-muted"> </span>
-                <hr>
-                OS<span style = "padding-left:120px";>:</span><span class="text-muted">  </span>
-                <hr>
-                IP Address<span style = "padding-left:69px";>:</span><span class="text-muted"> </span>
-                <hr>
-                Tanggal Perolehan<span style = "padding-left:15px";>:</span><span class="text-muted"> </span>
-               </p>
+                    <p class="text">Model<span style = "padding-left:98px";>:</span><span class="text-muted"> </span>
+                    <hr>
+                    Merk<span style = "padding-left:106px";>:</span><span class="text-muted"> </span>
+                    <hr>
+                    Nomor Seri<span style = "padding-left:63px";>:</span><span class="text-muted"> </span>
+                    <hr>
+                    Processor<span style = "padding-left:73px";>:</span><span class="text-muted"> </span>
+                    <hr>
+                    Hardisk<span style = "padding-left:87px";>:</span><span class="text-muted"> </span>
+                    <hr>
+                    SSD<span style = "padding-left:111px";>:</span><span class="text-muted"> </span>
+                    <hr>
+                    RAM<span style = "padding-left:110px";>:</span><span class="text-muted"> </span>
+                    <hr>
+                    Monitor<span style = "padding-left:86px";>:</span><span class="text-muted"> </span>
+                    <hr>
+                    OS<span style = "padding-left:120px";>:</span><span class="text-muted">  </span>
+                    <hr>
+                    IP Address<span style = "padding-left:69px";>:</span><span class="text-muted"> </span>
+                    <hr>
+                    Tanggal Perolehan<span style = "padding-left:15px";>:</span><span class="text-muted"> </span>
+                  </p>
                
                 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-                <strong><i class="fas fa-laptop"></i> Laptop / Notebook</strong>
-                <p class="text">Model<span style = "padding-left:98px";>:</span><span class="text-muted"> </span>
-                <hr>
-                Merk<span style = "padding-left:106px";>:</span><span class="text-muted"> </span>
-                <hr>
-                Nomor Seri<span style = "padding-left:63px";>:</span><span class="text-muted"> </span>
-                <hr>
-                Processor<span style = "padding-left:73px";>:</span><span class="text-muted"> </span>
-                <hr>
-                Hardisk<span style = "padding-left:87px";>:</span><span class="text-muted"> </span>
-                <hr>
-                SSD<span style = "padding-left:111px";>:</span><span class="text-muted"> </span>
-                <hr>
-                RAM<span style = "padding-left:110px";>:</span><span class="text-muted"> </span>
-                <hr>
-                OS<span style = "padding-left:120px";>:</span><span class="text-muted">  </span>
-                <hr>
-                IP Address<span style = "padding-left:69px";>:</span><span class="text-muted"> </span>
-                <hr>
-                Tanggal Perolehan<span style = "padding-left:15px";>:</span><span class="text-muted"> </span>
-               </p>
-                <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-              
+                <strong><i class="fas fa-print"></i> Printer</strong>
+                    <p class="text">Model<span style = "padding-left:97px";>:</span><span class="text-muted"> </span>
+                    <hr>
+                    Merk<span style = "padding-left:106px";>:</span><span class="text-muted"> </span>
+                    <hr>
+                    Nomor Seri<span style = "padding-left:63px";>:</span><span class="text-muted"> </span>
+                    <hr>
+                    Spesifikasi<span style = "padding-left:68px";>:</span><span class="text-muted"> </span>
+                    <hr>
+                    Tanggal Perolehan<span style = "padding-left:15px";>:</span><span class="text-muted"> </span>
+                  </p>
               </div>
               <!-- /.card-body -->
             </div>
@@ -243,20 +231,32 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <h3 class="card-title">PT. CAHAYA BINTANG PLASTINDO (CBP)</h3>
               </div>
               <div class="card-body">
-                <strong><i class="fas fa-print"></i> Printer</strong>
-                <p class="text">Model<span style = "padding-left:97px";>:</span><span class="text-muted"> </span>
-                <hr>
-                Merk<span style = "padding-left:106px";>:</span><span class="text-muted"> </span>
-                <hr>
-                Nomor Seri<span style = "padding-left:63px";>:</span><span class="text-muted"> </span>
-                <hr>
-                Spesifikasi<span style = "padding-left:68px";>:</span><span class="text-muted"> </span>
-                <hr>
-                Tanggal Perolehan<span style = "padding-left:15px";>:</span><span class="text-muted"> </span>
-               </p>
+                <strong><i class="fas fa-laptop"></i> Laptop / Notebook</strong>
+                  <p class="text">Model<span style = "padding-left:98px";>:</span><span class="text-muted"> </span>
+                  <hr>
+                  Merk<span style = "padding-left:106px";>:</span><span class="text-muted"> </span>
+                  <hr>
+                  Nomor Seri<span style = "padding-left:63px";>:</span><span class="text-muted"> </span>
+                  <hr>
+                  Processor<span style = "padding-left:73px";>:</span><span class="text-muted"> </span>
+                  <hr>
+                  Hardisk<span style = "padding-left:87px";>:</span><span class="text-muted"> </span>
+                  <hr>
+                  SSD<span style = "padding-left:111px";>:</span><span class="text-muted"> </span>
+                  <hr>
+                  RAM<span style = "padding-left:110px";>:</span><span class="text-muted"> </span>
+                  <hr>
+                  OS<span style = "padding-left:120px";>:</span><span class="text-muted">  </span>
+                  <hr>
+                  IP Address<span style = "padding-left:69px";>:</span><span class="text-muted"> </span>
+                  <hr>
+                  Tanggal Perolehan<span style = "padding-left:15px";>:</span><span class="text-muted"> </span>
+                  </p>
                 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
                <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
-                <p class="text-muted"> </p>
+                <p class="text-muted"> 
+
+                </p>
               </div>
               <!-- /.card-body -->
             </div>
@@ -275,30 +275,39 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <h6 class="modal-title"><i>Pengaturan Akun</i></h6>
             </div>
             <div class="modal-body">
-              <div class="form-group">
-                  <label for="exampleInputBorder">Username</label>
-                  <input type="text" class="form-control form-control-border" id="exampleInputBorder" disabled>
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                  </div>
+                  <input type="username" class="form-control" placeholder="Username" disabled>
               </div>
-              <div class="form-group">
-                  <label for="exampleInputBorder">Password Lama</label>
-                  <input type="text" autocomplete="off" class="form-control form-control-border" id="exampleInputBorder">
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-unlock-alt"></i></span>
+                  </div>
+                  <input type="password" class="form-control" placeholder="Password Lama">
               </div>
-              <div class="form-group">
-                  <label for="exampleInputBorder">Password Baru</label>
-                  <input type="text" autocomplete="off" class="form-control form-control-border" id="exampleInputBorder">
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                  </div>
+                  <input type="password" class="form-control" placeholder="Password Baru">
               </div>
-              <div class="form-group">
-                  <label for="exampleInputBorder">Konfirmasi Password</label>
-                  <input type="text" autocomplete="off" class="form-control form-control-border" id="exampleInputBorder">
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-check-circle"></i></span>
+                  </div>
+                  <input type="password" class="form-control" placeholder="Konfirmasi Password">
               </div>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
-              <button type="button" class="btn btn-danger">Ya</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Kembali</button>
+              <button type="button" class="btn btn-danger">Ubah</button>
             </div>
           </div>
         </div>
   </div>
+
 <!--MODAL PEMBERITAHUAN-->
 <div class="modal fade" id="modal-notifikasi">
         <div class="modal-dialog modal-lg">
@@ -330,11 +339,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </div>
         </div>
   </div>
-
-
-
-
-
 
 
 <!--MODAL LOG OUT-->

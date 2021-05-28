@@ -26,7 +26,7 @@ class Home extends BaseController
         return view('v_user/v_UserJobOrder', ['session' => $session]);
 	}
 
-	public function userJobPreventive()
+	public function userPreventive()
 	{
 		$session = session();
         return view('v_user/v_UserPreventive', ['session' => $session]);

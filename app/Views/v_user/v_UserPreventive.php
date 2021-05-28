@@ -121,14 +121,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('Home/userJobOrder')?>" class="nav-link active">
+            <a href="<?= base_url('Home/userJobOrder')?>" class="nav-link">
               <i class="nav-icon fas fa-clipboard-check"></i>
               <p>Job Order</p>
               <i class=" "></i>
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('Home/userPreventive')?>" class="nav-link">
+            <a href="<?= base_url('Home/userPreventive')?>" class="nav-link active">
               <i class="nav-icon fas fa-calendar-alt"></i>
               <p>Preventive / Maintenance</p>
               <i class=" "></i>
@@ -155,17 +155,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="card">
               <!-- /.card-header -->
               <div class="card-body">
-              <h4><i class="fas fa-history"></i>&nbsp; History Job Order<span>
-                  <a class="btn btn-success btn-sm" style="float:right" href="#" data-toggle="modal" data-target="#TambahJobRequest">
-                  <i class="fas fa-plus-square"></i>&nbsp; JOB REQUEST</a></span>
-              </h4>
+              <h4><i class="fas fa-history"></i>&nbsp; History Preventive / Maintenance<span></h4>
               <hr>
                 <table id="tabel1" class="table table-bordered table-striped" cellspacing="0" width="150%">
                   <thead>
                   <tr>
                     <th>Tanggal</th>
-                    <th>Job Request</th>
-                    <th>Permasalahan</th>
+                    <th>Jenis Perawatan</th>
                     <th>Keterangan</th>
                     <th>Status</th>
                     <th>Action</th>
@@ -177,13 +173,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td> </td>
                     <td> </td>
                     <td> </td>
-                    <td> </td>
                     <td class="text-left py-1 align-middle">
                       <div class="btn-group btn-group-sm">
                         <a href="#" class="btn btn-info" data-toggle="modal" data-target="#detailData"><i class="fas fa-eye"></i></a>
-                        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#editData"><i class="fas fa-edit"></i></a>
-                        <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#cetakData"><i class="fas fa-print"></i></a>
-                         <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#approve"><i class="fas fa-share"></i></a>
+                        <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#approve"><i class="fas fa-share"></i></a>
                       </div>
                     </td>
                   </tr>
@@ -213,7 +206,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </div>
 </div>
 
-<!--MODAL APPROVE JOB ORDER-->
+<!--MODAL APPROVE PREVENTIVE-->
 <div class="modal fade" id="approve" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -234,97 +227,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </div>
 </div>
 
-<!--MODAL TAMBAH DATA JOB ORDER-->
-<div class="modal fade" id="TambahJobRequest">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h6 class="modal-title"><i>Silahkan Lengkapi Data Dibawah ini!</i></h6>
-            </div>
-            <div class="modal-body">
-              <!--Form JOB REQUEST-->
-            <div class="row">
-              <div class="col-md-6">
-              <div class="form-group">
-                  <label>Tanggal Dan Jam:</label>
-                    <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
-                        <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker1"/>
-                        <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
-                            <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                      <label for="exampleInputRounded0">User</label>
-                      <input type="text" class="form-control rounded-0" id="exampleInputRounded0" disabled>
-                </div>
-                <div class="form-group">
-                        <label>Permasalahan</label>
-                        <textarea class="form-control" autocomplete="off" rows="3" required></textarea>
-                </div>
-                <div class="form-group">
-                  <label>Tanggal Dan Jam Selesai:</label>
-                    <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
-                        <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker2" disabled/>
-                        <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
-                            <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
-                        </div>
-                    </div>
-                </div>
-              </div>
-              <!--BATAS ROW-->
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="exampleSelectRounded0">Department</label>
-                  <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
-                    <option> </option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="exampleSelectRounded0">Job Request</label>
-                  <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
-                    <option> </option>
-                    <option> </option>
-                    <option> </option>
-                  </select>
-                </div>
-                <div class="form-group">
-                        <label>Keterangan</label>
-                        <textarea class="form-control" rows="3" disabled></textarea>
-                </div>
-                <div class="form-group">
-                  <label for="exampleSelectRounded0">Status Job Request</label>
-                  <select class="custom-select rounded-0" id="exampleSelectRounded0" disabled>
-                    <option> </option>
-                    <option> </option>
-                    <option> </option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <!--END JOB REQUEST-->
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
-              <button type="button" class="btn btn-dark"><i class="fas fa-save"></i>&nbsp; Simpan</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-  </div>
-
  <!--MODAL DETAIL DATA-->
  <div class="modal fade" id="detailData">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-xl">
           <div class="modal-content">
             <div class="modal-header">
-              <h6 class="modal-title"><i>Detail Job Request / Order</i></h6>
+              <h6 class="modal-title"><i>Detail Preventive / Maintenance</i></h6>
             </div>
             <div class="modal-body">
               <!--Form JOB REQUEST-->
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-4">
               <div class="form-group">
                   <label>Tanggal Dan Jam:</label>
                     <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
@@ -335,56 +248,339 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </div>
                 </div>
                 <div class="form-group">
-                      <label for="exampleInputRounded0">User</label>
-                      <input type="text" class="form-control rounded-0" id="exampleInputRounded0" disabled>
-                </div>
-                <div class="form-group">
-                        <label>Permasalahan</label>
-                        <textarea class="form-control" rows="3" disabled></textarea>
-                </div>
-                <div class="form-group">
-                  <label>Tanggal Dan Jam Selesai:</label>
-                    <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
-                        <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker2" disabled/>
-                        <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
-                            <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
-                        </div>
-                    </div>
+                  <label for="exampleSelectRounded0">IT User</label>
+                  <select class="custom-select rounded-0" id="exampleSelectRounded0" disabled>
+                    <option> </option>
+                  </select>
                 </div>
               </div>
-              <!--BATAS ROW-->
-              <div class="col-md-6">
+              <div class="col-md-4">
                 <div class="form-group">
                   <label for="exampleSelectRounded0">Department</label>
                   <select class="custom-select rounded-0" id="exampleSelectRounded0" disabled>
                     <option> </option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleSelectRounded0">Jenis Perawatan</label>
+                  <select class="custom-select rounded-0" id="exampleSelectRounded0" disabled>
                     <option> </option>
+                  </select>
+                </div>
+              </div>
+              <!--BATAS ROW-->
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="exampleSelectRounded0">User</label>
+                  <select class="custom-select rounded-0" id="exampleSelectRounded0" disabled>
                     <option> </option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="exampleSelectRounded0">Job Request</label>
+                  <label for="exampleSelectRounded0">Status Preventive</label>
                   <select class="custom-select rounded-0" id="exampleSelectRounded0" disabled>
-                    <option> </option>
-                    <option> </option>
-                    <option> </option>
-                  </select>
-                </div>
-                <div class="form-group">
-                        <label>Keterangan</label>
-                        <textarea class="form-control" rows="3" disabled></textarea>
-                </div>
-                <div class="form-group">
-                  <label for="exampleSelectRounded0">Status Job Request</label>
-                  <select class="custom-select rounded-0" id="exampleSelectRounded0" disabled>
-                    <option> </option>
-                    <option> </option>
                     <option> </option>
                   </select>
                 </div>
               </div>
             </div>
-            <!--END JOB REQUEST-->
+            <hr>
+            <h6 align="center"><i class="fas fa-tasks"></i>&nbsp;<strong> Checklist Preventive IT</strong><span></h6>
+            <ul class="nav nav-tabs" id="custom-content-above-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="custom-content-above-home-tab" data-toggle="pill" href="#custom-content-above-home" role="tab" aria-controls="custom-content-above-home" aria-selected="true"><strong>Perawatan Software</strong></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="custom-content-above-profile-tab" data-toggle="pill" href="#custom-content-above-profile" role="tab" aria-controls="custom-content-above-profile" aria-selected="false"><strong>Perawatan Hardware</strong></a>
+              </li>
+            </ul>
+            <div class="tab-content" id="custom-content-above-tabContent">
+              <div class="tab-pane fade show active" id="custom-content-above-home" role="tabpanel" aria-labelledby="custom-content-above-home-tab">
+              <table id="tabel1" class="table table-bordered table-striped" cellspacing="0" width="150%">
+                  <thead>
+                  <tr align="center">
+                    <th width="10px">No.</th>
+                    <th>Deskripsi Perawatan Software</th>
+                    <th>Checklist Pengerjaan</th>
+                  </tr>
+                  </thead>
+                  <tbody>   
+                  <tr>
+                    <td>1. </td>  
+                    <td><i>Disk clean up</i> </td>
+                    <td align="left">
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1" disabled>
+                          <label for="customCheckbox1" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2. </td>
+                    <td><i>Memastikan space / ruang disc C < 50%</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option2" disabled>
+                          <label for="customCheckbox2" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3. </td>
+                    <td><i>Melakukan disc defragmenter</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option3" disabled>
+                          <label for="customCheckbox3" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4. </td>
+                    <td><i>Uninstal program yang tidak perlu</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4" disabled>
+                          <label for="customCheckbox4" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5. </td>
+                    <td><i>Pembersihan recycle bin</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox5" value="option5" disabled>
+                          <label for="customCheckbox5" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6. </td>
+                    <td><i>Melakukan scan antivirus</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox6" value="option6" disabled>
+                          <label for="customCheckbox6" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>7. </td>
+                    <td><i>Melakukan backup data</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox7" value="option7" disabled>
+                          <label for="customCheckbox7" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>8. </td>
+                    <td><i>Performance secara umum</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox8" value="option8" disabled>
+                          <label for="customCheckbox8" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>9. </td>
+                    <td><i>File sharing</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox9" value="option9" disabled>
+                          <label for="customCheckbox9" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>10. </td>
+                    <td><i>Check IP Address PC</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox10" value="option10" disabled>
+                          <label for="customCheckbox10" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+                <div class="form-group">
+                        <label>Keterangan</label>
+                        <textarea class="form-control" rows="3" disabled></textarea>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="custom-content-above-profile" role="tabpanel" aria-labelledby="custom-content-above-profile-tab">
+              <table id="tabel1" class="table table-bordered table-striped" cellspacing="0" width="150%">
+                  <thead>
+                  <tr align="center">
+                    <th width="10px">No.</th>
+                    <th>Deskripsi Perawatan Hardware</th>
+                    <th>Checklist Pengerjaan</th>
+                  </tr>
+                  </thead>
+                  <tbody>   
+                  <tr>
+                    <td>1. </td>  
+                    <td><i>Pembersihan casing PC</i> </td>
+                    <td align="left">
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxA" value="optionA" disabled>
+                          <label for="customCheckboxA" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2. </td>
+                    <td><i>Pembersihan motherboard</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxB" value="optionB" disabled>
+                          <label for="customCheckboxB" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3. </td>
+                    <td><i>Pembersihan keyboard</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxC" value="optionC" disabled>
+                          <label for="customCheckboxC" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4. </td>
+                    <td><i>Pembersihan RAM (Random Access Memory)</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxD" value="optionD" disabled>
+                          <label for="customCheckboxD" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5. </td>
+                    <td><i>Pembersihan power supply</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxE" value="optionE" disabled>
+                          <label for="customCheckboxE" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6. </td>
+                    <td><i>Pembersihan monitor</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxF" value="optionF" disabled>
+                          <label for="customCheckboxF" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>7. </td>
+                    <td><i>Pengecekan kondisi keyboard</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxG" value="optionG" disabled>
+                          <label for="customCheckboxG" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>8. </td>
+                    <td><i>Pengecekan network adapter</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxH" value="optionH" disabled>
+                          <label for="customCheckboxH" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>9. </td>
+                    <td><i>Pengecekan network adapter</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxI" value="optionI" disabled>
+                          <label for="customCheckboxI" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>10. </td>
+                    <td><i>Pengecekan kondisi mouse</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxJ" value="optionJ" disabled>
+                          <label for="customCheckboxJ" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>11. </td>
+                    <td><i>Pembersihan CD-ROM</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxK" value="optionK" disabled>
+                          <label for="customCheckboxK" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>12. </td>
+                    <td><i>Pembersihan fan processor</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxL" value="optionL" disabled>
+                          <label for="customCheckboxL" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>13. </td>
+                    <td><i>Pengecekan baterai CMOS</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxM" value="optionM" disabled>
+                          <label for="customCheckboxM" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>14. </td>
+                    <td><i>Pembersihan heatsink</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxN" value="optionN" disabled>
+                          <label for="customCheckboxN" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>15. </td>
+                    <td><i>Pembersihan mouse</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxO" value="optionO" disabled>
+                          <label for="customCheckboxO" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+                <div class="form-group">
+                        <label>Keterangan</label>
+                        <textarea class="form-control" rows="3" disabled></textarea>
+                </div>
+              </div>
+            </div>
+            <!--END MODAL PREVENTIVE-->
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default center-block" data-dismiss="modal">Kembali</button>
@@ -513,7 +709,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </div>
         </div>
   </div>
-
   <!--MODAL PEMBERITAHUAN-->
 <div class="modal fade" id="modal-notifikasi">
         <div class="modal-dialog modal-lg">
