@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SIMANIS | Dashboard User</title>
+  <title>SIMANIS | Dashboard Dept. Head</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -23,14 +23,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <div class="wrapper">
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-light navbar-light">
+  <nav class="main-header navbar navbar-expand navbar-info navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="<?= base_url('Home/dashboarduser')?>" class="nav-link">Home</a>
+        <a href="<?= base_url('Home/HeadPage')?>" class="nav-link">Home</a>
       </li>
     </ul>
 
@@ -64,7 +64,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
        <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Accounting - Riki</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Dept. Head - Emma</span>
                   <img class="img-profile rounded-circle" width="20" height="20"
                      src="<?= base_url('assets_adminlte/dist/img/user2-160x160.jpg')?> ">
             </a>
@@ -85,7 +85,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-light-light elevation-4">
+  <aside class="main-sidebar sidebar-light-info elevation-4">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
       <img src="<?= base_url('assets_adminlte/dist/img/olymplast.jpg')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -100,7 +100,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <img src="<?= base_url('assets_adminlte/dist/img/user2-160x160.jpg')?>" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Accounting - Riki</a>
+          <a href="#" class="d-block">Dept. Head - Emma</a>
         </div>
       </div>
       <!-- SidebarSearch Form -->
@@ -108,21 +108,35 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            <a href="<?= base_url('Home/dashboarduser')?>" class="nav-link active">
+            <a href="<?= base_url('Home/HeadPage')?>" class="nav-link active">
               <i class="nav-icon fas fa-home"></i>
               <p>Dashboard</p>
               <i class=""></i>
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('Home/userJobOrder')?>" class="nav-link">
-              <i class="nav-icon fas fa-clipboard-check"></i>
+            <a href="<?= base_url('Home/HeadOrder')?>" class="nav-link">
+              <i class="nav-icon fas fa-chart-line"></i>
               <p>Job Order</p>
               <i class=" "></i>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?= base_url('Home/HeadOrder')?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Acc Job Order</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url('Home/HeadOrder')?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Acc Job Order</p>
+                </a>
+              </li>    
+            </ul>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('Home/userPreventive')?>" class="nav-link">
+            <a href="<?= base_url('Home/HeadPreventive')?>" class="nav-link">
               <i class="nav-icon fas fa-calendar-alt"></i>
               <p>Preventive / Maintenance</p>
               <i class=" "></i>
@@ -154,32 +168,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <!-- Info boxes -->
         <div class="row">
-          <div class="col-12 col-sm-6 col-md-6">
-            <div class="info-box">
-              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-calendar-alt"></i></span>
-              <div class="info-box-content">
-                <span class="info-box-text">PREVENTIVE / MAINTENANCE</span>
-                <span class="info-box-number">
-                  -
-                </span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
-          <div class="col-12 col-sm-6 col-md-6">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-clipboard-check"></i></span>
-              <div class="info-box-content">
-                <span class="info-box-text">JOB ORDER</span>
-                <span class="info-box-number">-</span>              
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->        
 
           <!-- About Me Box -->
           <div class="card card-light col-6">

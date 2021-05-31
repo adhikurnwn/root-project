@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SIMANIS | Dashboard User</title>
+  <title>SIMANIS | Dashboard Dept. Head</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -32,14 +32,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <div class="wrapper">
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-light navbar-light">
+  <nav class="main-header navbar navbar-expand navbar-info navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="<?= base_url('Home/dashboarduser')?>" class="nav-link">Home</a>
+        <a href="<?= base_url('Home/HeadPage')?>" class="nav-link">Home</a>
       </li>
     </ul>
 
@@ -91,7 +91,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-light-light elevation-4">
+  <aside class="main-sidebar sidebar-light-info elevation-4">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
       <img src="<?= base_url('assets_adminlte/dist/img/olymplast.jpg')?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -114,21 +114,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            <a href="<?= base_url('Home/dashboarduser')?>" class="nav-link">
+            <a href="<?= base_url('Home/HeadPage')?>" class="nav-link">
               <i class="nav-icon fas fa-home"></i>
               <p>Dashboard</p>
               <i class=""></i>
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('Home/userJobOrder')?>" class="nav-link active">
+            <a href="<?= base_url('Home/HeadOrder')?>" class="nav-link active">
               <i class="nav-icon fas fa-clipboard-check"></i>
               <p>Job Order</p>
               <i class=" "></i>
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('Home/userPreventive')?>" class="nav-link">
+            <a href="<?= base_url('Home/HeadPreventive')?>" class="nav-link">
               <i class="nav-icon fas fa-calendar-alt"></i>
               <p>Preventive / Maintenance</p>
               <i class=" "></i>

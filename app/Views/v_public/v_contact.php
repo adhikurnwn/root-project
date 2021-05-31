@@ -78,6 +78,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </div>
     <!-- /.content-header -->
     <!-- Main content -->
+    <div class="content">
+      <div class="container">
         <div class="card-body pb-0">
           <div class="row">
             <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
@@ -88,7 +90,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="card-body pt-0">
                   <div class="row">
                     <div class="col-7">
-                      <h2 class="lead"><b> ? </b></h2>
+                      <h2 class="lead"><b><i> ? </i></b></h2>
                       <p class="text-muted text-sm"><b>About: </b> ? </p>
                       <ul class="ml-4 mb-0 fa-ul text-muted">
                         <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Address: Surabaya 60177, Jawa Timur, Indonesia</li>
@@ -110,7 +112,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="card-body pt-0">
                   <div class="row">
                     <div class="col-7">
-                      <h2 class="lead"><b>Adhi Kurniawan</b></h2>
+                      <h2 class="lead"><b><i>Adhi Kurniawan</i></b></h2>
                       <p class="text-muted text-sm"><b>About: </b> Web Designer / Front and Backend Developer / Coffee Lover </p>
                       <ul class="ml-4 mb-0 fa-ul text-muted">
                         <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Address: Lamongan 62292, Jawa Timur, Indonesia</li>
@@ -132,7 +134,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="card-body pt-0">
                   <div class="row">
                     <div class="col-7">
-                      <h2 class="lead"><b>Muhammad Irman</b></h2>
+                      <h2 class="lead"><b><i>Muhammad Irman</i></b></h2>
                       <p class="text-muted text-sm"><b>About: </b> Network / Problem and Solving Computer / Cat Lover </p>
                       <ul class="ml-4 mb-0 fa-ul text-muted">
                         <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Address: Lamongan 62292, Jawa Timur, Indonesia</li>
@@ -148,7 +150,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
         </div>
       </div>
+    </div>
   </div>
+ </div>
   <!-- /.content-wrapper -->
   
   <!-- Control Sidebar -->
