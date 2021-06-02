@@ -112,43 +112,61 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- SidebarSearch Form -->
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-item">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <li class="nav-item">
             <a href="<?= base_url('Home/HeadPage')?>" class="nav-link">
               <i class="nav-icon fas fa-home"></i>
               <p>Dashboard</p>
               <i class=""></i>
             </a>
-          </li>
-          <li class="nav-item menu-open">
+        </li>
+        <li class="nav-item menu-open">
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-chart-line"></i>
-              <p>Job Order</p>
-              <i class="fas fa-angle-left right"></i>
+              <p>
+                Job Order
+                <i class="right fas fa-angle-left"></i>
+              </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= base_url('Home/HeadOrder')?>" class="nav-link">
+                <a href="<?= base_url('Home/HeadOrder')?>" class="nav-link active">
                 &emsp;<i class="fas fa-file-medical"></i>
                   <p>Tambah Job Order</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('Home/HeadOrderAcc')?>" class="nav-link active">
+                <a href="<?= base_url('Home/HeadOrderAcc')?>" class="nav-link">
                 &emsp;<i class="fas fa-file-signature"></i>
                   <p>Approval Job Order</p>
                 </a>
-              </li>    
+              </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Preventive
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/charts/chartjs.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Preventive</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/charts/flot.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Approval Preventive</p>
+                </a>
+              </li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a href="<?= base_url('Home/HeadPreventive')?>" class="nav-link">
-              <i class="nav-icon fas fa-calendar-alt"></i>
-              <p>Preventive / Maintenance</p>
-              <i class=" "></i>
-            </a>
-          </li>
-        </ul>
+      </ul>
       </nav>
       <!-- /.sidebar-menu -->
     </div>

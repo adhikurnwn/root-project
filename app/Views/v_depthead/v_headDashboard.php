@@ -103,46 +103,63 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <a href="#" class="d-block">Dept. Head - Emma</a>
         </div>
       </div>
-      <!-- SidebarSearch Form -->
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-item">
-            <a href="<?= base_url('Home/HeadPage')?>" class="nav-link active">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <li class="nav-item">
+            <a href="<?= base_url('Home/HeadPage')?>" class="nav-link">
               <i class="nav-icon fas fa-home"></i>
               <p>Dashboard</p>
               <i class=""></i>
             </a>
-          </li>
-          <li class="nav-item">
-            <a href="<?= base_url('Home/HeadOrder')?>" class="nav-link">
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-line"></i>
-              <p>Job Order</p>
-              <i class=" "></i>
+              <p>
+                Job Order
+                <i class="right fas fa-angle-left"></i>
+              </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="<?= base_url('Home/HeadOrder')?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Acc Job Order</p>
+                &emsp;<i class="fas fa-file-medical"></i>
+                  <p>Tambah Job Order</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('Home/HeadOrder')?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Acc Job Order</p>
+                <a href="<?= base_url('Home/HeadOrderAcc')?>" class="nav-link">
+                &emsp;<i class="fas fa-file-signature"></i>
+                  <p>Approval Job Order</p>
                 </a>
-              </li>    
+              </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Preventive
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/charts/chartjs.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Preventive</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/charts/flot.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Approval Preventive</p>
+                </a>
+              </li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a href="<?= base_url('Home/HeadPreventive')?>" class="nav-link">
-              <i class="nav-icon fas fa-calendar-alt"></i>
-              <p>Preventive / Maintenance</p>
-              <i class=" "></i>
-            </a>
-          </li>
-        </ul>
+      </ul>
       </nav>
       <!-- /.sidebar-menu -->
     </div>
@@ -154,14 +171,34 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <!--<h1 class="m-0">Halaman Utama</h1>-->
+        <div class="row">
+          <div class="col-lg-6 col-6">
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>150</h3>
+                <p>JOB ORDERS</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+              </div>
+              <a href="#" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
           </div><!-- /.col -->
-         
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
+          <div class="col-lg-6 col-6">
+            <div class="small-box bg-warning">
+              <div class="inner">
+                <h3>70</h3>
+                <p>PREVENTIVE / MAINTENANCE</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+              </div>
+              <a href="#" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div><!-- /.col -->
+      </div><!-- /.row -->
+     </div><!-- /.container-fluid -->
+   </div>
     <!-- /.content-header -->
     <!-- Main content -->
     <section class="content">
@@ -169,10 +206,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Info boxes -->
         <div class="row">
 
-          <!-- About Me Box -->
-          <div class="card card-light col-6">
+          <!-- About Me Box -->                
+            <div class="card bg-light col-12">
               <div class="card-header">
                 <h3 class="card-title">INFORMASI INVENTARIS COMPUTER</h3>
+                <div class="card-tools">
+                  <button type="button" class="btn btn-primary btn-sm" data-card-widget="collapse" title="Collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                </div>
               </div>
               <div class="card-body">
                 <strong><i class="fas fa-desktop"></i> PERSONAL COMPUTER</strong>
@@ -215,9 +257,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </div>
               <!-- /.card-body -->
             </div>
-            <div class="card card-light col-6">
+            <div class="card bg-light col-12">
               <div class="card-header">
                 <h3 class="card-title">PT. CAHAYA BINTANG PLASTINDO (CBP)</h3>
+                <div class="card-tools">
+                  <button type="button" class="btn btn-primary btn-sm" data-card-widget="collapse" title="Collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                </div>
               </div>
               <div class="card-body">
                 <strong><i class="fas fa-laptop"></i> LAPTOP / NOTEBOOK</strong>

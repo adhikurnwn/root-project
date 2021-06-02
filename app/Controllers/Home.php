@@ -53,10 +53,22 @@ class Home extends BaseController
 	public function HeadOrder()
 	{
 		$session = session();
+        return view('v_depthead/v_headJobOrder', ['session' => $session]);
+	}
+
+	public function HeadOrderAcc()
+	{
+		$session = session();
         return view('v_depthead/v_headAccOrder', ['session' => $session]);
 	}
 
 	public function HeadPreventive()
+	{
+		$session = session();
+        return view('v_depthead/v_headPreventive', ['session' => $session]);
+	}
+
+	public function HeadPreventiveAcc()
 	{
 		$session = session();
         return view('v_depthead/v_headAccPreventive', ['session' => $session]);
