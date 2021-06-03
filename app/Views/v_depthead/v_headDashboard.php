@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SIMANIS | Dashboard Dept. Head</title>
+  <title>SIMANIS | Dept. Head</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -107,7 +107,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <li class="nav-item">
-            <a href="<?= base_url('Home/HeadPage')?>" class="nav-link">
+            <a href="<?= base_url('Home/HeadPage')?>" class="nav-link active">
               <i class="nav-icon fas fa-home"></i>
               <p>Dashboard</p>
               <i class=""></i>
@@ -137,27 +137,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </ul>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
+            <a href="<?= base_url('Home/HeadPreventiveAcc')?>" class="nav-link">
+              <i class="nav-icon fas fa-check-circle"></i>
               <p>
                 Preventive
-                <i class="right fas fa-angle-left"></i>
+                <i class=""></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Tambah Preventive</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Approval Preventive</p>
-                </a>
-              </li>
-            </ul>
           </li>
       </ul>
       </nav>
@@ -181,7 +167,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="icon">
                 <i class="ion ion-bag"></i>
               </div>
-              <a href="#" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?= base_url('Home/HeadOrder')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div><!-- /.col -->
           <div class="col-lg-6 col-6">
@@ -193,7 +179,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="icon">
                 <i class="ion ion-bag"></i>
               </div>
-              <a href="#" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?= base_url('Home/HeadPreventiveAcc')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div><!-- /.col -->
       </div><!-- /.row -->

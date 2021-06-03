@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SIMANIS | Dashboard Dept. Head</title>
+  <title>SIMANIS | Dept. Head</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -142,10 +142,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </ul>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('Home/HeadPreventive')?>" class="nav-link">
-              <i class="nav-icon fas fa-calendar-alt"></i>
-              <p>Preventive / Maintenance</p>
-              <i class=" "></i>
+            <a href="<?= base_url('Home/HeadPreventiveAcc')?>" class="nav-link">
+              <i class="nav-icon fas fa-check-circle"></i>
+              <p>
+                Preventive
+                <i class=" "></i>
+              </p>
             </a>
           </li>
         </ul>
@@ -169,9 +171,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="card">
               <!-- /.card-header -->
               <div class="card-body">
-              <h4><i class="fas fa-history"></i>&nbsp; History Job Order<span>
-                  <a class="btn btn-success btn-sm" style="float:right" href="#" data-toggle="modal" data-target="#TambahJobRequest">
-                  <i class="fas fa-plus-square"></i>&nbsp; JOB REQUEST</a></span>
+              <h4><i class="fas fa-signature"></i>&nbsp; Approval Job Order<span>
               </h4>
               <hr>
                 <table id="tabel1" class="table table-bordered table-striped" cellspacing="0" width="150%">
@@ -194,10 +194,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td> </td>
                     <td class="text-left py-1 align-middle">
                       <div class="btn-group btn-group-sm">
-                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#detailData"><i class="fas fa-eye"></i></a>
-                        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#editData"><i class="fas fa-edit"></i></a>
-                        <a href="<?= base_url('Home/JobOrderPrint')?>" class="btn btn-warning" target="_blank"><i class="fas fa-print"></i></a>
-                         <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#approve"><i class="fas fa-share"></i></a>
+                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#detailData"><i class="fas fa-eye"></i> Detail</a>
+                        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#editData"><i class="fas fa-edit"></i> Revisi</a>
+                         <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#approve"><i class="fas fa-check"></i> Approve</a>
                       </div>
                     </td>
                   </tr>
@@ -409,12 +408,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- /.modal-dialog -->
   </div>
 
-  <!--MODAL EDIT DATA-->
+  <!--MODAL REVISI DATA-->
  <div class="modal fade" id="editData">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <h6 class="modal-title"><i>Edit Job Request / Order</i></h6>
+              <h6 class="modal-title"><i>Revisi Job Request / Order</i></h6>
             </div>
             <div class="modal-body">
               <!--Form JOB REQUEST-->

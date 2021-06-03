@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SIMANIS | Dashboard User</title>
+  <title>SIMANIS | User</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -180,10 +180,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td> </td>
                     <td class="text-left py-1 align-middle">
                       <div class="btn-group btn-group-sm">
-                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#detailData"><i class="fas fa-eye"></i></a>
-                        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#editData"><i class="fas fa-edit"></i></a>
-                        <a href="<?= base_url('Home/JobOrderPrint')?>" class="btn btn-warning" target="_blank"><i class="fas fa-print"></i></a>
-                         <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#approve"><i class="fas fa-share"></i></a>
+                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#detailData"><i class="fas fa-eye"> Detail</i></a>
+                        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#editData"><i class="fas fa-edit"> Edit</i></a>
+                        <a href="<?= base_url('Home/JobOrderPrint')?>" class="btn btn-warning" target="_blank"><i class="fas fa-print"> Cetak</i></a>
+                         <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#approve"><i class="fas fa-share"></i> Send Approval</a>
                       </div>
                     </td>
                   </tr>

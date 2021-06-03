@@ -62,17 +62,18 @@ class Home extends BaseController
         return view('v_depthead/v_headAccOrder', ['session' => $session]);
 	}
 
-	public function HeadPreventive()
-	{
-		$session = session();
-        return view('v_depthead/v_headPreventive', ['session' => $session]);
-	}
-
 	public function HeadPreventiveAcc()
 	{
 		$session = session();
         return view('v_depthead/v_headAccPreventive', ['session' => $session]);
 	}
+
+//FUNCTION VIEWS ADMINISTRATOR ----------------------------------------------------
+public function HeadPageAdmin()
+{
+	$session = session();
+	return view('v_admin/v_AdminDashboard', ['session' => $session]);
+}
 
 
 

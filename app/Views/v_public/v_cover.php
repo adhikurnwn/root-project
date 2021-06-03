@@ -81,7 +81,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="content">
       <div class="container">
       <div class="callout callout-danger">
-        <h5><i class="fas fa-info"></i> Catatan:</h5>
+        <h5><i class="fas fa-info"></i><mark><a href="<?= base_url('Home/HeadPageAdmin')?>"> Catatan:</a></mark></h5>
         Silahkan mendaftarkan diri di <mark><a href="<?= base_url('Home/dashboarduser')?>">Menu Register / Daftar</a></mark> untuk dapat menggunakan <mark><a href="<?= base_url('Home/HeadPage')?>">fitur-fitur dibawah ini.</a></mark>
       </div>
 
