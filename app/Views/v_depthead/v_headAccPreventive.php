@@ -209,20 +209,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
   </div>
 </section>
-    
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <!--<h1 class="m-0">Halaman Utama</h1>-->
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-</div>
 
 <!--MODAL APPROVE PREVENTIVE-->
 <div class="modal fade" id="approve" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

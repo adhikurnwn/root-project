@@ -75,7 +75,47 @@ public function HeadPageAdmin()
 	return view('v_admin/v_AdminDashboard', ['session' => $session]);
 }
 
+public function AdminRole()
+{
+	$session = session();
+	return view('v_admin/v_AdminRole', ['session' => $session]);
+}
 
+public function AdminStatus()
+{
+	$session = session();
+	return view('v_admin/v_AdminStatus', ['session' => $session]);
+}
+
+public function AdminDepartment()
+{
+	$session = session();
+	return view('v_admin/v_AdminDepartment', ['session' => $session]);
+}
+
+public function AdminHakAkses()
+{
+	$session = session();
+	return view('v_admin/v_AdminHakAkses', ['session' => $session]);
+}
+
+public function AdminBussinesUnit()
+{
+	$session = session();
+	return view('v_admin/v_AdminBussinesUnit', ['session' => $session]);
+}
+
+public function AdminDepo()
+{
+	$session = session();
+	return view('v_admin/v_AdminDepo', ['session' => $session]);
+}
+
+public function AdminSupplier()
+{
+	$session = session();
+	return view('v_admin/v_AdminSupplier', ['session' => $session]);
+}
 
 //FUNCTION VIEWS REGISTER AND LOGIN
 	public function register()

@@ -51,7 +51,7 @@
         </div>
 
         <div class="form-floating mb-3">
-            <input type="password" autocomplet="off" class="form-control" id="floatingPassword" placeholder="@$%jhon_due2509">
+            <input type="password" autocomplete="off" class="form-control" id="floatingPassword" placeholder="@$%jhon_due2509">
             <label for="floatingInput">Password</label>
         </div>
           <button class="w-100 btn btn-lg btn-primary" type="submit">Masuk</button>

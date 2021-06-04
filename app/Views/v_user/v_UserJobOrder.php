@@ -198,20 +198,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
   </div>
 </section>
-    
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <!--<h1 class="m-0">Halaman Utama</h1>-->
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-</div>
 
 <!--MODAL APPROVE JOB ORDER-->
 <div class="modal fade" id="approve" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -289,14 +275,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </select>
                 </div>
                 <div class="form-group">
-                        <label>Keterangan</label>
-                        <textarea class="form-control" rows="3" disabled></textarea>
+                   <label>Keterangan</label>
+                   <textarea class="form-control" rows="3" disabled></textarea>
                 </div>
                 <div class="form-group">
                   <label for="exampleSelectRounded0">Status Job Request</label>
                   <select class="custom-select rounded-0" id="exampleSelectRounded0" disabled>
-                    <option> </option>
-                    <option> </option>
                     <option> </option>
                   </select>
                 </div>
@@ -450,8 +434,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </select>
                 </div>
                 <div class="form-group">
-                        <label>Keterangan</label>
-                        <textarea class="form-control" rows="3" disabled></textarea>
+                    <label>Keterangan</label>
+                      <textarea class="form-control" rows="3" disabled></textarea>
                 </div>
                 <div class="form-group">
                   <label for="exampleSelectRounded0">Status Job Request</label>

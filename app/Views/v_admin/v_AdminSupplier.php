@@ -11,19 +11,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-   <!-- Font Awesome -->
+  <!-- Font Awesome -->
    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+   <!-- daterange picker -->
+   <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/daterangepicker/daterangepicker.css')?>">
+   <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')?>">
    <!-- overlayScrollbars -->
   <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')?>">
   <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/fontawesome-free/css/all.min.css')?>">
+   <!-- DataTables -->
+  <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')?>">
+  <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')?>">
+  <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/datatables-buttons/css/buttons.bootstrap4.min.css')?>">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= base_url('assets_adminlte/dist/css/adminlte.min.css')?>">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css')?>">
-   <!-- summernote -->
-   <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/summernote/summernote-bs4.min.css')?>">
 
 
   <link href="<?= base_url('assets_adminlte/dist/img/olymplast.jpg')?>" rel="shortcut icon">
@@ -116,7 +120,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <li class="nav-item">
-            <a href="<?= base_url('Home/HeadPage')?>" class="nav-link active">
+            <a href="<?= base_url('Home/HeadPageAdmin')?>" class="nav-link">
               <i class="nav-icon fas fa-home"></i>
               <p>Dashboard</p>
               <i class=""></i>
@@ -171,8 +175,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               
             </ul>
           </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link">
+        <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-warehouse"></i>
               <p>
                 Inventory
@@ -180,8 +184,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
+              <li class="nav-item menu-open">
+                <a href="#" class="nav-link active">
                 &emsp;<i class="fas fa-database"></i>
                   <p>
                     Master
@@ -202,7 +206,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url('Home/AdminSupplier')?>" class="nav-link">
+                    <a href="<?= base_url('Home/AdminSupplier')?>" class="nav-link active">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
                       <p>Supplier</p>
                     </a>
@@ -342,140 +346,175 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
+  <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0"><i class="fas fa-shipping-fast"></i> Setup Supplier</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Inventory</a></li>
+              <li class="breadcrumb-item"><a href="#">Master</a></li>
+              <li class="breadcrumb-item active">Supplier</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+  </div>
+
+  <section class="content">
       <div class="container-fluid">
         <div class="row">
-        <div class="col-lg-3 col-6">
-            <div class="small-box bg-primary">
-              <div class="inner">
-                <h3>65</h3>
-                <p>USER ACTIVE</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-bag"></i>
-              </div>
-              <a href="<?= base_url('Home/HeadOrder')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div><!-- /.col -->
-          <div class="col-lg-3 col-6">
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>2</h3>
-                <p>USER INACTIVE</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-bag"></i>
-              </div>
-              <a href="<?= base_url('Home/HeadOrder')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div><!-- /.col -->
-          <div class="col-lg-3 col-6">
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>150</h3>
-                <p>STOK ACTIVE</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-bag"></i>
-              </div>
-              <a href="<?= base_url('Home/HeadOrder')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div><!-- /.col -->
-          <div class="col-lg-3 col-6">
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3>34</h3>
-                <p>STOK INACTIVE</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-bag"></i>
-              </div>
-              <a href="<?= base_url('Home/HeadOrder')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div><!-- /.col -->
-          <div class="col-lg-6 col-6">
-            <div class="small-box bg-info">
-              <div class="inner">
-                <h3>121</h3>
-                <p>JOB ORDERS REQUEST</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-bag"></i>
-              </div>
-              <a href="<?= base_url('Home/HeadOrder')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div><!-- /.col -->
-          <div class="col-lg-6 col-6">
-            <div class="small-box bg-secondary">
-              <div class="inner">
-                <h3>70</h3>
-                <p>PREVENTIVE / MAINTENANCE</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-bag"></i>
-              </div>
-              <a href="<?= base_url('Home/HeadPreventiveAcc')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div><!-- /.col -->
-      </div><!-- /.row -->
-     </div><!-- /.container-fluid -->
-   </div>
-    <!-- /.content-header -->
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-        <!-- Info boxes -->
-          <div class="card col-12">
-              <div class="card-header">
-                <h3 class="card-title">
-                  <i class="ion ion-clipboard mr-1"></i>
-                  To Do List
-                </h3>
-                <div class="card-tools">
-                  <ul class="pagination pagination-sm">
-                    <li class="page-item"><a href="#" class="page-link">&laquo;</a></li>
-                    <li class="page-item"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
-                  </ul>
-                </div>
-              </div>
-              <!-- /.card-header -->
+            <div class="col-12">
+            <div class="card">
               <div class="card-body">
-                <ul class="todo-list" data-widget="todo-list">
-                  <li>
-                    <!-- drag handle -->
-                    <span class="handle">
-                      <i class="fas fa-ellipsis-v"></i>
-                      <i class="fas fa-ellipsis-v"></i>
-                    </span>
-                    <!-- checkbox -->
-                    <div  class="icheck-primary d-inline ml-2">
-                      <input type="checkbox" value="" name="todo1" id="todoCheck1">
-                      <label for="todoCheck1"></label>
-                    </div>
-                    <!-- todo text -->
-                    <span class="text">Belajar GOES di ruang Meeting pukul 13.00</span>
-                    <!-- General tools such as edit or delete-->
-                    <div class="tools">
-                      <i class="fas fa-edit"></i>
-                      <i class="fas fa-trash-o"></i>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+                <a href="#" class="btn btn-success" data-toggle="modal" data-target="#TambahSup"><i class="fas fa-plus"></i> Tambah Supplier</a>
+              <hr>
+                <table id="TabelSup" class="table table-bordered table-striped" cellspacing="0" width="150%">
+                  <thead>
+                  <tr>
+                    <th>Created</th>  
+                    <th>Kode</th>
+                    <th>Bussines Unit</th>
+                    <th>Lokasi</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                  </thead>
+                  <tbody>   
+                  <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td class="text-left py-1 align-middle">
+                      <div class="btn-group btn-group-sm">
+                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#EditSup"><i class="fas fa-edit"></i> Edit</a>
+                        <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#HapusSup"><i class="fas fa-trash"></i> Hapus</a>
+                      </div>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+               </div>
               <!-- /.card-body -->
-              <div class="card-footer clearfix">
-                <button type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Add Notes</button>
               </div>
-         </div>
-      </div>
-  </div>
+            <!-- /.card -->
+           </div>
+          </div> 
+        </div>
+  </section>
+</div>
   <!-- /.content -->
   <!-- /.content-wrapper -->
+
 <!--CONTENT MODAL-->
+<!--MODAL TAMBAH DATA SUPPLIER-->
+<div class="modal fade" id="TambahSup">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title"><i>Silahkan Lengkapi Data Dibawah ini!</i></h6>
+            </div>
+            <div class="modal-body">
+              <!--Form JOB REQUEST-->
+            <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                  <label>Created</label>
+                    <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                        <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker1"/>
+                        <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="form-group">
+                  <label for="exampleInputRounded0">Kode</label>
+                  <input type="text" class="form-control rounded-0" id="exampleInputRounded0" required>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="exampleInputRounded0">Bussines Unit</label>
+                  <input type="text" class="form-control rounded-0" id="exampleInputRounded0" required>
+                </div>
+              </div>
+              <div class="col-12">
+              <div class="form-group">
+                    <label>Alamat</label>
+                      <textarea class="form-control" rows="3"></textarea>
+              </div>
+              </div>
+            </div>
+            <!--END JOB REQUEST-->
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
+              <button type="button" class="btn btn-dark"><i class="fas fa-save"></i>&nbsp; Simpan</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+  </div>
+
+<!--MODAL EDIT DATA SUPPLIER-->
+<div class="modal fade" id="EditSup">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title"><i>Silahkan Lengkapi Data Dibawah ini!</i></h6>
+            </div>
+            <div class="modal-body">
+              <!--Form JOB REQUEST-->
+            <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                  <label>Created</label>
+                    <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
+                        <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker2"/>
+                        <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="form-group">
+                  <label for="exampleInputRounded0">Kode</label>
+                  <input type="text" class="form-control rounded-0" id="exampleInputRounded0" required>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="exampleInputRounded0">Bussines Unit</label>
+                  <input type="text" class="form-control rounded-0" id="exampleInputRounded0" required>
+                </div>
+              </div>
+              <div class="col-12">
+              <div class="form-group">
+                    <label>Alamat</label>
+                      <textarea class="form-control" rows="3"></textarea>
+              </div>
+              </div>
+            </div>
+            <!--END JOB REQUEST-->
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
+              <button type="button" class="btn btn-dark"><i class="fas fa-save"></i>&nbsp; Simpan Perubahan</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+  </div>
+
 <!--MODAL UBAH PASSWORD-->
   <div class="modal fade" id="modal-ubahpass">
         <div class="modal-dialog">
@@ -549,6 +588,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
   </div>
 
+<!--MODAL Hapus Data-->
+<div class="modal fade" id="HapusSup">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title">Alert!</h6>
+            </div>
+            <div class="modal-body">
+              <p><strong><i>Apakah anda yakin akan menghapus data ini?</i></strong></p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
+              <button type="button" class="btn btn-danger">Ya</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+  </div>
+      <!-- /.modal -->
 
 <!--MODAL LOG OUT-->
   <div class="modal fade" id="modal-logout">
@@ -598,20 +657,59 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="<?= base_url('assets_adminlte/plugins/jquery/jquery.min.js')?>"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="<?= base_url('assets_adminlte/plugins/jquery-ui/jquery-ui.min.js')?>"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
 <!-- Bootstrap 4 -->
 <script src="<?= base_url('assets_adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
-<!-- Summernote -->
-<script src="<?= base_url('assets_adminlte/plugins/summernote/summernote-bs4.min.js')?>"></script>
+<!-- InputMask -->
+<script src="<?= base_url('assets_adminlte/plugins/moment/moment.min.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/inputmask/jquery.inputmask.min.js')?>"></script>
+<!-- date-range-picker -->
+<script src="<?= base_url('assets_adminlte/plugins/daterangepicker/daterangepicker.js')?>"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="<?= base_url('assets_adminlte/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')?>"></script>
+<!-- DataTables  & Plugins -->
+<script src="<?= base_url('assets_adminlte/plugins/datatables/jquery.dataTables.min.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/datatables-responsive/js/dataTables.responsive.min.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/datatables-buttons/js/dataTables.buttons.min.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/datatables-buttons/js/buttons.bootstrap4.min.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/jszip/jszip.min.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/pdfmake/pdfmake.min.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/pdfmake/vfs_fonts.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/datatables-buttons/js/buttons.html5.min.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/datatables-buttons/js/buttons.print.min.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/plugins/datatables-buttons/js/buttons.colVis.min.js')?>"></script>
 <!-- AdminLTE App -->
 <script src="<?= base_url('assets_adminlte/dist/js/adminlte.min.js')?>"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?= base_url('assets_adminlte/dist/js/demo.js')?>"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="<?= base_url('assets_adminlte/dist/js/pages/dashboard.js')?>"></script>
+<script>
+  $(function () {
+    $("#TabelSup").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#TabelSup_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
+<script type="text/javascript">
+  $(function () {
+    $('#datetimepicker1').datetimepicker();
+  });
+
+  $(function () {
+    $('#datetimepicker2').datetimepicker();
+  });
+
+</script>
 
 </body>
 </html>
