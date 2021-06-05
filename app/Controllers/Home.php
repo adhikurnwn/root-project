@@ -117,6 +117,18 @@ public function AdminSupplier()
 	return view('v_admin/v_AdminSupplier', ['session' => $session]);
 }
 
+public function AdminSatuan()
+{
+	$session = session();
+	return view('v_admin/v_AdminSatuan', ['session' => $session]);
+}
+
+public function AdminKodeBarang()
+{
+	$session = session();
+	return view('v_admin/v_AdminKodeBarang', ['session' => $session]);
+}
+
 //FUNCTION VIEWS REGISTER AND LOGIN
 	public function register()
 	{

@@ -17,6 +17,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
    <!-- daterange picker -->
    <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/daterangepicker/daterangepicker.css')?>">
+   <!-- Select2 -->
+  <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/select2/css/select2.min.css')?>">
+  <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css')?>">
    <!-- Tempusdominus Bootstrap 4 -->
   <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')?>">
    <!-- overlayScrollbars -->
@@ -212,13 +215,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?= base_url('Home/AdminSatuan')?>" class="nav-link">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
                       <p>Satuan</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?= base_url('Home/AdminKodeBarang')?>" class="nav-link">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
                       <p>Kode Barang</p>
                     </a>
@@ -350,7 +353,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0"><i class="fas fa-shipping-fast"></i> Setup Supplier</h1>
+            <h1 class="m-0"><i class="fas fa-shipping-fast"></i> Set-up Supplier</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -376,14 +379,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <tr>
                     <th>Created</th>  
                     <th>Kode</th>
-                    <th>Bussines Unit</th>
-                    <th>Lokasi</th>
-                    <th>Status</th>
+                    <th>Supplier</th>
+                    <th>Alamat</th>
+                    <th>Telepon</th>
+                    <th>Keterangan</th>
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>   
                   <tr>
+                    <td> </td>
                     <td> </td>
                     <td> </td>
                     <td> </td>
@@ -422,7 +427,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <!--Form JOB REQUEST-->
             <div class="row">
             <div class="col-4">
-                <div class="form-group">
+              <div class="form-group">
                   <label>Created</label>
                     <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
                         <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker1"/>
@@ -432,23 +437,40 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </div>
                 </div>
               </div>
-              <div class="col-2">
-                <div class="form-group">
-                  <label for="exampleInputRounded0">Kode</label>
-                  <input type="text" class="form-control rounded-0" id="exampleInputRounded0" required>
+              <div class="col-3">
+              <label>Kode</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-code"></i></span>
                 </div>
+                <input type="text" class="form-control rounded-0"  id="exampleInputRounded0">
               </div>
-              <div class="col-6">
-                <div class="form-group">
-                  <label for="exampleInputRounded0">Bussines Unit</label>
-                  <input type="text" class="form-control rounded-0" id="exampleInputRounded0" required>
+              </div>
+              <div class="col-5">
+              <label>No.Telp / Hp</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-phone"></i></span>
                 </div>
+                <input type="text" class="form-control rounded-0" data-inputmask='"mask": "(999) 999-999-9999"' data-mask id="exampleInputRounded0">
+              </div>
               </div>
               <div class="col-12">
-              <div class="form-group">
-                    <label>Alamat</label>
-                      <textarea class="form-control" rows="3"></textarea>
-              </div>
+                <label>Supplier / Pemasok</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-store-alt"></i></span>
+                  </div>
+                  <input type="text" class="form-control rounded-0" id="exampleInputRounded0" required>
+                </div>
+                <div class="form-group">
+                      <label>Alamat</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                      <label>Keterangan</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                </div>
               </div>
             </div>
             <!--END JOB REQUEST-->
@@ -474,33 +496,50 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <!--Form JOB REQUEST-->
             <div class="row">
             <div class="col-4">
-                <div class="form-group">
+              <div class="form-group">
                   <label>Created</label>
-                    <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
-                        <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker2"/>
-                        <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
+                    <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                        <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker1"/>
+                        <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
                             <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
                         </div>
                     </div>
                 </div>
               </div>
-              <div class="col-2">
-                <div class="form-group">
-                  <label for="exampleInputRounded0">Kode</label>
-                  <input type="text" class="form-control rounded-0" id="exampleInputRounded0" required>
+              <div class="col-3">
+              <label>Kode</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-code"></i></span>
                 </div>
+                <input type="text" class="form-control rounded-0"  id="exampleInputRounded0">
               </div>
-              <div class="col-6">
-                <div class="form-group">
-                  <label for="exampleInputRounded0">Bussines Unit</label>
-                  <input type="text" class="form-control rounded-0" id="exampleInputRounded0" required>
+              </div>
+              <div class="col-5">
+              <label>No.Telp / Hp</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-phone"></i></span>
                 </div>
+                <input type="text" class="form-control rounded-0" data-inputmask='"mask": "(999) 999-999-9999"' data-mask id="exampleInputRounded0">
+              </div>
               </div>
               <div class="col-12">
-              <div class="form-group">
-                    <label>Alamat</label>
-                      <textarea class="form-control" rows="3"></textarea>
-              </div>
+                <label>Supplier / Pemasok</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-store-alt"></i></span>
+                  </div>
+                  <input type="text" class="form-control rounded-0" id="exampleInputRounded0" required>
+                </div>
+                <div class="form-group">
+                      <label>Alamat</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                      <label>Keterangan</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                </div>
               </div>
             </div>
             <!--END JOB REQUEST-->
@@ -659,6 +698,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="<?= base_url('assets_adminlte/plugins/jquery-ui/jquery-ui.min.js')?>"></script>
 <!-- Bootstrap 4 -->
 <script src="<?= base_url('assets_adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
+<!-- Select2 -->
+<script src="<?= base_url('assets_adminlte/plugins/select2/js/select2.full.min.js')?>"></script>
 <!-- InputMask -->
 <script src="<?= base_url('assets_adminlte/plugins/moment/moment.min.js')?>"></script>
 <script src="<?= base_url('assets_adminlte/plugins/inputmask/jquery.inputmask.min.js')?>"></script>
@@ -708,6 +749,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   $(function () {
     $('#datetimepicker2').datetimepicker();
   });
+
+  $('[data-mask]').inputmask()
+
 
 </script>
 

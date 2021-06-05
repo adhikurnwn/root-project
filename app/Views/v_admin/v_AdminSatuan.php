@@ -17,6 +17,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
    <!-- daterange picker -->
    <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/daterangepicker/daterangepicker.css')?>">
+   <!-- Select2 -->
+  <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/select2/css/select2.min.css')?>">
+  <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css')?>">
    <!-- Tempusdominus Bootstrap 4 -->
   <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')?>">
    <!-- overlayScrollbars -->
@@ -126,8 +129,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <i class=""></i>
             </a>
         </li>
-        <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+        <li class="nav-item">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-cogs"></i>
               <p>
                 Pengaturan
@@ -135,8 +138,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item menu-open">
-                <a href="#" class="nav-link active">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
                 &emsp;<i class="fas fa-database"></i>
                   <p>
                     Master
@@ -157,7 +160,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url('Home/AdminDepartment')?>" class="nav-link active">
+                    <a href="<?= base_url('Home/AdminDepartment')?>" class="nav-link">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
                       <p>Department</p>
                     </a>
@@ -175,8 +178,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               
             </ul>
           </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link">
+        <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-warehouse"></i>
               <p>
                 Inventory
@@ -184,8 +187,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
+              <li class="nav-item menu-open">
+                <a href="#" class="nav-link active">
                 &emsp;<i class="fas fa-database"></i>
                   <p>
                     Master
@@ -212,7 +215,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url('Home/AdminSatuan')?>" class="nav-link">
+                    <a href="<?= base_url('Home/AdminSatuan')?>" class="nav-link active">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
                       <p>Satuan</p>
                     </a>
@@ -350,13 +353,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0"><i class="fas fa-building"></i> Set-up Department</h1>
+            <h1 class="m-0"><i class="fas fa-puzzle-piece"></i> Set-up Satuan</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Pengaturan</a></li>
+              <li class="breadcrumb-item"><a href="#">Inventory</a></li>
               <li class="breadcrumb-item"><a href="#">Master</a></li>
-              <li class="breadcrumb-item active">Department</li>
+              <li class="breadcrumb-item active">Satuan</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -369,14 +372,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="col-12">
             <div class="card">
               <div class="card-body">
-                <a href="#" class="btn btn-success" data-toggle="modal" data-target="#TambahDepartment"><i class="fas fa-plus"></i> Tambah Department</a>
+                <a href="#" class="btn btn-success" data-toggle="modal" data-target="#TambahSatuan"><i class="fas fa-plus"></i> Tambah Satuan</a>
               <hr>
-                <table id="TabelDepartment" class="table table-bordered table-striped" cellspacing="0" width="150%">
+                <table id="TabelSatuan" class="table table-bordered table-striped" cellspacing="0" width="150%">
                   <thead>
                   <tr>
+                    <th>Created</th>  
                     <th>Kode</th>
-                    <th>Created</th>
-                    <th>Department</th>
+                    <th>Satuan</th>
                     <th>Action</th>
                   </tr>
                   </thead>
@@ -387,8 +390,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td> </td>
                     <td class="text-left py-1 align-middle">
                       <div class="btn-group btn-group-sm">
-                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#EditDepartment"><i class="fas fa-edit"></i> Edit</a>
-                        <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#HapusDepartment"><i class="fas fa-trash"></i> Hapus</a>
+                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#EditSatuan"><i class="fas fa-edit"></i> Edit</a>
+                        <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#HapusSatuan"><i class="fas fa-trash"></i> Hapus</a>
                       </div>
                     </td>
                   </tr>
@@ -407,8 +410,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- /.content-wrapper -->
 
 <!--CONTENT MODAL-->
-<!--MODAL TAMBAH DATA DEPARTMENT-->
-<div class="modal fade" id="TambahDepartment">
+<!--MODAL TAMBAH DATA SATUAN-->
+<div class="modal fade" id="TambahSatuan">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
@@ -417,35 +420,35 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="modal-body">
               <!--Form JOB REQUEST-->
             <div class="row">
-                  <div class="col-4">
-                    <div class="form-group">
-                    <label>Created</label>
-                      <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
-                          <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker1"/>
-                          <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
-                              <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
-                          </div>
-                      </div>
+            <div class="col-4">
+              <div class="form-group">
+                  <label>Created</label>
+                    <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                        <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker1"/>
+                        <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-3">
-                    <div class="form-group">
-                      <label for="exampleSelectRounded0">Kode</label>
-                      <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
-                      <option selected disabled>Select a type code</option>  
-                      <option></option>
-                  </select>
-                    </div>
-                  </div>
-                  <div class="col-5">
-                    <div class="form-group">
-                      <label for="exampleSelectRounded0">Department</label>
-                      <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
-                      <option selected disabled>Select a type code department</option>
-                        <option> </option>
-                      </select>
-                    </div>
-                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+              <label>Kode</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-code"></i></span>
+                </div>
+                <input type="text" class="form-control rounded-0"  id="exampleInputRounded0">
+              </div>
+              </div>
+              <div class="col-5">
+              <label>Satuan</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-dolly"></i></span>
+                </div>
+                <input type="text" class="form-control rounded-0" id="exampleInputRounded0">
+              </div>
+              </div>
             </div>
             <!--END JOB REQUEST-->
             </div>
@@ -459,8 +462,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- /.modal-dialog -->
   </div>
 
-<!--MODAL EDIT DATA DEPARTMENT-->
-<div class="modal fade" id="EditDepartment">
+<!--MODAL EDIT DATA SATUAN-->
+<div class="modal fade" id="EditSatuan">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
@@ -470,34 +473,34 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <!--Form JOB REQUEST-->
             <div class="row">
             <div class="col-4">
-                    <div class="form-group">
-                    <label>Created</label>
-                      <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
-                          <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker2"/>
-                          <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
-                              <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
-                          </div>
-                      </div>
+              <div class="form-group">
+                  <label>Created</label>
+                    <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
+                        <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker2"/>
+                        <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-3">
-                    <div class="form-group">
-                      <label for="exampleSelectRounded0">Kode</label>
-                      <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
-                      <option selected disabled>Select a type code</option>  
-                      <option></option>
-                  </select>
-                    </div>
-                  </div>
-                  <div class="col-5">
-                    <div class="form-group">
-                      <label for="exampleSelectRounded0">Department</label>
-                      <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
-                      <option selected disabled>Select a type code department</option>
-                        <option> </option>
-                      </select>
-                    </div>
-                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+              <label>Kode</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-code"></i></span>
+                </div>
+                <input type="text" class="form-control rounded-0"  id="exampleInputRounded0">
+              </div>
+              </div>
+              <div class="col-5">
+              <label>Satuan</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-dolly"></i></span>
+                </div>
+                <input type="text" class="form-control rounded-0" id="exampleInputRounded0">
+              </div>
+              </div>
             </div>
             <!--END JOB REQUEST-->
             </div>
@@ -585,7 +588,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </div>
 
 <!--MODAL Hapus Data-->
-<div class="modal fade" id="HapusDepartment">
+<div class="modal fade" id="HapusSatuan">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -655,6 +658,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="<?= base_url('assets_adminlte/plugins/jquery-ui/jquery-ui.min.js')?>"></script>
 <!-- Bootstrap 4 -->
 <script src="<?= base_url('assets_adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
+<!-- Select2 -->
+<script src="<?= base_url('assets_adminlte/plugins/select2/js/select2.full.min.js')?>"></script>
 <!-- InputMask -->
 <script src="<?= base_url('assets_adminlte/plugins/moment/moment.min.js')?>"></script>
 <script src="<?= base_url('assets_adminlte/plugins/inputmask/jquery.inputmask.min.js')?>"></script>
@@ -681,10 +686,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="<?= base_url('assets_adminlte/dist/js/demo.js')?>"></script>
 <script>
   $(function () {
-    $("#TabelDepartment").DataTable({
+    $("#TabelSatuan").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#TabelDepartment_wrapper .col-md-6:eq(0)');
+    }).buttons().container().appendTo('#TabelSatuan_wrapper .col-md-6:eq(0)');
     $('#example2').DataTable({
       "paging": true,
       "lengthChange": false,
@@ -704,6 +709,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   $(function () {
     $('#datetimepicker2').datetimepicker();
   });
+
+  $('[data-mask]').inputmask()
+
 
 </script>
 
