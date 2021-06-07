@@ -129,6 +129,24 @@ public function AdminKodeBarang()
 	return view('v_admin/v_AdminKodeBarang', ['session' => $session]);
 }
 
+public function AdminKodeInventaris()
+{
+	$session = session();
+	return view('v_admin/v_AdminKodeInventaris', ['session' => $session]);
+}
+
+public function AdminItemMasuk()
+{
+	$session = session();
+	return view('v_admin/v_AdminItemMasuk', ['session' => $session]);
+}
+
+public function AdminMutasi()
+{
+	$session = session();
+	return view('v_admin/v_AdminMutasi', ['session' => $session]);
+}
+
 //FUNCTION VIEWS REGISTER AND LOGIN
 	public function register()
 	{

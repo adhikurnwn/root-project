@@ -226,6 +226,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <p>Kode Barang</p>
                     </a>
                   </li>
+                  <li class="nav-item">
+                    <a href="<?= base_url('Home/AdminKodeInventaris')?>" class="nav-link">
+                    &emsp;<i class="far fa-dot-circle nav-icon"></i>
+                      <p>Kode Inventaris</p>
+                    </a>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -238,7 +244,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?= base_url('Home/AdminItemMasuk')?>" class="nav-link">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
                       <p>Barang Masuk</p>
                     </a>
@@ -250,7 +256,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?= base_url('Home/AdminMutasi')?>" class="nav-link">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
                       <p>Mutasi</p>
                     </a>
@@ -353,7 +359,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0"><i class="fas fa-puzzle-piece"></i> Set-up Kode Barang</h1>
+            <h1 class="m-0"><i class="fas fa-barcode"></i> Set-up Kode Barang</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -377,9 +383,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <table id="TabelKB" class="table table-bordered table-striped" cellspacing="0" width="150%">
                   <thead>
                   <tr>
-                    <th>Created</th>  
+                    <th>Created</th>
+                    <th>Kelompok</th>  
                     <th>Kode</th>
-                    <th>Satuan</th>
                     <th>Action</th>
                   </tr>
                   </thead>
@@ -431,24 +437,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </div>
                 </div>
               </div>
+              <div class="col-5">
+              <label>Kelompok</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-ethernet"></i></span>
+                  </div>
+                  <input type="text" autocomplete="off" class="form-control rounded-0" id="exampleInputRounded0">
+                </div>
+              </div>
               <div class="col-3">
               <label>Kode</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-code"></i></span>
                 </div>
-                <input type="text" class="form-control rounded-0"  id="exampleInputRounded0">
+                <input type="text" autocomplete="off" class="form-control rounded-0"  id="exampleInputRounded0">
               </div>
               </div>
-              <div class="col-5">
-              <label>Satuan</label>
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="fas fa-dolly"></i></span>
-                </div>
-                <input type="text" class="form-control rounded-0" id="exampleInputRounded0">
-              </div>
-              </div>
+              
             </div>
             <!--END JOB REQUEST-->
             </div>
@@ -483,23 +490,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </div>
                 </div>
               </div>
-              <div class="col-3">
-              <label>Kode</label>
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="fas fa-code"></i></span>
-                </div>
-                <input type="text" class="form-control rounded-0"  id="exampleInputRounded0">
-              </div>
-              </div>
               <div class="col-5">
-              <label>Satuan</label>
+              <label>Kelompok</label>
               <div class="input-group">
                 <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="fas fa-dolly"></i></span>
+                  <span class="input-group-text"><i class="fas fa-ethernet"></i></span>
                 </div>
-                <input type="text" class="form-control rounded-0" id="exampleInputRounded0">
+                <input type="text" autocomplete="off" class="form-control rounded-0" id="exampleInputRounded0">
               </div>
+              </div>
+              <div class="col-3">
+                <label>Kode</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-code"></i></span>
+                  </div>
+                  <input type="text" autocomplete="off" class="form-control rounded-0"  id="exampleInputRounded0">
+                </div>
               </div>
             </div>
             <!--END JOB REQUEST-->

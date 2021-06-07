@@ -223,6 +223,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <p>Kode Barang</p>
                     </a>
                   </li>
+                  <li class="nav-item">
+                    <a href="<?= base_url('Home/AdminKodeInventaris')?>" class="nav-link">
+                    &emsp;<i class="far fa-dot-circle nav-icon"></i>
+                      <p>Kode Inventaris</p>
+                    </a>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -235,7 +241,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?= base_url('Home/AdminItemMasuk')?>" class="nav-link">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
                       <p>Barang Masuk</p>
                     </a>
@@ -247,7 +253,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?= base_url('Home/AdminMutasi')?>" class="nav-link">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
                       <p>Mutasi</p>
                     </a>
@@ -376,11 +382,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <tr>
                     <th>Created</th>
                     <th>Status</th>
+                    <th>Value</th>
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>   
                   <tr>
+                    <td> </td>
                     <td> </td>
                     <td> </td>
                     <td class="text-left py-1 align-middle">
@@ -415,7 +423,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="modal-body">
               <!--Form JOB REQUEST-->
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-4">
               <div class="form-group">
                   <label>Created</label>
                     <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
@@ -427,7 +435,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </div>
               </div>
               <!--BATAS ROW-->
-              <div class="col-md-6">
+              <div class="col-md-5">
                 <div class="form-group">
                   <label for="exampleSelectRounded0">Status Proses</label>
                   <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
@@ -438,6 +446,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <option>ACTIVE</option>
                     <option>INACTIVE</option>
                   </select>
+                </div>
+              </div>
+              <div class="col-md-3">
+              <label>Value</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-sort-amount-down"></i></span>
+                  </div>
+                  <input type="text" autocomplete="off" class="form-control rounded-0" id="exampleInputRounded0">
                 </div>
               </div>
             </div>
@@ -463,7 +480,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="modal-body">
               <!--Form JOB REQUEST-->
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-4">
               <div class="form-group">
                   <label>Created</label>
                     <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
@@ -475,7 +492,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </div>
               </div>
               <!--BATAS ROW-->
-              <div class="col-md-6">
+              <div class="col-md-5">
                 <div class="form-group">
                   <label for="exampleSelectRounded0">Status Proses</label>
                   <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
@@ -484,6 +501,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <option>APPROVED</option>
                     <option>COMPLETE</option>
                   </select>
+                </div>
+              </div>
+              <div class="col-md-3">
+              <label>Value</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-sort-amount-down"></i></span>
+                  </div>
+                  <input type="text" autocomplete="off" class="form-control rounded-0" id="exampleInputRounded0">
                 </div>
               </div>
             </div>

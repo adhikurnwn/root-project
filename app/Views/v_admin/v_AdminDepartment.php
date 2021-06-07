@@ -223,6 +223,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <p>Kode Barang</p>
                     </a>
                   </li>
+                  <li class="nav-item">
+                    <a href="<?= base_url('Home/AdminKodeInventaris')?>" class="nav-link">
+                    &emsp;<i class="far fa-dot-circle nav-icon"></i>
+                      <p>Kode Inventaris</p>
+                    </a>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -235,7 +241,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?= base_url('Home/AdminItemMasuk')?>" class="nav-link">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
                       <p>Barang Masuk</p>
                     </a>
@@ -247,7 +253,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?= base_url('Home/AdminMutasi')?>" class="nav-link">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
                       <p>Mutasi</p>
                     </a>
@@ -428,24 +434,24 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       </div>
                     </div>
                   </div>
-                  <div class="col-3">
-                    <div class="form-group">
-                      <label for="exampleSelectRounded0">Kode</label>
-                      <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
-                      <option selected disabled>Select a type code</option>  
-                      <option></option>
-                  </select>
-                    </div>
-                  </div>
                   <div class="col-5">
-                    <div class="form-group">
-                      <label for="exampleSelectRounded0">Department</label>
-                      <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
-                      <option selected disabled>Select a type code department</option>
-                        <option> </option>
-                      </select>
+                    <label>Department</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-hotel"></i></span>
+                      </div>
+                      <input type="text" autocomplete="off" class="form-control rounded-0" id="exampleInputRounded0">
                     </div>
                   </div>
+                  <div class="col-3">
+                  <label>Kode</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-code"></i></span>
+                    </div>
+                    <input type="text" autocomplete="off" class="form-control rounded-0" id="exampleInputRounded0">
+                  </div>
+              </div>
             </div>
             <!--END JOB REQUEST-->
             </div>
@@ -480,24 +486,24 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       </div>
                     </div>
                   </div>
-                  <div class="col-3">
-                    <div class="form-group">
-                      <label for="exampleSelectRounded0">Kode</label>
-                      <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
-                      <option selected disabled>Select a type code</option>  
-                      <option></option>
-                  </select>
-                    </div>
-                  </div>
                   <div class="col-5">
-                    <div class="form-group">
-                      <label for="exampleSelectRounded0">Department</label>
-                      <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
-                      <option selected disabled>Select a type code department</option>
-                        <option> </option>
-                      </select>
+                    <label>Department</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-hotel"></i></span>
+                      </div>
+                      <input type="text" autocomplete="off" class="form-control rounded-0" id="exampleInputRounded0">
                     </div>
                   </div>
+                  <div class="col-3">
+                  <label>Kode</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-code"></i></span>
+                    </div>
+                    <input type="text" autocomplete="off" class="form-control rounded-0"  id="exampleInputRounded0">
+                  </div>
+                </div>
             </div>
             <!--END JOB REQUEST-->
             </div>

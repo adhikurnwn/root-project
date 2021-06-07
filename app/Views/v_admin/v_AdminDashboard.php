@@ -219,6 +219,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <p>Kode Barang</p>
                     </a>
                   </li>
+                  <li class="nav-item">
+                    <a href="<?= base_url('Home/AdminKodeInventaris')?>" class="nav-link">
+                    &emsp;<i class="far fa-dot-circle nav-icon"></i>
+                      <p>Kode Inventaris</p>
+                    </a>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -231,7 +237,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?= base_url('Home/AdminItemMasuk')?>" class="nav-link">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
                       <p>Barang Masuk</p>
                     </a>
@@ -243,7 +249,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?= base_url('Home/AdminMutasi')?>" class="nav-link">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
                       <p>Mutasi</p>
                     </a>
@@ -353,7 +359,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <p>USER ACTIVE</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="ion ion-android-contacts"></i>
               </div>
               <a href="<?= base_url('Home/HeadOrder')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -365,7 +371,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <p>USER INACTIVE</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="ion ion-android-contact"></i>
               </div>
               <a href="<?= base_url('Home/HeadOrder')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -377,7 +383,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <p>STOK ACTIVE</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="ion ion-cube"></i>
               </div>
               <a href="<?= base_url('Home/HeadOrder')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -389,7 +395,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <p>STOK INACTIVE</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="ion ion-ios-pulse"></i>
               </div>
               <a href="<?= base_url('Home/HeadOrder')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -401,7 +407,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <p>JOB ORDERS REQUEST</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="ion ion-ios-speedometer-outline"></i>
               </div>
               <a href="<?= base_url('Home/HeadOrder')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -413,7 +419,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <p>PREVENTIVE / MAINTENANCE</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="ion ion-ios-alarm-outline"></i>
               </div>
               <a href="<?= base_url('Home/HeadPreventiveAcc')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -425,8 +431,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
+        <div class="row">
         <!-- Info boxes -->
-          <div class="card col-12">
+          <div class="col-5">
+            <div class="card">
               <div class="card-header">
                 <h3 class="card-title">
                   <i class="ion ion-clipboard mr-1"></i>
@@ -470,7 +478,38 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="card-footer clearfix">
                 <button type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Add Notes</button>
               </div>
-         </div>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="card">
+              <div class="card-header border-0">
+                <div class="d-flex justify-content-between">
+                  <h3 class="card-title">Diagram Laporan IT Support</h3>
+                </div>
+                <hr>
+                <p class="ml-auto d-flex flex-column text-right">
+                    <span class="text-success">
+                      <i class="fas fa-arrow-up"></i> 33.1%
+                    </span>
+                    <span class="text-muted">Since last month</span>
+                  </p>
+              </div>
+                <div class="position-relative mb-4">
+                  <canvas id="sales-chart" height="200"></canvas>
+                </div>
+
+                <div class="d-flex flex-row justify-content-end">
+                  <span class="mr-2">
+                    <i class="fas fa-square text-primary"></i> Job Order
+                  </span>
+                  <span>
+                    <i class="fas fa-square text-gray"></i> Preventive
+                  </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
       </div>
   </div>
   <!-- /.content -->
@@ -602,6 +641,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script>
   $.widget.bridge('uibutton', $.ui.button)
 </script>
+<!-- OPTIONAL SCRIPTS -->
+<script src="<?= base_url('assets_adminlte/plugins/chart.js/Chart.min.js')?>"></script>
 <!-- Bootstrap 4 -->
 <script src="<?= base_url('assets_adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
 <!-- Summernote -->
@@ -612,6 +653,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="<?= base_url('assets_adminlte/dist/js/demo.js')?>"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?= base_url('assets_adminlte/dist/js/pages/dashboard.js')?>"></script>
+<script src="<?= base_url('assets_adminlte/dist/js/pages/dashboard3.js')?>"></script>
 
 </body>
 </html>

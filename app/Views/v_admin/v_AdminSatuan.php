@@ -226,6 +226,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <p>Kode Barang</p>
                     </a>
                   </li>
+                  <li class="nav-item">
+                    <a href="<?= base_url('Home/AdminKodeInventaris')?>" class="nav-link">
+                    &emsp;<i class="far fa-dot-circle nav-icon"></i>
+                      <p>Kode Inventaris</p>
+                    </a>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -238,7 +244,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?= base_url('Home/AdminItemMasuk')?>" class="nav-link">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
                       <p>Barang Masuk</p>
                     </a>
@@ -250,7 +256,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?= base_url('Home/AdminMutasi')?>" class="nav-link">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
                       <p>Mutasi</p>
                     </a>
