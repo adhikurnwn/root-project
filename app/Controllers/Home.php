@@ -141,6 +141,12 @@ public function AdminItemMasuk()
 	return view('v_admin/v_AdminItemMasuk', ['session' => $session]);
 }
 
+public function AdminItemKeluar()
+{
+	$session = session();
+	return view('v_admin/v_AdminItemKeluar', ['session' => $session]);
+}
+
 public function AdminMutasi()
 {
 	$session = session();

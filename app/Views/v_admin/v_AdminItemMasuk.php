@@ -250,7 +250,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?= base_url('Home/AdminItemKeluar')?>" class="nav-link">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
                       <p>Barang Keluar</p>
                     </a>
@@ -378,14 +378,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="col-12">
             <div class="card">
               <div class="card-body">
-                <a href="#" class="btn btn-success" data-toggle="modal" data-target="#TambahBM"><i class="fas fa-plus"></i> Tambah Barang</a>
+                <a href="#" class="btn btn-success" data-toggle="modal" data-target="#TambahBM"><i class="fas fa-plus"></i> CREATE NEW</a>
               <hr>
                 <table id="TabelBM" class="table table-bordered table-striped" cellspacing="0" width="150%">
                   <thead>
                   <tr>
                     <th>Created</th>
-                    <th>Perangkat</th>  
-                    <th>Kode</th>
+                    <th>No.Inv</th>
+                    <th>Nama Item</th>  
+                    <th>Model</th>
+                    <th>Type</th>
+                    <th>Kondisi</th>
+                    <th>Qty</th>
+                    <th>Satuan</th> 
                     <th>Action</th>
                   </tr>
                   </thead>
@@ -394,10 +399,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td> </td>
                     <td> </td>
                     <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
                     <td class="text-left py-1 align-middle">
                       <div class="btn-group btn-group-sm">
-                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#EditInv"><i class="fas fa-edit"></i> Edit</a>
-                        <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#HapusInv"><i class="fas fa-trash"></i> Hapus</a>
+                        <a href="#" class="btn btn-default" data-toggle="modal" data-target="#Detail"><i class="fas fa-eye"></i></a>
+                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#EditInv"><i class="fas fa-edit"></i></a>
+                        <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#HapusInv"><i class="fas fa-trash"></i></a>
                       </div>
                     </td>
                   </tr>
@@ -426,7 +437,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="modal-body">
               <!--Form JOB REQUEST-->
             <div class="row">
-            <div class="col-4">
+            <div class="col-3">
               <div class="form-group">
                   <label>Created</label>
                     <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
@@ -437,31 +448,161 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </div>
                 </div>
               </div>
-              <div class="col-5">
-              <label>Perangkat</label>
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="fas fa-desktop"></i></span>
-                </div>
-                <input type="text" autocomplete="off" class="form-control rounded-0" id="exampleInputRounded0">
-              </div>
+              <div class="col-3">
+                    <div class="form-group">
+                       <label for="exampleSelectRounded0">Kode Barang</label>
+                       <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                          <option> </option>
+                       </select>
+                    </div>
               </div>
               <div class="col-3">
-              <label>Kode</label>
+                    <div class="form-group">
+                       <label for="exampleSelectRounded0">Kode Inventaris</label>
+                       <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                          <option> </option>
+                       </select>
+                    </div>
+              </div>
+              <div class="col-3">
+              <label>No. Inventaris</label>
               <div class="input-group">
                 <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="fas fa-code"></i></span>
+                  <span class="input-group-text"><i class="fas fa-barcode"></i></span>
                 </div>
                 <input type="text" autocomplete="off" class="form-control rounded-0"  id="exampleInputRounded0">
               </div>
               </div>
-              
+              <div class="col-3">
+              <label>Nama Item / Barang</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-cube"></i></span>
+                </div>
+                <input type="text" autocomplete="off" class="form-control rounded-0"  id="exampleInputRounded0">
+              </div>
+              </div>
+              <div class="col-3">
+              <label>Model</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-cube"></i></span>
+                </div>
+                <input type="text" autocomplete="off" class="form-control rounded-0"  id="exampleInputRounded0">
+              </div>
+              </div>
+              <div class="col-3">
+              <label>Type</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-cube"></i></span>
+                </div>
+                <input type="text" autocomplete="off" class="form-control rounded-0"  id="exampleInputRounded0">
+              </div>
+              </div>
+              <div class="col-3">
+              <label>No. Seri</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-barcode"></i></span>
+                </div>
+                <input type="text" autocomplete="off" class="form-control rounded-0"  id="exampleInputRounded0">
+              </div>
+              </div>
+              <div class="col-12">
+                <label>Spesifikasi</label>
+                  <div class="form-group">
+                      <textarea class="form-control" rows="3"></textarea>
+                  </div>
+              </div>
             </div>
+            <br>
+              <h5><i class="fas fa-info-circle"></i> Detail Item</h5>
+              <hr>
+              <div class="row">
+                <div class="col-4">
+                   <div class="form-group">
+                       <label for="exampleSelectRounded0">Supplier</label>
+                       <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                          <option selected="true" disabled="disabled"> - </option>
+                       </select>
+                    </div>
+                </div>
+                <div class="col-2">
+                   <div class="form-group">
+                       <label for="exampleSelectRounded0">Sumber Perolehan</label>
+                       <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                          <option selected="true" disabled="disabled"> - </option>
+                          <option>Beli</option>
+                          <option>Mutasi</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-2">
+                   <div class="form-group">
+                       <label for="exampleSelectRounded0">Kondisi</label>
+                       <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                          <option selected="true" disabled="disabled"> - </option>
+                          <option>Baru</option>
+                          <option>Bekas</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-2">
+                        <label>Quantity</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fas fa-sort-numeric-down"></i></span>
+                            </div>
+                            <input type="text" autocomplete="off" class="form-control rounded-0" id="exampleInputRounded0">
+                        </div>
+                  </div>
+                  <div class="col-2">
+                   <div class="form-group">
+                       <label for="exampleSelectRounded0">Satuan</label>
+                       <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                          <option selected="true" disabled="disabled"> - </option>
+                       </select>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                        <label>Harga Perolehan</label>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Rp.</span>
+                          </div>
+                            <input type="text" class="form-control">
+                          <div class="input-group-append">
+                            <span class="input-group-text">.00</span>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="col-2">
+                  <label>Umur Ekonomis</label>
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control">
+                        <div class="input-group-append">
+                          <span class="input-group-text">Tahun</span>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-7">
+                        <label>Note</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fas fa-comment-alt"></i></span>
+                            </div>
+                            <input type="text" autocomplete="off" class="form-control rounded-0" id="exampleInputRounded0">
+                        </div>
+                  </div>
+                </div>
             <!--END JOB REQUEST-->
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
-              <button type="button" class="btn btn-dark"><i class="fas fa-save"></i>&nbsp; Simpan</button>
+              <div class="col text-center">
+                <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
+                <button type="button" class="btn btn-success"><i class="fas fa-save"></i>&nbsp; SAVE</button>
+              </div>
             </div>
           </div>
           <!-- /.modal-content -->

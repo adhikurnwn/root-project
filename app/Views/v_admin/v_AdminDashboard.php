@@ -243,7 +243,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?= base_url('Home/AdminItemKeluar')?>" class="nav-link">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
                       <p>Barang Keluar</p>
                     </a>
