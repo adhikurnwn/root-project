@@ -1,0 +1,10 @@
+CRITICAL - 2021-06-08 23:11:29 --> Invalid file: v_admin/v_ReportBarangKeluar.php
+#0 C:\xampp\htdocs\root-project\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_admin/v_Repor...')
+#1 C:\xampp\htdocs\root-project\system\Common.php(1119): CodeIgniter\View\View->render('v_admin/v_Repor...', Array, true)
+#2 C:\xampp\htdocs\root-project\app\Controllers\Home.php(165): view('v_admin/v_Repor...', Array)
+#3 C:\xampp\htdocs\root-project\system\CodeIgniter.php(918): App\Controllers\Home->ReportBarangKeluar()
+#4 C:\xampp\htdocs\root-project\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\root-project\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\root-project\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\root-project\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}

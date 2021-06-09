@@ -273,27 +273,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
                 <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?= base_url('Home/ReportBarangMasuk')?>" class="nav-link">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
-                      <p>Report Stok Barang</p>
+                      <p>Laporan Barang Masuk</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?= base_url('Home/ReportBarangKeluar')?>" class="nav-link">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
-                      <p>Report Barang Masuk</p>
+                      <p>Laporan Barang Keluar</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?= base_url('Home/ReportMutasi')?>" class="nav-link">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
-                      <p>Report Barang Keluar</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                    &emsp;<i class="far fa-dot-circle nav-icon"></i>
-                      <p>Report Mutasi</p>
+                      <p>Laporan Mutasi</p>
                     </a>
                   </li>
                 </ul>
@@ -310,13 +304,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= base_url('Home/HeadOrder')?>" class="nav-link">
+                <a href="<?= base_url('Home/AdminJobOrder')?>" class="nav-link">
                 &emsp;<i class="fas fa-file-signature"> </i>
                   <p>Job Order</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('Home/HeadOrderAcc')?>" class="nav-link">
+                <a href="<?= base_url('Home/AdminPreventive')?>" class="nav-link">
                 &emsp;<i class="fas fa-signature"> </i>
                   <p>Preventive</p>
                 </a>
@@ -331,13 +325,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
                 <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?= base_url('Home/ReportJobOrder')?>" class="nav-link">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
                       <p>Report Job Order</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?= base_url('Home/ReportPreventive')?>" class="nav-link">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
                       <p>Report Preventive</p>
                     </a>

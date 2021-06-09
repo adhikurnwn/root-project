@@ -153,6 +153,57 @@ public function AdminMutasi()
 	return view('v_admin/v_AdminMutasi', ['session' => $session]);
 }
 
+public function ReportBarangMasuk()
+{
+	$session = session();
+	return view('v_admin/v_ReportBarangMasuk', ['session' => $session]);
+}
+
+public function ReportBarangKeluar()
+{
+	$session = session();
+	return view('v_admin/v_ReportBarangKeluar', ['session' => $session]);
+}
+
+public function ReportMutasi()
+{
+	$session = session();
+	return view('v_admin/v_ReportMutasi', ['session' => $session]);
+}
+
+public function AdminJobOrder()
+{
+	$session = session();
+	return view('v_admin/v_AdminJobOrder', ['session' => $session]);
+}
+
+public function AdminPreventive()
+{
+	$session = session();
+	return view('v_admin/v_AdminPreventive', ['session' => $session]);
+}
+public function ReportJobOrder()
+{
+	$session = session();
+	return view('v_admin/v_AdminReportJobOrder', ['session' => $session]);
+}
+public function ReportPreventive()
+{
+	$session = session();
+	return view('v_admin/v_AdminReportPreventive', ['session' => $session]);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 //FUNCTION VIEWS REGISTER AND LOGIN
 	public function register()
 	{
