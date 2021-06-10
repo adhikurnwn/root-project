@@ -353,7 +353,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0"><i class="fas fa-shipping-fast"></i> Set-up Supplier</h1>
+            <h1 class="m-0"><i class="fas fa-question-circle"></i> Set-up Supplier</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -372,8 +372,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="col-12">
             <div class="card">
               <div class="card-body">
-                <a href="#" class="btn btn-success" data-toggle="modal" data-target="#TambahSup"><i class="fas fa-plus"></i> Tambah Supplier</a>
-              <hr>
+                <a href="#" class="btn btn-success" data-toggle="modal" data-target="#TambahSup"><i class="fas fa-plus-circle"></i> CREATE NEW</a>
+                &nbsp;<button type="button" class="btn btn-info" data-card-widget="card-refresh" data-source="<?= base_url('Home/AdminSupplier')?>" data-source-selector="#card-refresh-content" data-load-on-init="false"><i class="fas fa-sync-alt"></i></button>
+                <hr>
                 <table id="TabelSup" class="table table-bordered table-striped" cellspacing="0" width="150%">
                   <thead>
                   <tr>
@@ -396,8 +397,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td> </td>
                     <td class="text-left py-1 align-middle">
                       <div class="btn-group btn-group-sm">
-                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#EditSup"><i class="fas fa-edit"></i> Edit</a>
-                        <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#HapusSup"><i class="fas fa-trash"></i> Hapus</a>
+                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#EditSup"><i class="fas fa-edit"></i></a>
+                        <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#HapusSup"><i class="fas fa-trash"></i></a>
                       </div>
                     </td>
                   </tr>
@@ -476,8 +477,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!--END JOB REQUEST-->
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
-              <button type="button" class="btn btn-dark"><i class="fas fa-save"></i>&nbsp; Simpan</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
+              <button type="button" class="btn btn-success"><i class="fas fa-save"></i>&nbsp; SAVE</button>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -545,8 +546,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!--END JOB REQUEST-->
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
-              <button type="button" class="btn btn-dark"><i class="fas fa-save"></i>&nbsp; Simpan Perubahan</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
+              <button type="button" class="btn btn-success"><i class="fas fa-save"></i>&nbsp; SAVE CHANGES</button>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -589,7 +590,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Kembali</button>
-              <button type="button" class="btn btn-danger">Ubah</button>
+              <button type="button" class="btn btn-success"><i class="fas fa-save"></i>&nbsp; SAVE CHANGES</button>
             </div>
           </div>
         </div>
@@ -621,7 +622,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </table>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Kembali</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
             </div>
           </div>
         </div>
@@ -629,7 +630,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!--MODAL Hapus Data-->
 <div class="modal fade" id="HapusSup">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h6 class="modal-title">Alert!</h6>
@@ -638,8 +639,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <p><strong><i>Apakah anda yakin akan menghapus data ini?</i></strong></p>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
-              <button type="button" class="btn btn-danger">Ya</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
+              <button type="button" class="btn btn-danger">YES</button>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -650,7 +651,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!--MODAL LOG OUT-->
   <div class="modal fade" id="modal-logout">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h6 class="modal-title">Alert!</h6>
@@ -659,8 +660,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <p><strong><i>Anda yakin akan keluar dari sistem ini?</i></strong></p>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
-              <button type="button" class="btn btn-danger">Ya</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
+              <button type="button" class="btn btn-danger">YES</button>
             </div>
           </div>
           <!-- /.modal-content -->

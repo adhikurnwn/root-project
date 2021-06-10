@@ -367,13 +367,88 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <section class="content">
       <div class="container-fluid">
-          <div class="card">
-            <div class="card-body">
-               <div class="row">
+        <div class="row">
+            <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <a href="#" class="btn btn-success" data-toggle="modal" data-target="#TambahAdminPreventive"><i class="fas fa-plus"></i> CREATE NEW</a>
+                <!--&nbsp;<button class="btn btn-warning" type="submit"  onclick="window.location.reload(true);"><i class="fas fa-sync-alt"></i> REFRESH</button>-->
+                &nbsp;<button type="button" class="btn btn-warning" data-card-widget="card-refresh" data-source="<?= base_url('Home/AdminMutasi')?>" data-source-selector="#card-refresh-content" data-load-on-init="false"><i class="fas fa-sync-alt"></i> REFRESH</button>
+              <hr>
+                <table id="TabelAdminPreventive" class="table table-bordered table-striped" cellspacing="0" width="150%">
+                  <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>BU</th>  
+                    <th>Depo</th>
+                    <th>Depart.</th>
+                    <th>User</th>
+                    <th>Next Date</th>
+                    <th>Checklist</th>
+                    <th>Status</th>  
+                    <th>Action</th>
+                  </tr>
+                  </thead>
+                  <tbody>   
+                  <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td class="text-left py-1 align-middle">
+                      <div class="btn-group btn-group-sm">
+                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#EditPreventive"><i class="fas fa-edit"></i></a>
+                        <a href="#" class="btn btn-default" data-toggle="modal" data-target="#HapusPreventive"><i class="fas fa-share-square"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+               </div>
+              <!-- /.card-body -->
+              </div>
+            <!-- /.card -->
+           </div>
+          </div> 
+        </div>
+  </section>
+
+<!--MODAL TAMBAH PREVENTIVE-->
+  <div class="modal fade" id="TambahAdminPreventive">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title"><i>Detail Preventive / Maintenance</i></h6>
+            </div>
+            <div class="modal-body">
+            <div class="row">
+                  <div class="col-2">
+                    <div class="form-group">
+                    <label>Date</label>
+                        <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
+                              <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar-day"></i></div>
+                              </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="form-group">
+                      <label for="timeReq">Time</label>
+                        <input type="time" id="timeReq" class="form-control">
+                    </div>
+                  </div>
                   <div class="col-4">
                         <div class="form-group">
                           <label for="exampleSelectRounded0">Bussines Unit</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                          <select class="custom-select rounded-0" id="exampleSelectRounded0">
                               <option> </option>
                           </select>
                         </div>
@@ -381,7 +456,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <div class="col-4">
                         <div class="form-group">
                           <label for="exampleSelectRounded0">Depo</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                          <select class="custom-select rounded-0" id="exampleSelectRounded0">
                               <option> </option>
                           </select>
                         </div>
@@ -389,82 +464,724 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <div class="col-4">
                         <div class="form-group">
                           <label for="exampleSelectRounded0">Department</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                          <select class="custom-select rounded-0" id="exampleSelectRounded0">
                               <option> </option>
                           </select>
                         </div>
                   </div>
                   <div class="col-4">
                         <div class="form-group">
-                          <label for="exampleSelectRounded0">Kode Barang</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                          <label for="exampleSelectRounded0">User</label>
+                          <select class="custom-select rounded-0" id="exampleSelectRounded0">
                               <option> </option>
                           </select>
                         </div>
                   </div>
                   <div class="col-4">
-                        <div class="form-group">
-                          <label for="exampleSelectRounded0">Kode Inventaris</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
-                              <option> </option>
-                          </select>
+                    <div class="form-group">
+                    <label>Next Date Preventive</label>
+                        <div class="input-group date" id="reservationdate2" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate2"/>
+                              <div class="input-group-append" data-target="#reservationdate2" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar-day"></i></div>
+                              </div>
                         </div>
-                  </div>
-                  <div class="col-4">
-                    <label>Nama Item / Barang</label>
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-cube"></i></span>
-                      </div>
-                      <input type="text" autocomplete="off" class="form-control rounded-0"  id="exampleInputRounded0">
-                      &nbsp;<button type="button" class="btn btn-info" data-toggle="modal" data-target="#CariItem"><i class="fas fa-search"></i></button>
-                      &nbsp;<button type="reset" value="Reset" class="btn btn-danger"><i class="fas fa-eraser"></i></button>
                     </div>
-                 </div>
-                 
-                </div>
-
-                <!--FORM FILTER-->                
-                      <div class="row">
-                        <div class="col-12">
-                          <div class="mb-3 row">
-                            <label for="reservationdate" class="col-sm-1 col-form-label">Periode</label>
-                              <div class="form-group">
-                                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
-                                          <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                                            <div class="input-group-text"><i class="fa fa-calendar-day"></i></div>
-                                          </div>
-                                    </div>
-                              </div>
-
-                              <label for="reservationdate2" class="col-sm-1 col-form-label" align="center"> - </label>
-                              <div class="form-group">
-                                    <div class="input-group date" id="reservationdate2" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate2"/>
-                                          <div class="input-group-append" data-target="#reservationdate2" data-toggle="datetimepicker">
-                                            <div class="input-group-text"><i class="fa fa-calendar-day"></i></div>
-                                          </div>
-                                    </div>
-                              </div>
-                          </div>
-                      </div>
-                <!--END FORM FILTER-->
-               
-                  <div class="col text-center">
-                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-file-pdf"></i>&nbsp; SAVE AS PDF</button>
-                    <button type="button" class="btn btn-success" data-dismiss="modal"><i class="fas fa-file-excel"></i>&nbsp; SAVE AS EXCEL</button>  
-                    <button type="button" class="btn btn-primary"><i class="fas fa-print"></i>&nbsp; PRINT</button>
                   </div>
-                
-
+              </div>
+           
+            <hr>
+            <h6 align="center"><i class="fas fa-tasks"></i>&nbsp;<strong> CHECKLIST PREVENTIVE IT</strong><span></h6>
+            <ul class="nav nav-tabs" id="custom-content-above-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="custom-content-above-home-tab" data-toggle="pill" href="#custom-content-above-home" role="tab" aria-controls="custom-content-above-home" aria-selected="true"><strong>Perawatan Software</strong></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="custom-content-above-profile-tab" data-toggle="pill" href="#custom-content-above-profile" role="tab" aria-controls="custom-content-above-profile" aria-selected="false"><strong>Perawatan Hardware</strong></a>
+              </li>
+            </ul>
+            <div class="tab-content" id="custom-content-above-tabContent">
+              <div class="tab-pane fade show active" id="custom-content-above-home" role="tabpanel" aria-labelledby="custom-content-above-home-tab">
+              <table id="tabel1" class="table table-bordered table-striped" cellspacing="0" width="150%">
+                  <thead>
+                  <tr align="center">
+                    <th width="10px">No.</th>
+                    <th>Deskripsi Perawatan Software</th>
+                    <th>Checklist Pengerjaan</th>
+                  </tr>
+                  </thead>
+                  <tbody>   
+                  <tr>
+                    <td>1. </td>  
+                    <td><i>Disk clean up</i> </td>
+                    <td align="left">
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                          <label for="customCheckbox1" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2. </td>
+                    <td><i>Memastikan space / ruang disc C < 50%</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option2">
+                          <label for="customCheckbox2" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3. </td>
+                    <td><i>Melakukan disc defragmenter</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option3">
+                          <label for="customCheckbox3" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4. </td>
+                    <td><i>Uninstal program yang tidak perlu</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4">
+                          <label for="customCheckbox4" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5. </td>
+                    <td><i>Pembersihan recycle bin</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox5" value="option5">
+                          <label for="customCheckbox5" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6. </td>
+                    <td><i>Melakukan scan antivirus</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox6" value="option6">
+                          <label for="customCheckbox6" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>7. </td>
+                    <td><i>Melakukan backup data</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox7" value="option7">
+                          <label for="customCheckbox7" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>8. </td>
+                    <td><i>Performance secara umum</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox8" value="option8">
+                          <label for="customCheckbox8" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>9. </td>
+                    <td><i>File sharing</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox9" value="option9">
+                          <label for="customCheckbox9" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>10. </td>
+                    <td><i>Check IP Address PC</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox10" value="option10">
+                          <label for="customCheckbox10" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+                <div class="form-group">
+                        <label>Keterangan</label>
+                        <textarea class="form-control" rows="3"></textarea>
                 </div>
-            </div>       
+              </div>
+              <div class="tab-pane fade" id="custom-content-above-profile" role="tabpanel" aria-labelledby="custom-content-above-profile-tab">
+              <table id="tabel1" class="table table-bordered table-striped" cellspacing="0" width="150%">
+                  <thead>
+                  <tr align="center">
+                    <th width="10px">No.</th>
+                    <th>Deskripsi Perawatan Hardware</th>
+                    <th>Checklist Pengerjaan</th>
+                  </tr>
+                  </thead>
+                  <tbody>   
+                  <tr>
+                    <td>1. </td>  
+                    <td><i>Pembersihan casing PC</i> </td>
+                    <td align="left">
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxA" value="optionA">
+                          <label for="customCheckboxA" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2. </td>
+                    <td><i>Pembersihan motherboard</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxB" value="optionB">
+                          <label for="customCheckboxB" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3. </td>
+                    <td><i>Pembersihan keyboard</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxC" value="optionC">
+                          <label for="customCheckboxC" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4. </td>
+                    <td><i>Pembersihan RAM (Random Access Memory)</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxD" value="optionD">
+                          <label for="customCheckboxD" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5. </td>
+                    <td><i>Pembersihan power supply</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxE" value="optionE">
+                          <label for="customCheckboxE" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6. </td>
+                    <td><i>Pembersihan monitor</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxF" value="optionF">
+                          <label for="customCheckboxF" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>7. </td>
+                    <td><i>Pengecekan kondisi keyboard</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxG" value="optionG">
+                          <label for="customCheckboxG" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>8. </td>
+                    <td><i>Pengecekan network adapter</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxH" value="optionH">
+                          <label for="customCheckboxH" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>9. </td>
+                    <td><i>Pengecekan network adapter</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxI" value="optionI">
+                          <label for="customCheckboxI" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>10. </td>
+                    <td><i>Pengecekan kondisi mouse</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxJ" value="optionJ">
+                          <label for="customCheckboxJ" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>11. </td>
+                    <td><i>Pembersihan CD-ROM</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxK" value="optionK">
+                          <label for="customCheckboxK" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>12. </td>
+                    <td><i>Pembersihan fan processor</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxL" value="optionL">
+                          <label for="customCheckboxL" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>13. </td>
+                    <td><i>Pengecekan baterai CMOS</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxM" value="optionM">
+                          <label for="customCheckboxM" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>14. </td>
+                    <td><i>Pembersihan heatsink</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxN" value="optionN">
+                          <label for="customCheckboxN" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>15. </td>
+                    <td><i>Pembersihan mouse</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxO" value="optionO">
+                          <label for="customCheckboxO" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+                <div class="form-group">
+                        <label>Keterangan</label>
+                        <textarea class="form-control" rows="3" ></textarea>
+                </div>
+              </div>
+            </div>
+            <!--END MODAL PREVENTIVE-->
+            </div>
+            <div class="modal-footer justify-content-between">
+              <div class="col text-center">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-undo"></i>&nbsp;BACK</button>
+                <button type="button" class="btn btn-success"><i class="fas fa-save"></i>&nbsp; SAVE</button>
+              </div>
+            </div>
+          </div>
+          <!-- /.modal-content -->
         </div>
-  </section>
-
-
+        <!-- /.modal-dialog -->
+    </div>
 </div>
+
+<!--EDIT DATA PREVENTIVE-->
+<div class="modal fade" id="EditPreventive">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title"><i>Edit Preventive / Maintenance</i></h6>
+            </div>
+            <div class="modal-body">
+            <div class="row">
+                  <div class="col-2">
+                    <div class="form-group">
+                    <label>Date</label>
+                        <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
+                              <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar-day"></i></div>
+                              </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="form-group">
+                      <label for="timeReq">Time</label>
+                        <input type="time" id="timeReq" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-4">
+                        <div class="form-group">
+                          <label for="exampleSelectRounded0">Bussines Unit</label>
+                          <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                              <option> </option>
+                          </select>
+                        </div>
+                  </div>
+                  <div class="col-4">
+                        <div class="form-group">
+                          <label for="exampleSelectRounded0">Depo</label>
+                          <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                              <option> </option>
+                          </select>
+                        </div>
+                  </div>
+                  <div class="col-4">
+                        <div class="form-group">
+                          <label for="exampleSelectRounded0">Department</label>
+                          <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                              <option> </option>
+                          </select>
+                        </div>
+                  </div>
+                  <div class="col-4">
+                        <div class="form-group">
+                          <label for="exampleSelectRounded0">User</label>
+                          <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                              <option> </option>
+                          </select>
+                        </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-group">
+                    <label>Next Date Preventive</label>
+                        <div class="input-group date" id="reservationdate2" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate2"/>
+                              <div class="input-group-append" data-target="#reservationdate2" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar-day"></i></div>
+                              </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+           
+            <hr>
+            <h6 align="center"><i class="fas fa-tasks"></i>&nbsp;<strong> CHECKLIST PREVENTIVE IT</strong><span></h6>
+            <ul class="nav nav-tabs" id="custom-content-above-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="custom-content-above-home-tab" data-toggle="pill" href="#custom-content-above-home" role="tab" aria-controls="custom-content-above-home" aria-selected="true"><strong>Perawatan Software</strong></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="custom-content-above-profile-tab" data-toggle="pill" href="#custom-content-above-profile" role="tab" aria-controls="custom-content-above-profile" aria-selected="false"><strong>Perawatan Hardware</strong></a>
+              </li>
+            </ul>
+            <div class="tab-content" id="custom-content-above-tabContent">
+              <div class="tab-pane fade show active" id="custom-content-above-home" role="tabpanel" aria-labelledby="custom-content-above-home-tab">
+              <table id="tabel1" class="table table-bordered table-striped" cellspacing="0" width="150%">
+                  <thead>
+                  <tr align="center">
+                    <th width="10px">No.</th>
+                    <th>Deskripsi Perawatan Software</th>
+                    <th>Checklist Pengerjaan</th>
+                  </tr>
+                  </thead>
+                  <tbody>   
+                  <tr>
+                    <td>1. </td>  
+                    <td><i>Disk clean up</i> </td>
+                    <td align="left">
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                          <label for="customCheckbox1" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2. </td>
+                    <td><i>Memastikan space / ruang disc C < 50%</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option2">
+                          <label for="customCheckbox2" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3. </td>
+                    <td><i>Melakukan disc defragmenter</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option3">
+                          <label for="customCheckbox3" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4. </td>
+                    <td><i>Uninstal program yang tidak perlu</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4">
+                          <label for="customCheckbox4" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5. </td>
+                    <td><i>Pembersihan recycle bin</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox5" value="option5">
+                          <label for="customCheckbox5" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6. </td>
+                    <td><i>Melakukan scan antivirus</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox6" value="option6">
+                          <label for="customCheckbox6" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>7. </td>
+                    <td><i>Melakukan backup data</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox7" value="option7">
+                          <label for="customCheckbox7" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>8. </td>
+                    <td><i>Performance secara umum</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox8" value="option8">
+                          <label for="customCheckbox8" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>9. </td>
+                    <td><i>File sharing</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox9" value="option9">
+                          <label for="customCheckbox9" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>10. </td>
+                    <td><i>Check IP Address PC</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckbox10" value="option10">
+                          <label for="customCheckbox10" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+                <div class="form-group">
+                        <label>Keterangan</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="custom-content-above-profile" role="tabpanel" aria-labelledby="custom-content-above-profile-tab">
+              <table id="tabel1" class="table table-bordered table-striped" cellspacing="0" width="150%">
+                  <thead>
+                  <tr align="center">
+                    <th width="10px">No.</th>
+                    <th>Deskripsi Perawatan Hardware</th>
+                    <th>Checklist Pengerjaan</th>
+                  </tr>
+                  </thead>
+                  <tbody>   
+                  <tr>
+                    <td>1. </td>  
+                    <td><i>Pembersihan casing PC</i> </td>
+                    <td align="left">
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxA" value="optionA">
+                          <label for="customCheckboxA" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2. </td>
+                    <td><i>Pembersihan motherboard</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxB" value="optionB">
+                          <label for="customCheckboxB" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3. </td>
+                    <td><i>Pembersihan keyboard</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxC" value="optionC">
+                          <label for="customCheckboxC" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4. </td>
+                    <td><i>Pembersihan RAM (Random Access Memory)</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxD" value="optionD">
+                          <label for="customCheckboxD" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5. </td>
+                    <td><i>Pembersihan power supply</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxE" value="optionE">
+                          <label for="customCheckboxE" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6. </td>
+                    <td><i>Pembersihan monitor</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxF" value="optionF">
+                          <label for="customCheckboxF" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>7. </td>
+                    <td><i>Pengecekan kondisi keyboard</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxG" value="optionG">
+                          <label for="customCheckboxG" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>8. </td>
+                    <td><i>Pengecekan network adapter</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxH" value="optionH">
+                          <label for="customCheckboxH" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>9. </td>
+                    <td><i>Pengecekan network adapter</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxI" value="optionI">
+                          <label for="customCheckboxI" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>10. </td>
+                    <td><i>Pengecekan kondisi mouse</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxJ" value="optionJ">
+                          <label for="customCheckboxJ" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>11. </td>
+                    <td><i>Pembersihan CD-ROM</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxK" value="optionK">
+                          <label for="customCheckboxK" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>12. </td>
+                    <td><i>Pembersihan fan processor</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxL" value="optionL">
+                          <label for="customCheckboxL" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>13. </td>
+                    <td><i>Pengecekan baterai CMOS</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxM" value="optionM">
+                          <label for="customCheckboxM" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>14. </td>
+                    <td><i>Pembersihan heatsink</i></td>
+                    <td align="right"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxN" value="optionN">
+                          <label for="customCheckboxN" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>15. </td>
+                    <td><i>Pembersihan mouse</i></td>
+                    <td align="left"> 
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="customCheckboxO" value="optionO">
+                          <label for="customCheckboxO" class="custom-control-label">Selesai</label>
+                        </div>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+                <div class="form-group">
+                        <label>Keterangan</label>
+                        <textarea class="form-control" rows="3" ></textarea>
+                </div>
+              </div>
+            </div>
+            <!--END MODAL PREVENTIVE-->
+            </div>
+            <div class="modal-footer justify-content-between">
+              <div class="col text-center">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-undo"></i>&nbsp;BACK</button>
+                <button type="button" class="btn btn-success"><i class="fas fa-save"></i>&nbsp; SAVE</button>
+              </div>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+</div>
+
 <!--MODAL UBAH PASSWORD-->
   <div class="modal fade" id="modal-ubahpass">
         <div class="modal-dialog modal-dialog-centered">
@@ -506,51 +1223,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
   </div>
 
-<!--MODAL CARI DATA BARANG-->
-<div class="modal fade" id="CariItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h6 class="modal-title"><i>Master Item / Barang</i></h6>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="table-responsive-sm">
-                <table id="TabelCariItem" class="table">
-                <thead>
-                  <tr>
-                    <th>Item Numb</th>
-                    <th>Item Desc</th>
-                    <th>Type Item</th>
-                    <th>Stock</th>
-                    <th>Satuan</th>     
-                    <th>Action</th>
-                  </tr>
-                  </thead>
-                  <tbody>   
-                  <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td class="text-left py-1 align-middle">
-                      <div class="btn-group btn-group-sm">
-                        <button type="button" class="btn btn-default"><i class="fas fa-check-circle"></i></button>
-                      </div>
-                    </td>
-                  </tr>
-                  </tbody>
-                </table>
-            </div>
-             <!--END Cari Data Mutasi-->
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-  </div>
-
 <!--MODAL PEMBERITAHUAN-->
 <div class="modal fade" id="modal-notifikasi">
         <div class="modal-dialog modal-lg">
@@ -584,14 +1256,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </div>
 
 <!--MODAL Hapus Data-->
-<div class="modal fade" id="HapusBM">
+<div class="modal fade" id="HapusPreventive">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h6 class="modal-title">Alert!</h6>
             </div>
             <div class="modal-body">
-              <p><strong><i>Apakah anda yakin akan menghapus data ini?</i></strong></p>
+              <p><strong><i>Apakah yakin data yang anda masukan sudah benar?</i></strong></p>
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
@@ -682,10 +1354,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="<?= base_url('assets_adminlte/dist/js/demo.js')?>"></script>
 <script>
   $(function () {
-    $("#TabelBM").DataTable({
+    $("#TabelAdminPreventive").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#TabelBM_wrapper .col-md-6:eq(0)');
+    }).buttons().container().appendTo('#TabelAdminPreventive_wrapper .col-md-6:eq(0)');
     $('#example2').DataTable({
       "paging": true,
       "lengthChange": false,

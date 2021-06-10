@@ -148,12 +148,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </section>
     <section class="content">
       <div class="container-fluid">
-        <!-- /.card --> 
-        <!---BAATAS-->
         <div class="row">
             <div class="col-12">
             <div class="card">
-              <!-- /.card-header -->
               <div class="card-body">
               <h4><i class="fas fa-history"></i>&nbsp; History Job Order<span>
                   <a class="btn btn-success btn-sm" style="float:right" href="#" data-toggle="modal" data-target="#TambahJobRequest">
@@ -190,9 +187,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </tbody>
                 </table>
               </div>
-              <!-- /.card-body -->
             </div>
-            <!-- /.card -->
           </div>
         </div> 
         </div>

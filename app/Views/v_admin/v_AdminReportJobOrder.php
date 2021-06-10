@@ -371,7 +371,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <div class="card">
             <div class="card-body">
                <div class="row">
-                  <div class="col-4">
+                  <div class="col-3">
                         <div class="form-group">
                           <label for="exampleSelectRounded0">Bussines Unit</label>
                           <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
@@ -379,7 +379,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           </select>
                         </div>
                   </div>
-                  <div class="col-4">
+                  <div class="col-3">
                         <div class="form-group">
                           <label for="exampleSelectRounded0">Depo</label>
                           <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
@@ -387,7 +387,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           </select>
                         </div>
                   </div>
-                  <div class="col-4">
+                  <div class="col-3">
                         <div class="form-group">
                           <label for="exampleSelectRounded0">Department</label>
                           <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
@@ -395,38 +395,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           </select>
                         </div>
                   </div>
-                  <div class="col-4">
+                  <div class="col-3">
                         <div class="form-group">
-                          <label for="exampleSelectRounded0">Kode Barang</label>
+                          <label for="exampleSelectRounded0">Job Request</label>
                           <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
                               <option> </option>
                           </select>
                         </div>
-                  </div>
-                  <div class="col-4">
-                        <div class="form-group">
-                          <label for="exampleSelectRounded0">Kode Inventaris</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
-                              <option> </option>
-                          </select>
-                        </div>
-                  </div>
-                  <div class="col-4">
-                    <label>Nama Item / Barang</label>
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-cube"></i></span>
-                      </div>
-                      <input type="text" autocomplete="off" class="form-control rounded-0"  id="exampleInputRounded0">
-                      &nbsp;<button type="button" class="btn btn-info" data-toggle="modal" data-target="#CariItem"><i class="fas fa-search"></i></button>
-                      &nbsp;<button type="reset" value="Reset" class="btn btn-danger"><i class="fas fa-eraser"></i></button>
-                    </div>
-                 </div>
-                 
+                  </div>                 
                 </div>
 
                 <!--FORM FILTER-->                
-                      <div class="row">
+                <div class="row">
                         <div class="col-12">
                           <div class="mb-3 row">
                             <label for="reservationdate" class="col-sm-1 col-form-label">Periode</label>
@@ -451,13 +431,47 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           </div>
                       </div>
                 <!--END FORM FILTER-->
-               
-                  <div class="col text-center">
-                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-file-pdf"></i>&nbsp; SAVE AS PDF</button>
-                    <button type="button" class="btn btn-success" data-dismiss="modal"><i class="fas fa-file-excel"></i>&nbsp; SAVE AS EXCEL</button>  
-                    <button type="button" class="btn btn-primary"><i class="fas fa-print"></i>&nbsp; PRINT</button>
-                  </div>
                 
+                    <div class="col text-center">
+                      <button type="button" class="btn btn-warning" data-dismiss="modal"><i class="fas fa-broom"></i>&nbsp; CLEAR</button>
+                      <button type="button" class="btn btn-info" data-dismiss="modal"><i class="fas fa-filter"></i>&nbsp; SEARCH</button>  
+                    </div>
+                  </div>
+                <br>
+                    <div class="table-responsive-sm">
+                        <table id="TabelReportBarangMasuk" class="table">
+                        <thead>
+                          <tr>
+                            <th>No. Ticket</th>
+                            <th>Date</th>
+                            <th>Job Request</th>
+                            <th>User</th>
+                            <th>BU</th>
+                            <th>Depo</th>
+                            <th>Depart</th>
+                            <th>Status</th>   
+                          </tr>
+                          </thead>
+                          <tbody>   
+                          <tr>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                          </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                    <br>
+                    <div class="col text-center">
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-file-pdf"></i>&nbsp; SAVE AS PDF</button>
+                        <button type="button" class="btn btn-success" data-dismiss="modal"><i class="fas fa-file-excel"></i>&nbsp; SAVE AS EXCEL</button>  
+                        <button type="button" class="btn btn-primary"><i class="fas fa-print"></i>&nbsp; PRINT</button>
+                    </div> 
 
                 </div>
             </div>       
@@ -505,51 +519,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
           </div>
         </div>
-  </div>
-
-<!--MODAL CARI DATA BARANG-->
-<div class="modal fade" id="CariItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h6 class="modal-title"><i>Master Item / Barang</i></h6>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="table-responsive-sm">
-                <table id="TabelCariItem" class="table">
-                <thead>
-                  <tr>
-                    <th>Item Numb</th>
-                    <th>Item Desc</th>
-                    <th>Type Item</th>
-                    <th>Stock</th>
-                    <th>Satuan</th>     
-                    <th>Action</th>
-                  </tr>
-                  </thead>
-                  <tbody>   
-                  <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td class="text-left py-1 align-middle">
-                      <div class="btn-group btn-group-sm">
-                        <button type="button" class="btn btn-default"><i class="fas fa-check-circle"></i></button>
-                      </div>
-                    </td>
-                  </tr>
-                  </tbody>
-                </table>
-            </div>
-             <!--END Cari Data Mutasi-->
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
   </div>
 
 <!--MODAL PEMBERITAHUAN-->

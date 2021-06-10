@@ -452,12 +452,46 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       </div>
                 <!--END FORM FILTER-->
                
-                  <div class="col text-center">
-                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-file-pdf"></i>&nbsp; SAVE AS PDF</button>
-                    <button type="button" class="btn btn-success" data-dismiss="modal"><i class="fas fa-file-excel"></i>&nbsp; SAVE AS EXCEL</button>  
-                    <button type="button" class="btn btn-primary"><i class="fas fa-print"></i>&nbsp; PRINT</button>
-                  </div>
-                
+                <div class="col text-center">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal"><i class="fas fa-broom"></i>&nbsp; CLEAR</button>
+                        <button type="button" class="btn btn-info" data-dismiss="modal"><i class="fas fa-filter"></i>&nbsp; SEARCH</button>  
+                      </div>
+                    </div>
+                    <br>
+                    <div class="table-responsive-sm">
+                        <table id="TabelReportBarangKeluar" class="table">
+                        <thead>
+                          <tr>
+                            <th>Kd. Brg</th>
+                            <th>Kd. Inv</th>
+                            <th>BU</th>
+                            <th>Depo</th>
+                            <th>Dept.</th>
+                            <th>Item</th>
+                            <th>Qty</th>
+                            <th>Satuan</th>   
+                          </tr>
+                          </thead>
+                          <tbody>   
+                          <tr>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                          </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                    <br>
+                    <div class="col text-center">
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-file-pdf"></i>&nbsp; SAVE AS PDF</button>
+                        <button type="button" class="btn btn-success" data-dismiss="modal"><i class="fas fa-file-excel"></i>&nbsp; SAVE AS EXCEL</button>  
+                        <button type="button" class="btn btn-primary"><i class="fas fa-print"></i>&nbsp; PRINT</button>
+                    </div>
 
                 </div>
             </div>       

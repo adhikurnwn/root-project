@@ -369,11 +369,86 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
           <div class="card">
             <div class="card-body">
-               <div class="row">
+              &nbsp;<button type="button" class="btn btn-warning" data-card-widget="card-refresh" data-source="<?= base_url('Home/AdminJobOrder')?>" data-source-selector="#card-refresh-content" data-load-on-init="false"><i class="fas fa-sync-alt"></i> REFRESH</button>
+            <hr>
+            <table id="TabelJobOrderAcc" class="table table-bordered table-striped" cellspacing="0" width="150%">
+                  <thead>
+                  <tr>
+                    <th>No.Ticket</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>User</th>
+                    <th>Depart.</th>
+                    <th>Job Request</th>
+                    <th>Problem</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                  </thead>
+                  <tbody>   
+                  <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td class="text-left py-1 align-middle">
+                      <div class="btn-group btn-group-sm">
+                         <a href="#" class="btn btn-success" data-toggle="modal" data-target="#ApproveAdminJobOrder"><i class="fas fa-check"></i> </a>
+                      </div>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>             
+            </div>
+          </div>       
+      </div>
+  </section>
+
+
+ <!--MODAL APPROVE JOB ORDER-->
+ <div class="modal fade" id="ApproveAdminJobOrder">
+        <div class="modal-dialog modal-dialog-centered modal-lg ">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title"><i>Detail Job Request / Order</i></h6>
+            </div>
+            <div class="modal-body">
+             <!--Form JOB REQUEST-->
+             <div class="row">
+                  <div class="col-4">
+                    <label>Nomor Ticket</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-ticket-alt"></i></span>
+                      </div>
+                      <input type="text" autocomplete="off" class="form-control rounded-0"  id="exampleInputRounded0" disabled>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-group">
+                    <label>Date Request</label>
+                        <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" disabled/>
+                              <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar-day"></i></div>
+                              </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-group">
+                      <label for="timeReq">Time Request</label>
+                        <input type="time" id="timeReq" class="form-control" disabled>
+                    </div>
+                  </div>
                   <div class="col-4">
                         <div class="form-group">
                           <label for="exampleSelectRounded0">Bussines Unit</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                          <select class="custom-select rounded-0" id="exampleSelectRounded0" disabled>
                               <option> </option>
                           </select>
                         </div>
@@ -381,7 +456,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <div class="col-4">
                         <div class="form-group">
                           <label for="exampleSelectRounded0">Depo</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                          <select class="custom-select rounded-0" id="exampleSelectRounded0" disabled>
                               <option> </option>
                           </select>
                         </div>
@@ -389,80 +464,78 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <div class="col-4">
                         <div class="form-group">
                           <label for="exampleSelectRounded0">Department</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                          <select class="custom-select rounded-0" id="exampleSelectRounded0" disabled>
                               <option> </option>
                           </select>
                         </div>
                   </div>
                   <div class="col-4">
                         <div class="form-group">
-                          <label for="exampleSelectRounded0">Kode Barang</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                          <label for="exampleSelectRounded0">User</label>
+                          <select class="custom-select rounded-0" id="exampleSelectRounded0" disabled>
                               <option> </option>
                           </select>
                         </div>
                   </div>
                   <div class="col-4">
                         <div class="form-group">
-                          <label for="exampleSelectRounded0">Kode Inventaris</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                          <label for="exampleSelectRounded0">Job Request</label>
+                          <select class="custom-select rounded-0" id="exampleSelectRounded0" disabled>
                               <option> </option>
                           </select>
                         </div>
                   </div>
-                  <div class="col-4">
-                    <label>Nama Item / Barang</label>
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-cube"></i></span>
+                  <div class="col-12">
+                    <label>Problem</label>
+                      <div class="form-group">
+                          <textarea class="form-control" rows="3" disabled></textarea>
                       </div>
-                      <input type="text" autocomplete="off" class="form-control rounded-0"  id="exampleInputRounded0">
-                      &nbsp;<button type="button" class="btn btn-info" data-toggle="modal" data-target="#CariItem"><i class="fas fa-search"></i></button>
-                      &nbsp;<button type="reset" value="Reset" class="btn btn-danger"><i class="fas fa-eraser"></i></button>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-group">
+                    <label>Date Complete</label>
+                        <div class="input-group date" id="reservationdate2" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate2"/>
+                              <div class="input-group-append" data-target="#reservationdate2" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar-day"></i></div>
+                              </div>
+                        </div>
                     </div>
-                 </div>
-                 
-                </div>
-
-                <!--FORM FILTER-->                
-                      <div class="row">
-                        <div class="col-12">
-                          <div class="mb-3 row">
-                            <label for="reservationdate" class="col-sm-1 col-form-label">Periode</label>
-                              <div class="form-group">
-                                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
-                                          <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                                            <div class="input-group-text"><i class="fa fa-calendar-day"></i></div>
-                                          </div>
-                                    </div>
-                              </div>
-
-                              <label for="reservationdate2" class="col-sm-1 col-form-label" align="center"> - </label>
-                              <div class="form-group">
-                                    <div class="input-group date" id="reservationdate2" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate2"/>
-                                          <div class="input-group-append" data-target="#reservationdate2" data-toggle="datetimepicker">
-                                            <div class="input-group-text"><i class="fa fa-calendar-day"></i></div>
-                                          </div>
-                                    </div>
-                              </div>
-                          </div>
-                      </div>
-                <!--END FORM FILTER-->
-               
-                  <div class="col text-center">
-                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-file-pdf"></i>&nbsp; SAVE AS PDF</button>
-                    <button type="button" class="btn btn-success" data-dismiss="modal"><i class="fas fa-file-excel"></i>&nbsp; SAVE AS EXCEL</button>  
-                    <button type="button" class="btn btn-primary"><i class="fas fa-print"></i>&nbsp; PRINT</button>
                   </div>
-                
-
+                  <div class="col-4">
+                    <div class="form-group">
+                      <label for="timeReq2">Time Complete</label>
+                        <input type="time" id="timeReq2" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-4">
+                        <div class="form-group">
+                          <label for="exampleSelectRounded0">Status</label>
+                          <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                              <option> </option>
+                          </select>
+                        </div>
+                  </div>
+                  <div class="col-12">
+                    <label>Analisa</label>
+                      <div class="form-group">
+                          <textarea class="form-control" rows="3"></textarea>
+                      </div>
+                  </div>
                 </div>
-            </div>       
+             <!--END JOB REQUEST-->
+            <div class="col text-center">
+                  <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-undo"></i>&nbsp; BACK</button>
+                  <button type="button" class="btn btn-success" data-dismiss="modal" ><i class="fas fa-check"></i>&nbsp; APPROVE</button>  
+            </div>
+           
+            </div>
+              
+          </div>
+          <!-- /.modal-content -->
         </div>
-  </section>
-
+        <!-- /.modal-dialog -->
+  </div>
 
 </div>
 <!--MODAL UBAH PASSWORD-->
@@ -505,52 +578,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </div>
         </div>
   </div>
-
-<!--MODAL CARI DATA BARANG-->
-<div class="modal fade" id="CariItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h6 class="modal-title"><i>Master Item / Barang</i></h6>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="table-responsive-sm">
-                <table id="TabelCariItem" class="table">
-                <thead>
-                  <tr>
-                    <th>Item Numb</th>
-                    <th>Item Desc</th>
-                    <th>Type Item</th>
-                    <th>Stock</th>
-                    <th>Satuan</th>     
-                    <th>Action</th>
-                  </tr>
-                  </thead>
-                  <tbody>   
-                  <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td class="text-left py-1 align-middle">
-                      <div class="btn-group btn-group-sm">
-                        <button type="button" class="btn btn-default"><i class="fas fa-check-circle"></i></button>
-                      </div>
-                    </td>
-                  </tr>
-                  </tbody>
-                </table>
-            </div>
-             <!--END Cari Data Mutasi-->
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-  </div>
-
 <!--MODAL PEMBERITAHUAN-->
 <div class="modal fade" id="modal-notifikasi">
         <div class="modal-dialog modal-lg">
@@ -682,10 +709,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="<?= base_url('assets_adminlte/dist/js/demo.js')?>"></script>
 <script>
   $(function () {
-    $("#TabelBM").DataTable({
+    $("#TabelJobOrderAcc").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#TabelBM_wrapper .col-md-6:eq(0)');
+    }).buttons().container().appendTo('#TabelJobOrderAcc_wrapper .col-md-6:eq(0)');
     $('#example2').DataTable({
       "paging": true,
       "lengthChange": false,

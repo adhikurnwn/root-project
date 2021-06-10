@@ -371,7 +371,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <div class="card">
             <div class="card-body">
                <div class="row">
-                  <div class="col-4">
+                  <div class="col-3">
                         <div class="form-group">
                           <label for="exampleSelectRounded0">Bussines Unit</label>
                           <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
@@ -379,7 +379,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           </select>
                         </div>
                   </div>
-                  <div class="col-4">
+                  <div class="col-3">
                         <div class="form-group">
                           <label for="exampleSelectRounded0">Depo</label>
                           <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
@@ -387,7 +387,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           </select>
                         </div>
                   </div>
-                  <div class="col-4">
+                  <div class="col-3">
                         <div class="form-group">
                           <label for="exampleSelectRounded0">Department</label>
                           <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
@@ -395,34 +395,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           </select>
                         </div>
                   </div>
-                  <div class="col-4">
+                  <div class="col-3">
                         <div class="form-group">
-                          <label for="exampleSelectRounded0">Kode Barang</label>
+                          <label for="exampleSelectRounded0">User</label>
                           <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
                               <option> </option>
                           </select>
                         </div>
-                  </div>
-                  <div class="col-4">
-                        <div class="form-group">
-                          <label for="exampleSelectRounded0">Kode Inventaris</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
-                              <option> </option>
-                          </select>
-                        </div>
-                  </div>
-                  <div class="col-4">
-                    <label>Nama Item / Barang</label>
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-cube"></i></span>
-                      </div>
-                      <input type="text" autocomplete="off" class="form-control rounded-0"  id="exampleInputRounded0">
-                      &nbsp;<button type="button" class="btn btn-info" data-toggle="modal" data-target="#CariItem"><i class="fas fa-search"></i></button>
-                      &nbsp;<button type="reset" value="Reset" class="btn btn-danger"><i class="fas fa-eraser"></i></button>
-                    </div>
-                 </div>
-                 
+                  </div>                 
                 </div>
 
                 <!--FORM FILTER-->                
@@ -451,6 +431,40 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           </div>
                       </div>
                 <!--END FORM FILTER-->
+
+                <div class="col text-center">
+                      <button type="button" class="btn btn-warning" data-dismiss="modal"><i class="fas fa-broom"></i>&nbsp; CLEAR</button>
+                      <button type="button" class="btn btn-info" data-dismiss="modal"><i class="fas fa-filter"></i>&nbsp; SEARCH</button>  
+                    </div>
+                  </div>
+                <br>
+                    <div class="table-responsive-sm">
+                        <table id="TabelReportBarangMasuk" class="table">
+                        <thead>
+                          <tr>
+                            <th>Date</th>
+                            <th>BU</th>
+                            <th>Depo</th>
+                            <th>Depart.</th>
+                            <th>User</th>
+                            <th>Status</th> 
+                            <th>Next Date</th>
+                          </tr>
+                          </thead>
+                          <tbody>   
+                          <tr>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                          </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                    <br>
                
                   <div class="col text-center">
                     <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-file-pdf"></i>&nbsp; SAVE AS PDF</button>
