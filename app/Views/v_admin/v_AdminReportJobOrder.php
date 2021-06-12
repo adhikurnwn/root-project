@@ -471,7 +471,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-file-pdf"></i>&nbsp; SAVE AS PDF</button>
                         <button type="button" class="btn btn-success" data-dismiss="modal"><i class="fas fa-file-excel"></i>&nbsp; SAVE AS EXCEL</button>  
                         <button type="button" class="btn btn-primary"><i class="fas fa-print"></i>&nbsp; PRINT</button>
-                    </div> 
+                    </div>
+                        &nbsp;<button class="btn btn-info float-right" type="submit"  onclick="window.location.reload(true);"><i class="fas fa-sync-alt"></i></button>
 
                 </div>
             </div>       
@@ -514,8 +515,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </div>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Kembali</button>
-              <button type="button" class="btn btn-danger">Ubah</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
+              <button type="button" class="btn btn-success"><i class="fas fa-save"></i>&nbsp; SAVE CHANGES</button>
             </div>
           </div>
         </div>
@@ -547,7 +548,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </table>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Kembali</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
             </div>
           </div>
         </div>
@@ -561,11 +562,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <h6 class="modal-title">Alert!</h6>
             </div>
             <div class="modal-body">
-              <p><strong><i>Apakah anda yakin akan menghapus data ini?</i></strong></p>
+              <p><strong><i>Data akan di HAPUS! Apakah anda yakin?</i></strong></p>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
-              <button type="button" class="btn btn-danger">Ya</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
+              <button type="button" class="btn btn-danger">YES</button>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -576,7 +577,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!--MODAL LOG OUT-->
   <div class="modal fade" id="modal-logout">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h6 class="modal-title">Alert!</h6>
@@ -585,8 +586,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <p><strong><i>Anda yakin akan keluar dari sistem ini?</i></strong></p>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
-              <button type="button" class="btn btn-danger">Ya</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
+              <button type="button" class="btn btn-danger">YES</button>
             </div>
           </div>
           <!-- /.modal-content -->

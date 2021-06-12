@@ -369,7 +369,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="card">
               <div class="card-body">
                 <a href="#" class="btn btn-success" data-toggle="modal" data-target="#TambahHakAkses"><i class="fas fa-plus-circle"></i> CREATE NEW</a>
-                &nbsp;<button type="button" class="btn btn-info" data-card-widget="card-refresh" data-source="<?= base_url('Home/AdminHakAkses')?>" data-source-selector="#card-refresh-content" data-load-on-init="false"><i class="fas fa-sync-alt"></i></button>
+                &nbsp;<button class="btn btn-info float-right" type="submit"  onclick="window.location.reload(true);"><i class="fas fa-sync-alt"></i></button>
+                <!--&nbsp;<button type="button" class="btn btn-info" data-card-widget="card-refresh" data-source="<?= base_url('Home/AdminHakAkses')?>" data-source-selector="#card-refresh-content" data-load-on-init="false"><i class="fas fa-sync-alt"></i></button>-->
                 <hr>
                 <table id="TabelHakAkses" class="table table-bordered table-striped" cellspacing="0" width="150%">
                   <thead>
@@ -473,8 +474,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!--END JOB REQUEST-->
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
-              <button type="button" class="btn btn-success"><i class="fas fa-save"></i>&nbsp; SAVE</button>
+              <div class="col text-center">
+                <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
+                <button type="button" class="btn btn-success"><i class="fas fa-save"></i>&nbsp; SAVE</button>
+              </div>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -544,8 +547,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!--END JOB REQUEST-->
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
-              <button type="button" class="btn btn-success"><i class="fas fa-save"></i>&nbsp; SAVE CHANGES</button>
+              <div class="col text-center">
+                <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
+                <button type="button" class="btn btn-success"><i class="fas fa-save"></i>&nbsp; SAVE CHANGES</button>
+              </div>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -555,7 +560,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!--MODAL UBAH PASSWORD-->
   <div class="modal fade" id="modal-ubahpass">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h6 class="modal-title"><i>Pengaturan Akun</i></h6>
@@ -634,7 +639,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <h6 class="modal-title">Alert!</h6>
             </div>
             <div class="modal-body">
-              <p><strong><i>Apakah anda yakin akan menghapus data ini?</i></strong></p>
+              <p><strong><i>Data ini akan di HAPUS! Apakah anda yakin?</i></strong></p>
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>

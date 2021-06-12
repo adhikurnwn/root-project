@@ -373,7 +373,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="card">
               <div class="card-body">
                 <a href="#" class="btn btn-success" data-toggle="modal" data-target="#TambahBM"><i class="fas fa-plus-circle"></i> CREATE NEW</a>
-                &nbsp;<button class="btn btn-info" type="submit"  onclick="window.location.reload(true);"><i class="fas fa-sync-alt"></i></button>
+                &nbsp;<button class="btn btn-info float-right" type="submit"  onclick="window.location.reload(true);"><i class="fas fa-sync-alt"></i></button>
                 <!--&nbsp;<button type="button" class="btn btn-info" data-card-widget="card-refresh" data-source="<?= base_url('Home/AdminMutasi')?>" data-source-selector="#card-refresh-content" data-load-on-init="false"><i class="fas fa-sync-alt"></i></button>-->
               <hr>
                 <table id="TabelBM" class="table table-bordered table-striped" cellspacing="0" width="150%">
@@ -1052,7 +1052,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <h6 class="modal-title">Alert!</h6>
             </div>
             <div class="modal-body">
-              <p><strong><i>Apakah anda yakin akan menghapus data ini?</i></strong></p>
+              <p><strong><i>Data ini akan di HAPUS! Apakah anda yakin?</i></strong></p>
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>

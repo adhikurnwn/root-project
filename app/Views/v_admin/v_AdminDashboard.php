@@ -513,7 +513,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!--CONTENT MODAL-->
 <!--MODAL UBAH PASSWORD-->
   <div class="modal fade" id="modal-ubahpass">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h6 class="modal-title"><i>Pengaturan Akun</i></h6>

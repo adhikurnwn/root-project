@@ -157,9 +157,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
+      <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0"><i class="fas fa-tachometer-alt"></i>Dashboard</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+          </div><!-- /.col -->
+        </div>
         <div class="row">
           <div class="col-lg-6 col-6">
-            <div class="small-box bg-info">
+            <div class="small-box bg-light">
               <div class="inner">
                 <h3>150</h3>
                 <p>JOB ORDERS</p>
@@ -171,7 +181,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
           </div><!-- /.col -->
           <div class="col-lg-6 col-6">
-            <div class="small-box bg-warning">
+            <div class="small-box bg-light">
               <div class="inner">
                 <h3>70</h3>
                 <p>PREVENTIVE / MAINTENANCE</p>
@@ -205,41 +215,105 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="card-body">
                 <strong><i class="fas fa-desktop"></i> PERSONAL COMPUTER</strong>
                 <br>
-                    <p class="text">Model<span style = "padding-left:98px";>:</span><span class="text-muted"> </span>
-                    <hr>
-                    Merk<span style = "padding-left:106px";>:</span><span class="text-muted"> </span>
-                    <hr>
-                    Nomor Seri<span style = "padding-left:63px";>:</span><span class="text-muted"> </span>
-                    <hr>
-                    Processor<span style = "padding-left:73px";>:</span><span class="text-muted"> </span>
-                    <hr>
-                    Hardisk<span style = "padding-left:87px";>:</span><span class="text-muted"> </span>
-                    <hr>
-                    SSD<span style = "padding-left:111px";>:</span><span class="text-muted"> </span>
-                    <hr>
-                    RAM<span style = "padding-left:110px";>:</span><span class="text-muted"> </span>
-                    <hr>
-                    Monitor<span style = "padding-left:86px";>:</span><span class="text-muted"> </span>
-                    <hr>
-                    OS<span style = "padding-left:120px";>:</span><span class="text-muted">  </span>
-                    <hr>
-                    IP Address<span style = "padding-left:69px";>:</span><span class="text-muted"> </span>
-                    <hr>
-                    Tanggal Perolehan<span style = "padding-left:15px";>:</span><span class="text-muted"> </span>
-                  </p>
+                <br>
+                <form>
+                  <div class="form-group row">
+                    <p for="inputModelPC" class="col-sm-2 col-form-label">Model</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputModelPC" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <p for="inputMerkPC" class="col-sm-2 col-form-label">Merk</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputMerkPC" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <p for="inputNoSeriPC" class="col-sm-2 col-form-label">Nomor Seri</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputNoSeriPC" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <p for="inputProcessorPC" class="col-sm-2 col-form-label">Processor</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputProcessorPC" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <p for="inputHardiskPC" class="col-sm-2 col-form-label">Hardisk</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputHardiskPC" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <p for="inputSSDPC" class="col-sm-2 col-form-label">SSD</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputSSDPC" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <p for="inputRAMPC" class="col-sm-2 col-form-label">RAM</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputRAMPC" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <p for="inputOSPC" class="col-sm-2 col-form-label">OS</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputOSPC" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <p for="inputIPAddressPC" class="col-sm-2 col-form-label">IP Address</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputIPAddressPC" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <p for="inputTglPC" class="col-sm-2 col-form-label">Tgl. Perolehan</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputTglPC" disabled>
+                    </div>
+                  </div>
+                </form>
                
                 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
                 <strong><i class="fas fa-print"></i> PRINTER</strong>
-                    <p class="text">Model<span style = "padding-left:97px";>:</span><span class="text-muted"> </span>
-                    <hr>
-                    Merk<span style = "padding-left:106px";>:</span><span class="text-muted"> </span>
-                    <hr>
-                    Nomor Seri<span style = "padding-left:63px";>:</span><span class="text-muted"> </span>
-                    <hr>
-                    Spesifikasi<span style = "padding-left:68px";>:</span><span class="text-muted"> </span>
-                    <hr>
-                    Tanggal Perolehan<span style = "padding-left:15px";>:</span><span class="text-muted"> </span>
-                  </p>
+                <br>
+                <br>
+                <form>
+                  <div class="form-group row">
+                    <p for="inputModelPR" class="col-sm-2 col-form-label">Model</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputModelPR" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <p for="inputMerkPR" class="col-sm-2 col-form-label">Merk</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputMerkPR" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <p for="inputNoSeriPR" class="col-sm-2 col-form-label">Nomor Seri</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputNoSeriPR" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <p for="inputSpekPR" class="col-sm-2 col-form-label">Spesifikasi</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputSpekPR" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <p for="inputTglPR" class="col-sm-2 col-form-label">Tgl. Perolehan</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputTglPR" disabled>
+                    </div>
+                  </div>
               </div>
               <!-- /.card-body -->
             </div>
@@ -254,31 +328,77 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </div>
               <div class="card-body">
                 <strong><i class="fas fa-laptop"></i> LAPTOP / NOTEBOOK</strong>
-                  <p class="text">Model<span style = "padding-left:98px";>:</span><span class="text-muted"> </span>
-                  <hr>
-                  Merk<span style = "padding-left:106px";>:</span><span class="text-muted"> </span>
-                  <hr>
-                  Nomor Seri<span style = "padding-left:63px";>:</span><span class="text-muted"> </span>
-                  <hr>
-                  Processor<span style = "padding-left:73px";>:</span><span class="text-muted"> </span>
-                  <hr>
-                  Hardisk<span style = "padding-left:87px";>:</span><span class="text-muted"> </span>
-                  <hr>
-                  SSD<span style = "padding-left:111px";>:</span><span class="text-muted"> </span>
-                  <hr>
-                  RAM<span style = "padding-left:110px";>:</span><span class="text-muted"> </span>
-                  <hr>
-                  OS<span style = "padding-left:120px";>:</span><span class="text-muted">  </span>
-                  <hr>
-                  IP Address<span style = "padding-left:69px";>:</span><span class="text-muted"> </span>
-                  <hr>
-                  Tanggal Perolehan<span style = "padding-left:15px";>:</span><span class="text-muted"> </span>
-                  </p>
+                <br>
+                <br>
+                <form>
+                  <div class="form-group row">
+                    <p for="inputModelNB" class="col-sm-2 col-form-label">Model</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputModelNB" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <p for="inputMerkNB" class="col-sm-2 col-form-label">Merk</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputMerkNB" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <p for="inputNoSeriNB" class="col-sm-2 col-form-label">Nomor Seri</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputNoSeriNB" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <p for="inputProcessorNB" class="col-sm-2 col-form-label">Processor</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputProcessorNB" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <p for="inputHardiskNB" class="col-sm-2 col-form-label">Hardisk</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputHardiskNB" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <p for="inputSSDNB" class="col-sm-2 col-form-label">SSD</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputSSDNB" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <p for="inputRAMNB" class="col-sm-2 col-form-label">RAM</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputRAMNB" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <p for="inputOSNB" class="col-sm-2 col-form-label">OS</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputOSNB" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <p for="inputIPAddressNB" class="col-sm-2 col-form-label">IP Address</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputIPAddressNB" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <p for="inputTglNB" class="col-sm-2 col-form-label">Tgl. Perolehan</p>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputTglNB" disabled>
+                    </div>
+                  </div>
+                </form>
                 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
                <strong><i class="far fa-file-alt mr-1"></i> NOTES</strong>
-                <p class="text-muted"> 
-
-                </p>
+               <br>
+               <br>
+                  <div class="form-group">
+                      <textarea class="form-control" rows="3"> </textarea>
+                  </div>
               </div>
               <!-- /.card-body -->
             </div>
@@ -291,7 +411,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!--CONTENT MODAL-->
 <!--MODAL UBAH PASSWORD-->
   <div class="modal fade" id="modal-ubahpass">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h6 class="modal-title"><i>Pengaturan Akun</i></h6>
@@ -323,8 +443,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </div>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Kembali</button>
-              <button type="button" class="btn btn-danger">Ubah</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
+              <button type="button" class="btn btn-success"><i class="fas fa-save"></i>&nbsp; SAVE CHANGES</button>
             </div>
           </div>
         </div>
@@ -356,7 +476,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </table>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Kembali</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
             </div>
           </div>
         </div>
@@ -365,7 +485,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!--MODAL LOG OUT-->
   <div class="modal fade" id="modal-logout">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h6 class="modal-title">Alert!</h6>
@@ -374,8 +494,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <p><strong><i>Anda yakin akan keluar dari sistem ini?</i></strong></p>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
-              <button type="button" class="btn btn-danger">Ya</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
+              <button type="button" class="btn btn-danger">YES</button>
             </div>
           </div>
           <!-- /.modal-content -->

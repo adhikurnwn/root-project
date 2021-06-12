@@ -369,8 +369,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
           <div class="card">
             <div class="card-body">
-              &nbsp;<button type="button" class="btn btn-warning" data-card-widget="card-refresh" data-source="<?= base_url('Home/AdminJobOrder')?>" data-source-selector="#card-refresh-content" data-load-on-init="false"><i class="fas fa-sync-alt"></i> REFRESH</button>
-            <hr>
+              <!--&nbsp;<button type="button" class="btn btn-warning" data-card-widget="card-refresh" data-source="<?= base_url('Home/AdminJobOrder')?>" data-source-selector="#card-refresh-content" data-load-on-init="false"><i class="fas fa-sync-alt"></i> REFRESH</button>-->
             <table id="TabelJobOrderAcc" class="table table-bordered table-striped" cellspacing="0" width="150%">
                   <thead>
                   <tr>
@@ -397,13 +396,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td> </td>
                     <td class="text-left py-1 align-middle">
                       <div class="btn-group btn-group-sm">
-                         <a href="#" class="btn btn-success" data-toggle="modal" data-target="#ApproveAdminJobOrder"><i class="fas fa-check"></i> </a>
+                         <a href="#" class="btn btn-default" data-toggle="modal" data-target="#ApproveAdminJobOrder"><i class="fas fa-eye"></i> </a>
                       </div>
                     </td>
                   </tr>
                   </tbody>
-                </table>             
+                </table>
+                <br>
+                &nbsp;<button class="btn btn-info float-right" type="submit"  onclick="window.location.reload(true);"><i class="fas fa-sync-alt"></i></button>             
             </div>
+            
           </div>       
       </div>
   </section>
@@ -526,7 +528,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
              <!--END JOB REQUEST-->
             <div class="col text-center">
                   <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-undo"></i>&nbsp; BACK</button>
-                  <button type="button" class="btn btn-success" data-dismiss="modal" ><i class="fas fa-check"></i>&nbsp; APPROVE</button>  
+                  <button type="button" class="btn btn-success" data-dismiss="modal" ><i class="fas fa-check-circle"></i>&nbsp; APPROVE</button>  
             </div>
            
             </div>
@@ -538,6 +540,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </div>
 
 </div>
+
 <!--MODAL UBAH PASSWORD-->
   <div class="modal fade" id="modal-ubahpass">
         <div class="modal-dialog modal-dialog-centered">
@@ -572,12 +575,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </div>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Kembali</button>
-              <button type="button" class="btn btn-danger">Ubah</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
+              <button type="button" class="btn btn-success"><i class="fas fa-save"></i>&nbsp; SAVE CHANGES</button>
             </div>
           </div>
         </div>
   </div>
+
 <!--MODAL PEMBERITAHUAN-->
 <div class="modal fade" id="modal-notifikasi">
         <div class="modal-dialog modal-lg">
@@ -604,13 +608,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </table>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Kembali</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
             </div>
           </div>
         </div>
   </div>
 
-<!--MODAL Hapus Data-->
+<!--MODAL HAPUS DATA-->
 <div class="modal fade" id="HapusBM">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
@@ -618,11 +622,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <h6 class="modal-title">Alert!</h6>
             </div>
             <div class="modal-body">
-              <p><strong><i>Apakah anda yakin akan menghapus data ini?</i></strong></p>
+              <p><strong><i>Data ini akan di HAPUS! Apakah anda yakin?</i></strong></p>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
-              <button type="button" class="btn btn-danger">Ya</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
+              <button type="button" class="btn btn-danger">YES</button>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -633,7 +637,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!--MODAL LOG OUT-->
   <div class="modal fade" id="modal-logout">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h6 class="modal-title">Alert!</h6>
@@ -642,8 +646,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <p><strong><i>Anda yakin akan keluar dari sistem ini?</i></strong></p>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
-              <button type="button" class="btn btn-danger">Ya</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
+              <button type="button" class="btn btn-danger">YES</button>
             </div>
           </div>
           <!-- /.modal-content -->
