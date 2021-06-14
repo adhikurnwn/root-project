@@ -528,7 +528,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
              <!--END JOB REQUEST-->
             <div class="col text-center">
                   <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-undo"></i>&nbsp; BACK</button>
-                  <button type="button" class="btn btn-success" data-dismiss="modal" ><i class="fas fa-check-circle"></i>&nbsp; APPROVE</button>  
+                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#ApproveJO"><i class="fas fa-check-circle"></i>&nbsp; APPROVE</button>  
             </div>
            
             </div>
@@ -623,6 +623,27 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
             <div class="modal-body">
               <p><strong><i>Data ini akan di HAPUS! Apakah anda yakin?</i></strong></p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
+              <button type="button" class="btn btn-danger">YES</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+  </div>
+      <!-- /.modal -->
+
+<!--MODAL HAPUS DATA-->
+<div class="modal fade" id="ApproveJO">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title">Alert!</h6>
+            </div>
+            <div class="modal-body">
+              <p><strong><i>Data akan di APPROVE! Apakah anda yakin?</i></strong></p>
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
