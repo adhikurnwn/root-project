@@ -372,11 +372,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="col-12">
             <div class="card">
               <div class="card-body">
-                <a href="#" class="btn btn-success" data-toggle="modal" data-target="#TambahBM"><i class="fas fa-plus-circle"></i> CREATE NEW</a>
+                <a href="#" class="btn btn-success" data-toggle="modal" data-target="#add_item_in"><i class="fas fa-plus-circle"></i> CREATE NEW</a>
                 &nbsp;<button class="btn btn-info float-right" type="submit"  onclick="window.location.reload(true);"><i class="fas fa-sync-alt"></i></button>
                 <!--&nbsp;<button type="button" class="btn btn-info" data-card-widget="card-refresh" data-source="<?= base_url('Home/AdminMutasi')?>" data-source-selector="#card-refresh-content" data-load-on-init="false"><i class="fas fa-sync-alt"></i></button>-->
               <hr>
-                <table id="TabelBM" class="table table-bordered table-striped" cellspacing="0" width="150%">
+                <table id="tbl_item_in" class="table table-bordered table-striped" cellspacing="0" width="150%">
                   <thead>
                   <tr>
                     <th>Created</th>
@@ -402,9 +402,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td> </td>
                     <td class="text-left py-1 align-middle">
                       <div class="btn-group btn-group-sm">
-                        <a href="#" class="btn btn-default" data-toggle="modal" data-target="#DetailBM"><i class="fas fa-eye"></i></a>
-                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#EditBM"><i class="fas fa-edit"></i></a>
-                        <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#HapusBM"><i class="fas fa-trash"></i></a>
+                        <a href="#" class="btn btn-default" data-toggle="modal" data-target="#detail_item_in"><i class="fas fa-eye"></i></a>
+                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#edit_item_in"><i class="fas fa-edit"></i></a>
+                        <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#hapus_item_in"><i class="fas fa-trash"></i></a>
                       </div>
                     </td>
                   </tr>
@@ -424,7 +424,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!--CONTENT MODAL-->
 <!--MODAL TAMBAH DATA BARANG MASUK-->
-<div class="modal fade" id="TambahBM">
+<div class="modal fade" id="add_item_in">
         <div class="modal-dialog modal-xl">
           <div class="modal-content">
             <div class="modal-header">
@@ -436,9 +436,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="col-3">
               <div class="form-group">
                   <label>Created</label>
-                    <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
-                        <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker1"/>
-                        <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                    <div class="input-group date" id="date_item_in" data-target-input="nearest">
+                        <input type="text" name="date_item_in" class="form-control rounded-0 datetimepicker-input" data-target="#date_item_in"/>
+                        <div class="input-group-append" data-target="#date_item_in" data-toggle="datetimepicker">
                             <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
                         </div>
                     </div>
@@ -446,16 +446,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </div>
               <div class="col-3">
                     <div class="form-group">
-                       <label for="exampleSelectRounded0">Kode Barang</label>
-                       <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                       <label for="kode_brg_in">Kode Barang</label>
+                       <select class="custom-select rounded-0" name="kode_brg_in" id="kode_brg_in" required>
                           <option> </option>
                        </select>
                     </div>
               </div>
               <div class="col-3">
                     <div class="form-group">
-                       <label for="exampleSelectRounded0">Kode Inventaris</label>
-                       <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                       <label for="kode_inv_in">Kode Inventaris</label>
+                       <select class="custom-select rounded-0" name="kode_inv_in" id="kode_inv_in" required>
                           <option> </option>
                        </select>
                     </div>
@@ -466,7 +466,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-barcode"></i></span>
                 </div>
-                <input type="text" autocomplete="off" class="form-control rounded-0"  id="exampleInputRounded0">
+                <input type="text" autocomplete="off" class="form-control rounded-0" name="no_inv_brg" id="no_inv_brg">
               </div>
               </div>
               <div class="col-3">
@@ -475,7 +475,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-cube"></i></span>
                 </div>
-                <input type="text" autocomplete="off" class="form-control rounded-0"  id="exampleInputRounded0">
+                <input type="text" autocomplete="off" class="form-control rounded-0"  name="nama_brg" id="nama_brg">
               </div>
               </div>
               <div class="col-3">
@@ -484,7 +484,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-cube"></i></span>
                 </div>
-                <input type="text" autocomplete="off" class="form-control rounded-0"  id="exampleInputRounded0">
+                <input type="text" autocomplete="off" class="form-control rounded-0"  name="model_brg" id="model_brg">
               </div>
               </div>
               <div class="col-3">
@@ -493,7 +493,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-cube"></i></span>
                 </div>
-                <input type="text" autocomplete="off" class="form-control rounded-0"  id="exampleInputRounded0">
+                <input type="text" autocomplete="off" class="form-control rounded-0"  name="type_brg" id="type_brg">
               </div>
               </div>
               <div class="col-3">
@@ -502,13 +502,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-barcode"></i></span>
                 </div>
-                <input type="text" autocomplete="off" class="form-control rounded-0"  id="exampleInputRounded0">
+                <input type="text" autocomplete="off" class="form-control rounded-0"  name="no_seri_brg" id="no_seri_brg">
               </div>
               </div>
               <div class="col-12">
                 <label>Spesifikasi</label>
                   <div class="form-group">
-                      <textarea class="form-control" rows="3"></textarea>
+                      <textarea class="form-control" rows="3" name="spek_brg" id="spek_brg"></textarea>
                   </div>
               </div>
             </div>
@@ -518,16 +518,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="row">
                 <div class="col-4">
                    <div class="form-group">
-                       <label for="exampleSelectRounded0">Supplier</label>
-                       <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                       <label for="supplier_brg">Supplier</label>
+                       <select class="custom-select rounded-0" name="supplier_brg" id="supplier_brg" required>
                           <option selected="true" disabled="disabled"> - </option>
                        </select>
                     </div>
                 </div>
                 <div class="col-2">
                    <div class="form-group">
-                       <label for="exampleSelectRounded0">Sumber Perolehan</label>
-                       <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                       <label for="smbr_perolehan_brg">Sumber Perolehan</label>
+                       <select class="custom-select rounded-0" name="smbr_perolehan_brg" id="smbr_perolehan_brg" required>
                           <option selected="true" disabled="disabled"> - </option>
                           <option>Beli</option>
                           <option>Mutasi</option>
@@ -536,8 +536,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </div>
                 <div class="col-2">
                    <div class="form-group">
-                       <label for="exampleSelectRounded0">Kondisi</label>
-                       <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                       <label for="kond_brg">Kondisi</label>
+                       <select class="custom-select rounded-0" name="kond_brg" id="kond_brg" required>
                           <option selected="true" disabled="disabled"> - </option>
                           <option>Baru</option>
                           <option>Bekas</option>
@@ -548,15 +548,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <label>Quantity</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                              <span class="input-group-text"><i class="fas fa-sort-numeric-down"></i></span>
+                              <span class="input-group-text"><i class="fas fa-question-circle"></i></span>
                             </div>
-                            <input type="text" autocomplete="off" class="form-control rounded-0" id="exampleInputRounded0">
+                            <input type="text" autocomplete="off" name="qty_brg" id="qty_brg" class="form-control rounded-0">
                         </div>
                   </div>
                   <div class="col-2">
                    <div class="form-group">
-                       <label for="exampleSelectRounded0">Satuan</label>
-                       <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                       <label for="satuan_brg">Satuan</label>
+                       <select class="custom-select rounded-0" name="satuan_brg" id="satuan_brg" required>
                           <option selected="true" disabled="disabled"> - </option>
                        </select>
                     </div>
@@ -567,7 +567,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           <div class="input-group-prepend">
                             <span class="input-group-text">Rp.</span>
                           </div>
-                            <input type="text" class="form-control">
+                            <input type="text" name="hrg_perolehan_brg" id="hrg_perolehan_brg" class="form-control">
                           <div class="input-group-append">
                             <span class="input-group-text">.00</span>
                           </div>
@@ -576,7 +576,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <div class="col-2">
                   <label>Umur Ekonomis</label>
                     <div class="input-group mb-3">
-                      <input type="text" class="form-control">
+                      <input type="text" name="umr_ekonomis_brg" id="umr_ekonomis_brg" class="form-control">
                         <div class="input-group-append">
                           <span class="input-group-text">Tahun</span>
                         </div>
@@ -588,7 +588,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <div class="input-group-prepend">
                               <span class="input-group-text"><i class="fas fa-comment-alt"></i></span>
                             </div>
-                            <input type="text" autocomplete="off" class="form-control rounded-0" id="exampleInputRounded0">
+                            <input type="text" autocomplete="off" class="form-control rounded-0" name="note_brg_in" id="note_brg_in">
                         </div>
                   </div>
                 </div>
@@ -607,7 +607,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </div>
 
 <!--MODAL EDIT DATA BARANG MASUK-->
-<div class="modal fade" id="EditBM">
+<div class="modal fade" id="edit_item_in">
         <div class="modal-dialog modal-xl">
           <div class="modal-content">
             <div class="modal-header">
@@ -619,9 +619,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="col-3">
               <div class="form-group">
                   <label>Created</label>
-                    <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
-                        <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker1"/>
-                        <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                    <div class="input-group date" id="date_item_in" data-target-input="nearest">
+                        <input type="text" name="date_item_in" class="form-control rounded-0 datetimepicker-input" data-target="#date_item_in" disabled/>
+                        <div class="input-group-append" data-target="#date_item_in" data-toggle="datetimepicker">
                             <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
                         </div>
                     </div>
@@ -629,8 +629,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </div>
               <div class="col-3">
                     <div class="form-group">
-                       <label for="exampleSelectRounded0">Kode Barang</label>
-                       <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                       <label for="kode_brg_in">Kode Barang</label>
+                       <select class="custom-select rounded-0" name="kode_brg_in" id="kode_brg_in" required>
                           <option> </option>
                        </select>
                     </div>

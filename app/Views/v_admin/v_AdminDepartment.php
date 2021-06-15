@@ -369,11 +369,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="col-12">
             <div class="card">
               <div class="card-body">
-                <a href="#" class="btn btn-success" data-toggle="modal" data-target="#TambahDepartment"><i class="fas fa-plus-circle"></i> CREATE NEW</a>
+                <a href="#" class="btn btn-success" data-toggle="modal" data-target="#add_depart"><i class="fas fa-plus-circle"></i> CREATE NEW</a>
                 &nbsp;<button class="btn btn-info float-right" type="submit"  onclick="window.location.reload(true);"><i class="fas fa-sync-alt"></i></button>
                 <!--&nbsp;<button type="button" class="btn btn-info" data-card-widget="card-refresh" data-source="<?= base_url('Home/AdminDepartment')?>" data-source-selector="#card-refresh-content" data-load-on-init="false"><i class="fas fa-sync-alt"></i></button>-->
                 <hr>
-                <table id="TabelDepartment" class="table table-bordered table-striped" cellspacing="0" width="150%">
+                <table id="tbl_depart" class="table table-bordered table-striped" cellspacing="0" width="150%">
                   <thead>
                   <tr>
                     <th>Kode</th>
@@ -389,8 +389,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td> </td>
                     <td class="text-left py-1 align-middle">
                       <div class="btn-group btn-group-sm">
-                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#EditDepartment"><i class="fas fa-edit"></i></a>
-                        <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#HapusDepartment"><i class="fas fa-trash"></i></a>
+                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#edit_depart"><i class="fas fa-edit"></i></a>
+                        <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#hapus_depart"><i class="fas fa-trash"></i></a>
                       </div>
                     </td>
                   </tr>
@@ -410,7 +410,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!--CONTENT MODAL-->
 <!--MODAL TAMBAH DATA DEPARTMENT-->
-<div class="modal fade" id="TambahDepartment">
+<div class="modal fade" id="add_depart">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
@@ -422,9 +422,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <div class="col-4">
                     <div class="form-group">
                     <label>Created</label>
-                      <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
-                          <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker1"/>
-                          <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                      <div class="input-group date" id="date_depart" data-target-input="nearest">
+                          <input type="text" name="date_depart" class="form-control rounded-0 datetimepicker-input" data-target="#date_depart"/>
+                          <div class="input-group-append" data-target="#date_depart" data-toggle="datetimepicker">
                               <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
                           </div>
                       </div>
@@ -436,16 +436,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-hotel"></i></span>
                       </div>
-                      <input type="text" autocomplete="off" class="form-control rounded-0" id="exampleInputRounded0">
+                      <input type="text" autocomplete="off" class="form-control rounded-0" name="depart" id="depart">
                     </div>
                   </div>
                   <div class="col-3">
                   <label>Kode</label>
                   <div class="input-group">
                     <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="fas fa-code"></i></span>
+                      <span class="input-group-text"><i class="fas fa-terminal"></i></span>
                     </div>
-                    <input type="text" autocomplete="off" class="form-control rounded-0" id="exampleInputRounded0">
+                    <input type="text" autocomplete="off" class="form-control rounded-0" name="kode_depart" id="kode_depart">
                   </div>
               </div>
             </div>
@@ -464,7 +464,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </div>
 
 <!--MODAL EDIT DATA DEPARTMENT-->
-<div class="modal fade" id="EditDepartment">
+<div class="modal fade" id="edit_depart">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
@@ -476,9 +476,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="col-4">
                     <div class="form-group">
                     <label>Created</label>
-                      <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
-                          <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker2"/>
-                          <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
+                      <div class="input-group date" id="date_depart" data-target-input="nearest">
+                          <input type="text" name="date_depart" class="form-control rounded-0 datetimepicker-input" data-target="#date_depart"/>
+                          <div class="input-group-append" data-target="#date_depart" data-toggle="datetimepicker">
                               <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
                           </div>
                       </div>
@@ -490,16 +490,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-hotel"></i></span>
                       </div>
-                      <input type="text" autocomplete="off" class="form-control rounded-0" id="exampleInputRounded0">
+                      <input type="text" autocomplete="off" class="form-control rounded-0" name="depart" id="depart">
                     </div>
                   </div>
                   <div class="col-3">
                   <label>Kode</label>
                   <div class="input-group">
                     <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="fas fa-code"></i></span>
+                      <span class="input-group-text"><i class="fas fa-terminal"></i></span>
                     </div>
-                    <input type="text" autocomplete="off" class="form-control rounded-0"  id="exampleInputRounded0">
+                    <input type="text" autocomplete="off" class="form-control rounded-0"  name="kode_depart" id="kode_depart">
                   </div>
                 </div>
             </div>
@@ -529,25 +529,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                   </div>
-                  <input type="username" class="form-control" placeholder="Username" disabled>
+                  <input type="text" class="form-control" name="username" id="username" placeholder="Username" disabled>
               </div>
               <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-unlock-alt"></i></span>
                   </div>
-                  <input type="password" class="form-control" placeholder="Password Lama">
+                  <input type="password" class="form-control" name="old_pass" id="old_pass" placeholder="Password Lama">
               </div>
               <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-lock"></i></span>
                   </div>
-                  <input type="password" class="form-control" placeholder="Password Baru">
+                  <input type="password" class="form-control" name="new_pass" id="new_pass" placeholder="Password Baru">
               </div>
               <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-check-circle"></i></span>
                   </div>
-                  <input type="password" class="form-control" placeholder="Konfirmasi Password">
+                  <input type="password" class="form-control" name="pass_conf" id="pass_conf" placeholder="Konfirmasi Password">
               </div>
             </div>
             <div class="modal-footer justify-content-between">
@@ -591,9 +591,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </div>
 
 <!--MODAL Hapus Data-->
-<div class="modal fade" id="HapusDepartment">
+<div class="modal fade" id="hapus_depart">
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
+          <div class="modal-content modal-dialog-centered">
             <div class="modal-header">
               <h6 class="modal-title">Alert!</h6>
             </div>
@@ -614,7 +614,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!--MODAL LOG OUT-->
   <div class="modal fade" id="modal-logout">
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
+          <div class="modal-content modal-dialog-centered">
             <div class="modal-header">
               <h6 class="modal-title">Alert!</h6>
             </div>
@@ -687,10 +687,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="<?= base_url('assets_adminlte/dist/js/demo.js')?>"></script>
 <script>
   $(function () {
-    $("#TabelDepartment").DataTable({
+    $("#tbl_depart").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#TabelDepartment_wrapper .col-md-6:eq(0)');
+    }).buttons().container().appendTo('#tbl_depart_wrapper .col-md-6:eq(0)');
     $('#example2').DataTable({
       "paging": true,
       "lengthChange": false,
@@ -704,7 +704,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </script>
 <script type="text/javascript">
   $(function () {
-    $('#datetimepicker1').datetimepicker();
+    $('#date_depart').datetimepicker();
   });
 
   $(function () {

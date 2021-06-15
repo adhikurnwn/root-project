@@ -125,13 +125,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <li class="nav-item">
                 <a href="<?= base_url('Home/HeadOrder')?>" class="nav-link">
                 &emsp;<i class="far fa-dot-circle nav-icon"></i>
-                  <p>Tambah Job Order</p>
+                  <p>Job Order Request</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="<?= base_url('Home/HeadOrderAcc')?>" class="nav-link">
                 &emsp;<i class="far fa-dot-circle nav-icon"></i>
-                  <p>Approval Job Order</p>
+                  <p>Approval</p>
                 </a>
               </li>
             </ul>
@@ -218,63 +218,63 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <br>
                 <form>
                   <div class="form-group row">
-                    <p for="inputModelPC" class="col-sm-2 col-form-label">Model</p>
+                    <p for="in_mdl_pc" class="col-sm-2 col-form-label">Model</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputModelPC" id="inputModelPC" disabled>
+                      <input type="text" class="form-control" name="in_mdl_pc" id="in_mdl_pc" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <p for="inputMerkPC" class="col-sm-2 col-form-label">Merk</p>
+                    <p for="in_merk_pc" class="col-sm-2 col-form-label">Merk</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputMerkPC" id="inputMerkPC" disabled>
+                      <input type="text" class="form-control" name="in_merk_pc" id="in_merk_pc" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <p for="inputNoSeriPC" class="col-sm-2 col-form-label">Nomor Seri</p>
+                    <p for="in_seri_pc" class="col-sm-2 col-form-label">Nomor Seri</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputNoSeriPC" id="inputNoSeriPC" disabled>
+                      <input type="text" class="form-control" name="in_seri_pc" id="in_seri_pc" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <p for="inputProcessorPC" class="col-sm-2 col-form-label">Processor</p>
+                    <p for="in_proc_pc" class="col-sm-2 col-form-label">Processor</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputProcessorPC" id="inputProcessorPC" disabled>
+                      <input type="text" class="form-control" name="in_proc_pc" id="in_proc_pc" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <p for="inputHardiskPC" class="col-sm-2 col-form-label">Hardisk</p>
+                    <p for="in_hdd_pc" class="col-sm-2 col-form-label">Hardisk</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputHardiskPC" id="inputHardiskPC" disabled>
+                      <input type="text" class="form-control" name="in_hdd_pc" id="in_hdd_pc" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <p for="inputSSDPC" class="col-sm-2 col-form-label">SSD</p>
+                    <p for="in_ssd_pc" class="col-sm-2 col-form-label">SSD</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputSSDPC" id="inputSSDPC" disabled>
+                      <input type="text" class="form-control" name="in_ssd_pc" id="in_ssd_pc" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <p for="inputRAMPC" class="col-sm-2 col-form-label">RAM</p>
+                    <p for="in_ram_pc" class="col-sm-2 col-form-label">RAM</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputRAMPC" id="inputRAMPC" disabled>
+                      <input type="text" class="form-control" name="in_ram_pc" id="in_ram_pc" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <p for="inputOSPC" class="col-sm-2 col-form-label">OS</p>
+                    <p for="in_os_pc" class="col-sm-2 col-form-label">OS</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputOSPC" id="inputOSPC" disabled>
+                      <input type="text" class="form-control" name="in_os_pc" id="in_os_pc" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <p for="inputIPAddressPC" class="col-sm-2 col-form-label">IP Address</p>
+                    <p for="inp_ip_pc" class="col-sm-2 col-form-label">IP Address</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputIPAddressPC" id="inputIPAddressPC" disabled>
+                      <input type="text" class="form-control" name="in_ip_pc" id="in_ip_pc" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <p for="inputTglPC" class="col-sm-2 col-form-label">Tgl. Perolehan</p>
+                    <p for="in_tgl_pc" class="col-sm-2 col-form-label">Tgl. Perolehan</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputTglPC" id="inputTglPC" disabled>
+                      <input type="text" class="form-control" name="in_tgl_pc" id="in_tgl_pc" disabled>
                     </div>
                   </div>
                 </form>
@@ -285,33 +285,33 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <br>
                 <form>
                   <div class="form-group row">
-                    <p for="inputModelPR" class="col-sm-2 col-form-label">Model</p>
+                    <p for="in_mdl_pr" class="col-sm-2 col-form-label">Model</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputModelPR" id="inputModelPR" disabled>
+                      <input type="text" class="form-control" name="in_mdl_pr" id="in_mdl_pr" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <p for="inputMerkPR" class="col-sm-2 col-form-label">Merk</p>
+                    <p for="in_merk_pr" class="col-sm-2 col-form-label">Merk</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputMerkPR" id="inputMerkPR" disabled>
+                      <input type="text" class="form-control" name="in_merk_pr" id="in_merk_pr" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <p for="inputNoSeriPR" class="col-sm-2 col-form-label">Nomor Seri</p>
+                    <p for="in_seri_pr" class="col-sm-2 col-form-label">Nomor Seri</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputNoSeriPR" id="inputNoSeriPR" disabled>
+                      <input type="text" class="form-control" name="in_seri_pr" id="in_seri_pr" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <p for="inputSpekPR" class="col-sm-2 col-form-label">Spesifikasi</p>
+                    <p for="in_spek_pr" class="col-sm-2 col-form-label">Spesifikasi</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputSpekPR" id="inputSpekPR" disabled>
+                      <input type="text" class="form-control" name="in_spek_pr" id="in_spek_pr" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <p for="inputTglPR" class="col-sm-2 col-form-label">Tgl. Perolehan</p>
+                    <p for="in_tgl_pr" class="col-sm-2 col-form-label">Tgl. Perolehan</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputTglPR" id="inputTglPR" disabled>
+                      <input type="text" class="form-control" name="in_tgl_pr" id="in_tgl_pr" disabled>
                     </div>
                   </div>
               </div>
@@ -332,63 +332,63 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <br>
                 <form>
                   <div class="form-group row">
-                    <p for="inputModelNB" class="col-sm-2 col-form-label">Model</p>
+                    <p for="in_mdl_nb" class="col-sm-2 col-form-label">Model</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputModelNB" id="inputModelNB" disabled>
+                      <input type="text" class="form-control" name="in_mdl_nb" id="in_mdl_nb" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <p for="inputMerkNB" class="col-sm-2 col-form-label">Merk</p>
+                    <p for="in_merk_nb" class="col-sm-2 col-form-label">Merk</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputMerkNB" id="inputMerkNB" disabled>
+                      <input type="text" class="form-control" name="in_merk_nb" id="in_merk_nb" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <p for="inputNoSeriNB" class="col-sm-2 col-form-label">Nomor Seri</p>
+                    <p for="in_seri_nb" class="col-sm-2 col-form-label">Nomor Seri</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputNoSeriNB" id="inputNoSeriNB" disabled>
+                      <input type="text" class="form-control" name="in_seri_nb" id="in_seri_nb" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <p for="inputProcessorNB" class="col-sm-2 col-form-label">Processor</p>
+                    <p for="in_proc_nb" class="col-sm-2 col-form-label">Processor</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputProcessorNB" id="inputProcessorNB" disabled>
+                      <input type="text" class="form-control" name="in_proc_nb" id="in_proc_nb" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <p for="inputHardiskNB" class="col-sm-2 col-form-label">Hardisk</p>
+                    <p for="in_hdd_nb" class="col-sm-2 col-form-label">Hardisk</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputHardiskNB" id="inputHardiskNB" disabled>
+                      <input type="text" class="form-control" name="in_hdd_nb" id="in_hdd_nb" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <p for="inputSSDNB" class="col-sm-2 col-form-label">SSD</p>
+                    <p for="in_ssd_nb" class="col-sm-2 col-form-label">SSD</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputSSDNB" id="inputSSDNB" disabled>
+                      <input type="text" class="form-control" name="in_ssd_nb" id="in_ssd_nb" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <p for="inputRAMNB" class="col-sm-2 col-form-label">RAM</p>
+                    <p for="in_ram_nb" class="col-sm-2 col-form-label">RAM</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputRAMNB" id="inputRAMNB" disabled>
+                      <input type="text" class="form-control" name="in_ram_nb" id="in_ram_nb" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <p for="inputOSNB" class="col-sm-2 col-form-label">OS</p>
+                    <p for="in_os_nb" class="col-sm-2 col-form-label">OS</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputOSNB" id="inputOSNB" disabled>
+                      <input type="text" class="form-control" name="in_os_nb" id="in_os_nb" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <p for="inputIPAddressNB" class="col-sm-2 col-form-label">IP Address</p>
+                    <p for="in_ip_nb" class="col-sm-2 col-form-label">IP Address</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputIPAddressNB" id="inputIPAddressNB" disabled>
+                      <input type="text" class="form-control" name="in_ip_nb" id="in_ip_nb" disabled>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <p for="inputTglNB" class="col-sm-2 col-form-label">Tgl. Perolehan</p>
+                    <p for="in_tgl_nb" class="col-sm-2 col-form-label">Tgl. Perolehan</p>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="inputTglNB" id="inputTglNB" disabled>
+                      <input type="text" class="form-control" name="in_tgl_nb" id="in_tgl_nb" disabled>
                     </div>
                   </div>
                 </form>
@@ -427,19 +427,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-unlock-alt"></i></span>
                   </div>
-                  <input type="password" name="old_password" id="old_password" class="form-control" placeholder="Password Lama">
+                  <input type="password" name="old_pass" id="old_pass" class="form-control" placeholder="Password Lama">
               </div>
               <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-lock"></i></span>
                   </div>
-                  <input type="password" name="new_password" id="new_password" class="form-control" placeholder="Password Baru">
+                  <input type="password" name="new_pass" id="new_pass" class="form-control" placeholder="Password Baru">
               </div>
               <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-check-circle"></i></span>
                   </div>
-                  <input type="password" name="pass_confirm" id="pass_confirm" class="form-control" placeholder="Konfirmasi Password">
+                  <input type="password" name="pass_conf" id="pass_conf" class="form-control" placeholder="Konfirmasi Password">
               </div>
             </div>
             <div class="modal-footer justify-content-between">

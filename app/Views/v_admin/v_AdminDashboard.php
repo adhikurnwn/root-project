@@ -355,7 +355,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="icon">
                 <i class="ion ion-android-contacts"></i>
               </div>
-              <a href="<?= base_url('Home/HeadOrder')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?= base_url('Home/AdminHakAkses')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div><!-- /.col -->
           <div class="col-lg-3 col-6">
@@ -367,7 +367,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="icon">
                 <i class="ion ion-android-contact"></i>
               </div>
-              <a href="<?= base_url('Home/HeadOrder')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?= base_url('Home/AdminHakAkses')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div><!-- /.col -->
           <div class="col-lg-3 col-6">
@@ -379,7 +379,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="icon">
                 <i class="ion ion-cube"></i>
               </div>
-              <a href="<?= base_url('Home/HeadOrder')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?= base_url('Home/AdminItemKeluar')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div><!-- /.col -->
           <div class="col-lg-3 col-6">
@@ -391,7 +391,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="icon">
                 <i class="ion ion-ios-pulse"></i>
               </div>
-              <a href="<?= base_url('Home/HeadOrder')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?= base_url('Home/AdminItemMasuk')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div><!-- /.col -->
           <div class="col-lg-6 col-6">
@@ -403,7 +403,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="icon">
                 <i class="ion ion-ios-speedometer-outline"></i>
               </div>
-              <a href="<?= base_url('Home/HeadOrder')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?= base_url('Home/AdminJobOrder')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div><!-- /.col -->
           <div class="col-lg-6 col-6">
@@ -415,7 +415,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="icon">
                 <i class="ion ion-ios-alarm-outline"></i>
               </div>
-              <a href="<?= base_url('Home/HeadPreventiveAcc')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?= base_url('Home/AdminPreventive')?>" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div><!-- /.col -->
       </div><!-- /.row -->
@@ -509,7 +509,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- /.content -->
   <!-- /.content-wrapper -->
 
-
 <!--CONTENT MODAL-->
 <!--MODAL UBAH PASSWORD-->
   <div class="modal fade" id="modal-ubahpass">
@@ -523,25 +522,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                   </div>
-                  <input type="username" class="form-control" placeholder="Username" disabled>
+                  <input type="text" class="form-control" name="username" id="username" placeholder="Username" disabled>
               </div>
               <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-unlock-alt"></i></span>
                   </div>
-                  <input type="password" class="form-control" placeholder="Password Lama">
+                  <input type="password" class="form-control" name="old_pass" id="old_pass" placeholder="Password Lama">
               </div>
               <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-lock"></i></span>
                   </div>
-                  <input type="password" class="form-control" placeholder="Password Baru">
+                  <input type="password" class="form-control" name="new_pass" id="new_pass" placeholder="Password Baru">
               </div>
               <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-check-circle"></i></span>
                   </div>
-                  <input type="password" class="form-control" placeholder="Konfirmasi Password">
+                  <input type="password" class="form-control" name="pass_conf" id="pass_conf" placeholder="Konfirmasi Password">
               </div>
             </div>
             <div class="modal-footer justify-content-between">
@@ -584,11 +583,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
   </div>
 
-
 <!--MODAL LOG OUT-->
   <div class="modal fade" id="modal-logout">
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
+          <div class="modal-content modal-dialog-centered">
             <div class="modal-header">
               <h6 class="modal-title">Alert!</h6>
             </div>

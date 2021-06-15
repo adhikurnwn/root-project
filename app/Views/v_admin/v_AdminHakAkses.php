@@ -368,11 +368,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="col-12">
             <div class="card">
               <div class="card-body">
-                <a href="#" class="btn btn-success" data-toggle="modal" data-target="#TambahHakAkses"><i class="fas fa-plus-circle"></i> CREATE NEW</a>
+                <a href="#" class="btn btn-success" data-toggle="modal" data-target="#add_hak_akses"><i class="fas fa-plus-circle"></i> CREATE NEW</a>
                 &nbsp;<button class="btn btn-info float-right" type="submit"  onclick="window.location.reload(true);"><i class="fas fa-sync-alt"></i></button>
                 <!--&nbsp;<button type="button" class="btn btn-info" data-card-widget="card-refresh" data-source="<?= base_url('Home/AdminHakAkses')?>" data-source-selector="#card-refresh-content" data-load-on-init="false"><i class="fas fa-sync-alt"></i></button>-->
                 <hr>
-                <table id="TabelHakAkses" class="table table-bordered table-striped" cellspacing="0" width="150%">
+                <table id="tbl_hak_akses" class="table table-bordered table-striped" cellspacing="0" width="150%">
                   <thead>
                   <tr>
                     <th>Created</th>
@@ -392,8 +392,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td> </td>
                     <td class="text-left py-1 align-middle">
                       <div class="btn-group btn-group-sm">
-                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#EditHakAkses"><i class="fas fa-edit"></i></a>
-                        <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#HapusHakAkses"><i class="fas fa-trash"></i></a>
+                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#edit_hak_akses"><i class="fas fa-edit"></i></a>
+                        <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#hapus_hak_akses"><i class="fas fa-trash"></i></a>
                       </div>
                     </td>
                   </tr>
@@ -413,7 +413,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!--CONTENT MODAL-->
 <!--MODAL TAMBAH DATA HAK AKSES-->
-<div class="modal fade" id="TambahHakAkses">
+<div class="modal fade" id="add_hak_akses">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
@@ -425,9 +425,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="col-4">
                 <div class="form-group">
                   <label>Created</label>
-                    <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
-                        <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker1"/>
-                        <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                    <div class="input-group date" id="date_hak_akses" data-target-input="nearest">
+                        <input type="text" name="date_hak_akses" class="form-control rounded-0 datetimepicker-input" data-target="#date_hak_akses"/>
+                        <div class="input-group-append" data-target="#date_hak_akses" data-toggle="datetimepicker">
                             <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
                         </div>
                     </div>
@@ -439,13 +439,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                   </div>
-                  <input type="text" autocomplete="off" class="form-control rounded-0" id="exampleInputRounded0">
+                  <input type="text" autocomplete="off" class="form-control rounded-0" name="username" id="username">
                 </div>
               </div>
               <div class="col-3">
                 <div class="form-group">
-                  <label for="exampleSelectRounded0">Type Role</label>
-                  <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                  <label for="type_role">Type Role</label>
+                  <select class="custom-select rounded-0" name="type_role" id="type_role" required>
                   <option selected disabled>-</option>
                     <option> </option>
                   </select>
@@ -453,8 +453,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </div>
               <div class="col-9">
                 <div class="form-group">
-                  <label for="exampleSelectRounded0">Department</label>
-                  <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                  <label for="depart">Department</label>
+                  <select class="custom-select rounded-0" name="depart" id="depart" required>
                   <option selected disabled>-</option>
                     <option> </option>
                   </select>
@@ -462,8 +462,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </div>
               <div class="col-3">
                 <div class="form-group">
-                  <label for="exampleSelectRounded0">Status</label>
-                  <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                  <label for="status">Status</label>
+                  <select class="custom-select rounded-0" name="status" id="status" required>
                   <option selected disabled>-</option>
                     <option> </option>
                   </select>
@@ -486,7 +486,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </div>
 
 <!--MODAL EDIT DATA HAK AKSES-->
-<div class="modal fade" id="EditHakAkses">
+<div class="modal fade" id="edit_hak_akses">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
@@ -498,9 +498,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="col-4">
                 <div class="form-group">
                   <label>Created</label>
-                    <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
-                        <input type="text" class="form-control rounded-0 datetimepicker-input" data-target="#datetimepicker2"/>
-                        <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
+                    <div class="input-group date" id="date_hak_akses" data-target-input="nearest">
+                        <input type="text" name="edit_hak_akses" class="form-control rounded-0 datetimepicker-input" data-target="#date_hak_akses" disabled/>
+                        <div class="input-group-append" data-target="#datet_hak_akses" data-toggle="datetimepicker">
                             <div class="input-group-text"><i class="fa fa-calendar-week"></i></div>
                         </div>
                     </div>
@@ -512,13 +512,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                   </div>
-                  <input type="text" autocomplete="off" class="form-control rounded-0" id="exampleInputRounded0">
+                  <input type="text" autocomplete="off" class="form-control rounded-0" name="username" id="username">
                 </div>
               </div>
               <div class="col-3">
                 <div class="form-group">
-                  <label for="exampleSelectRounded0">Type Role</label>
-                  <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                  <label for="type_role">Type Role</label>
+                  <select class="custom-select rounded-0" name="type_role" id="type_role" required>
                   <option selected disabled>-</option>
                     <option> </option>
                   </select>
@@ -526,8 +526,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </div>
               <div class="col-9">
                 <div class="form-group">
-                  <label for="exampleSelectRounded0">Department</label>
-                  <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                  <label for="depart">Department</label>
+                  <select class="custom-select rounded-0" name="depart" id="depart" required>
                   <option selected disabled>-</option>
                     <option> </option>
                   </select>
@@ -535,8 +535,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </div>
               <div class="col-3">
                 <div class="form-group">
-                  <label for="exampleSelectRounded0">Status</label>
-                  <select class="custom-select rounded-0" id="exampleSelectRounded0" required>
+                  <label for="status">Status</label>
+                  <select class="custom-select rounded-0" name="status" id="status" required>
                   <option selected disabled>-</option>
                     <option> </option>
                   </select>
@@ -570,25 +570,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                   </div>
-                  <input type="username" class="form-control" placeholder="Username" disabled>
+                  <input type="username" class="form-control" name="username" id="username" placeholder="Username" disabled>
               </div>
               <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-unlock-alt"></i></span>
                   </div>
-                  <input type="password" class="form-control" placeholder="Password Lama">
+                  <input type="password" class="form-control" name="old_pass" id="old_pass" placeholder="Password Lama">
               </div>
               <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-lock"></i></span>
                   </div>
-                  <input type="password" class="form-control" placeholder="Password Baru">
+                  <input type="password" class="form-control" name="new_pass" id="new_pass" placeholder="Password Baru">
               </div>
               <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-check-circle"></i></span>
                   </div>
-                  <input type="password" class="form-control" placeholder="Konfirmasi Password">
+                  <input type="password" class="form-control" name="pas_conf" id="pass_conf" placeholder="Konfirmasi Password">
               </div>
             </div>
             <div class="modal-footer justify-content-between">
@@ -632,9 +632,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </div>
 
 <!--MODAL Hapus Data-->
-<div class="modal fade" id="HapusHakAkses">
+<div class="modal fade" id="hapus_hak_akses">
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
+          <div class="modal-content modal-dialog-centered">
             <div class="modal-header">
               <h6 class="modal-title">Alert!</h6>
             </div>
@@ -655,7 +655,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!--MODAL LOG OUT-->
   <div class="modal fade" id="modal-logout">
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
+          <div class="modal-content modal-dialog-centered">
             <div class="modal-header">
               <h6 class="modal-title">Alert!</h6>
             </div>
@@ -728,10 +728,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="<?= base_url('assets_adminlte/dist/js/demo.js')?>"></script>
 <script>
   $(function () {
-    $("#TabelHakAkses").DataTable({
+    $("#tbl_hak_akses").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#TabelHakAkses_wrapper .col-md-6:eq(0)');
+    }).buttons().container().appendTo('#tbl_hak_akses_wrapper .col-md-6:eq(0)');
     $('#example2').DataTable({
       "paging": true,
       "lengthChange": false,
@@ -745,7 +745,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </script>
 <script type="text/javascript">
   $(function () {
-    $('#datetimepicker1').datetimepicker();
+    $('#date_hak_akses').datetimepicker();
   });
 
   $(function () {
