@@ -316,7 +316,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </ul>
             <div class="tab-content" id="custom-content-above-tabContent">
               <div class="tab-pane fade show active" id="custom-content-above-home" role="tabpanel" aria-labelledby="custom-content-above-home-tab">
-              <table id="tabel1" class="table table-bordered table-striped" cellspacing="0" width="150%">
+              <table id="tbl_prev_soft" class="table table-bordered table-striped" cellspacing="0" width="150%">
                   <thead>
                   <tr align="center">
                     <th width="10px">No.</th>
@@ -433,7 +433,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </div>
               </div>
               <div class="tab-pane fade" id="custom-content-above-profile" role="tabpanel" aria-labelledby="custom-content-above-profile-tab">
-              <table id="tabel1" class="table table-bordered table-striped" cellspacing="0" width="150%">
+              <table id="tbl_prev_hard" class="table table-bordered table-striped" cellspacing="0" width="150%">
                   <thead>
                   <tr align="center">
                     <th width="10px">No.</th>
@@ -525,7 +525,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <tr>
                     <td>9. </td>
                     <td><i>Pengecekan kondisi mouse</i></td>
-                    <td align="right"> 
+                    <td align="left"> 
                         <div class="custom-control custom-checkbox">
                           <input class="custom-control-input" type="checkbox" name="chbx_prev_hard" id="chbx_prev_hard9" value="Pengecekan kondisi mouse" disabled>
                           <label for="chbx_prev_hard9" class="custom-control-label">Selesai</label>
@@ -535,7 +535,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <tr>
                     <td>10. </td>
                     <td><i>Pembersihan CD-ROM</i></td>
-                    <td align="left"> 
+                    <td align="right"> 
                         <div class="custom-control custom-checkbox">
                           <input class="custom-control-input" type="checkbox" name="chbx_prev_hard" id="chbx_prev_hard10" value="Pembersihan CD-ROM" disabled>
                           <label for="chbx_prev_hard10" class="custom-control-label">Selesai</label>
@@ -545,7 +545,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <tr>
                     <td>11. </td>
                     <td><i>Pembersihan fan processor</i></td>
-                    <td align="right"> 
+                    <td align="left"> 
                         <div class="custom-control custom-checkbox">
                           <input class="custom-control-input" type="checkbox" name="chbx_prev_hard" id="chbx_prev_hard11" value="Pembersihan fan processor" disabled>
                           <label for="chbx_prev_hard11" class="custom-control-label">Selesai</label>
@@ -555,7 +555,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <tr>
                     <td>12. </td>
                     <td><i>Pengecekan baterai CMOS</i></td>
-                    <td align="left"> 
+                    <td align="right"> 
                         <div class="custom-control custom-checkbox">
                           <input class="custom-control-input" type="checkbox" name="chbx_prev_hard" id="chbx_prev_hard12" value="Pengecekan baterai CMOS" disabled>
                           <label for="chbx_prev_hard12" class="custom-control-label">Selesai</label>
@@ -565,7 +565,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <tr>
                     <td>13. </td>
                     <td><i>Pembersihan heatsink</i></td>
-                    <td align="right"> 
+                    <td align="left"> 
                         <div class="custom-control custom-checkbox">
                           <input class="custom-control-input" type="checkbox" name="chbx_prev_hard" id="chbx_prev_hard13" value="Pembersihan heatsink" disabled>
                           <label for="chbx_prev_hard13" class="custom-control-label">Selesai</label>
@@ -575,7 +575,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <tr>
                     <td>14. </td>
                     <td><i>Pembersihan mouse</i></td>
-                    <td align="left"> 
+                    <td align="right"> 
                         <div class="custom-control custom-checkbox">
                           <input class="custom-control-input" type="checkbox" name="chbx_prev_hard" id="chbx_prev_hard14" value="Pembersihan mouse" disabled>
                           <label for="chbx_prev_hard14" class="custom-control-label">Selesai</label>

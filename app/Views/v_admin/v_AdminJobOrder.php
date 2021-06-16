@@ -287,7 +287,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <li class="nav-item">
                     <a href="<?= base_url('Home/ReportMutasi')?>" class="nav-link">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
-                      <p>laporan Mutasi</p>
+                      <p>Laporan Mutasi</p>
                     </a>
                   </li>
                 </ul>
@@ -370,7 +370,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <div class="card">
             <div class="card-body">
               <!--&nbsp;<button type="button" class="btn btn-warning" data-card-widget="card-refresh" data-source="<?= base_url('Home/AdminJobOrder')?>" data-source-selector="#card-refresh-content" data-load-on-init="false"><i class="fas fa-sync-alt"></i> REFRESH</button>-->
-            <table id="TabelJobOrderAcc" class="table table-bordered table-striped" cellspacing="0" width="150%">
+            <table id="tbl_approve_job_order" class="table table-bordered table-striped" cellspacing="0" width="150%">
                   <thead>
                   <tr>
                     <th>No.Ticket</th>
@@ -396,7 +396,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td> </td>
                     <td class="text-left py-1 align-middle">
                       <div class="btn-group btn-group-sm">
-                         <a href="#" class="btn btn-default" data-toggle="modal" data-target="#ApproveAdminJobOrder"><i class="fas fa-eye"></i> </a>
+                         <a href="#" class="btn btn-default" data-toggle="modal" data-target="#approve_job"><i class="fas fa-eye"></i> </a>
                       </div>
                     </td>
                   </tr>
@@ -412,7 +412,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
  <!--MODAL APPROVE JOB ORDER-->
- <div class="modal fade" id="ApproveAdminJobOrder">
+ <div class="modal fade" id="approve_job">
         <div class="modal-dialog modal-dialog-centered modal-lg ">
           <div class="modal-content">
             <div class="modal-header">
@@ -427,15 +427,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-ticket-alt"></i></span>
                       </div>
-                      <input type="text" autocomplete="off" class="form-control rounded-0"  id="exampleInputRounded0" disabled>
+                      <input type="text" autocomplete="off" class="form-control rounded-0"  name="no_ticket" id="no_ticket" disabled>
                     </div>
                   </div>
                   <div class="col-4">
                     <div class="form-group">
                     <label>Date Request</label>
-                        <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                            <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" disabled/>
-                              <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                        <div class="input-group date" id="tgl_job_req" data-target-input="nearest">
+                            <input type="text" name="tgl_job_req" class="form-control datetimepicker-input" data-target="#tgl_job_req" disabled/>
+                              <div class="input-group-append" data-target="#tgl_job_req" data-toggle="datetimepicker">
                                 <div class="input-group-text"><i class="fa fa-calendar-day"></i></div>
                               </div>
                         </div>
@@ -443,46 +443,46 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </div>
                   <div class="col-4">
                     <div class="form-group">
-                      <label for="timeReq">Time Request</label>
-                        <input type="time" id="timeReq" class="form-control" disabled>
+                      <label for="time_req">Time Request</label>
+                        <input type="time" name="time_req" id="time_req" class="form-control" disabled>
                     </div>
                   </div>
                   <div class="col-4">
                         <div class="form-group">
-                          <label for="exampleSelectRounded0">Bussines Unit</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0" disabled>
+                          <label for="buss_unit">Bussines Unit</label>
+                          <select class="custom-select rounded-0" name="buss_unit" id="buss_unit" disabled>
                               <option> </option>
                           </select>
                         </div>
                   </div>
                   <div class="col-4">
                         <div class="form-group">
-                          <label for="exampleSelectRounded0">Depo</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0" disabled>
+                          <label for="depo">Depo</label>
+                          <select class="custom-select rounded-0" name="depo" id="depo" disabled>
                               <option> </option>
                           </select>
                         </div>
                   </div>
                   <div class="col-4">
                         <div class="form-group">
-                          <label for="exampleSelectRounded0">Department</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0" disabled>
+                          <label for="depart">Department</label>
+                          <select class="custom-select rounded-0" name="depart" id="depart" disabled>
                               <option> </option>
                           </select>
                         </div>
                   </div>
                   <div class="col-4">
                         <div class="form-group">
-                          <label for="exampleSelectRounded0">User</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0" disabled>
+                          <label for="username">User</label>
+                          <select class="custom-select rounded-0" name="username" id="username" disabled>
                               <option> </option>
                           </select>
                         </div>
                   </div>
                   <div class="col-4">
                         <div class="form-group">
-                          <label for="exampleSelectRounded0">Job Request</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0" disabled>
+                          <label for="job_req">Job Request</label>
+                          <select class="custom-select rounded-0" name="job_req" id="job_req" disabled>
                               <option> </option>
                           </select>
                         </div>
@@ -490,15 +490,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <div class="col-12">
                     <label>Problem</label>
                       <div class="form-group">
-                          <textarea class="form-control" rows="3" disabled></textarea>
+                          <textarea class="form-control" rows="3" name="prob_order" id="prob_order" disabled></textarea>
                       </div>
                   </div>
                   <div class="col-4">
                     <div class="form-group">
                     <label>Date Complete</label>
-                        <div class="input-group date" id="reservationdate2" data-target-input="nearest">
-                            <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate2"/>
-                              <div class="input-group-append" data-target="#reservationdate2" data-toggle="datetimepicker">
+                        <div class="input-group date" id="tgl_job_complete" data-target-input="nearest">
+                            <input type="text" name="tgl_job_complete" class="form-control datetimepicker-input" data-target="#tgl_job_complete"/>
+                              <div class="input-group-append" data-target="#tgl_job_complete" data-toggle="datetimepicker">
                                 <div class="input-group-text"><i class="fa fa-calendar-day"></i></div>
                               </div>
                         </div>
@@ -506,14 +506,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </div>
                   <div class="col-4">
                     <div class="form-group">
-                      <label for="timeReq2">Time Complete</label>
-                        <input type="time" id="timeReq2" class="form-control">
+                      <label for="time_complete">Time Complete</label>
+                        <input type="time" name="time_complete" id="time_complete" class="form-control">
                     </div>
                   </div>
                   <div class="col-4">
                         <div class="form-group">
-                          <label for="exampleSelectRounded0">Status</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                          <label for="status">Status</label>
+                          <select class="custom-select rounded-0" name="status" id="status">
                               <option> </option>
                           </select>
                         </div>
@@ -521,14 +521,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <div class="col-12">
                     <label>Analisa</label>
                       <div class="form-group">
-                          <textarea class="form-control" rows="3"></textarea>
+                          <textarea class="form-control" rows="3" name="analisa" id="analisa"></textarea>
                       </div>
                   </div>
                 </div>
              <!--END JOB REQUEST-->
             <div class="col text-center">
-                  <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-undo"></i>&nbsp; BACK</button>
-                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#ApproveJO"><i class="fas fa-check-circle"></i>&nbsp; APPROVE</button>  
+                  <button type="button" class="btn btn-default" data-dismiss="modal"></i>BACK</button>
+                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#approve_job_order"><i class="fas fa-check-circle"></i>&nbsp; APPROVE</button>  
             </div>
            
             </div>
@@ -553,25 +553,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                   </div>
-                  <input type="username" class="form-control" placeholder="Username" disabled>
+                  <input type="text" class="form-control" name="username" id="username" placeholder="Username" disabled>
               </div>
               <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-unlock-alt"></i></span>
                   </div>
-                  <input type="password" class="form-control" placeholder="Password Lama">
+                  <input type="password" class="form-control" name="old_pass" id="old_pass" placeholder="Password Lama">
               </div>
               <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-lock"></i></span>
                   </div>
-                  <input type="password" class="form-control" placeholder="Password Baru">
+                  <input type="password" class="form-control" name="new_pass" id="new_pass" placeholder="Password Baru">
               </div>
               <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-check-circle"></i></span>
                   </div>
-                  <input type="password" class="form-control" placeholder="Konfirmasi Password">
+                  <input type="password" class="form-control" name="pass_conf" id="pass_Conf" placeholder="Konfirmasi Password">
               </div>
             </div>
             <div class="modal-footer justify-content-between">
@@ -614,31 +614,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
   </div>
 
-<!--MODAL HAPUS DATA-->
-<div class="modal fade" id="HapusBM">
+<!--MODAL APPROVE JOB ORDER-->
+<div class="modal fade" id="approve_job_order">
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h6 class="modal-title">Alert!</h6>
-            </div>
-            <div class="modal-body">
-              <p><strong><i>Data ini akan di HAPUS! Apakah anda yakin?</i></strong></p>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
-              <button type="button" class="btn btn-danger">YES</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-  </div>
-      <!-- /.modal -->
-
-<!--MODAL HAPUS DATA-->
-<div class="modal fade" id="ApproveJO">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
+          <div class="modal-content modal-dialog-centered">
             <div class="modal-header">
               <h6 class="modal-title">Alert!</h6>
             </div>
@@ -659,7 +638,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!--MODAL LOG OUT-->
   <div class="modal fade" id="modal-logout">
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
+          <div class="modal-content modal-dialog-centered">
             <div class="modal-header">
               <h6 class="modal-title">Alert!</h6>
             </div>
@@ -734,10 +713,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="<?= base_url('assets_adminlte/dist/js/demo.js')?>"></script>
 <script>
   $(function () {
-    $("#TabelJobOrderAcc").DataTable({
+    $("#tbl_approve_job_order").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#TabelJobOrderAcc_wrapper .col-md-6:eq(0)');
+    }).buttons().container().appendTo('#tbl_approve_job_order_wrapper .col-md-6:eq(0)');
     $('#example2').DataTable({
       "paging": true,
       "lengthChange": false,
@@ -752,11 +731,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <script type="text/javascript">
    //Date picker
-  $('#reservationdate').datetimepicker({
+  $('#tgl_job_req').datetimepicker({
         format: 'L'
     });
 
-  $('#reservationdate2').datetimepicker({
+  $('#tgl_job_complete').datetimepicker({
         format: 'L'
     });
 

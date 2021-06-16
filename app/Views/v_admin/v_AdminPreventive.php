@@ -287,7 +287,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <li class="nav-item">
                     <a href="<?= base_url('Home/ReportMutasi')?>" class="nav-link">
                     &emsp;<i class="far fa-dot-circle nav-icon"></i>
-                      <p>laporan Mutasi</p>
+                      <p>Laporan Mutasi</p>
                     </a>
                   </li>
                 </ul>
@@ -371,11 +371,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="col-12">
             <div class="card">
               <div class="card-body">
-                <a href="#" class="btn btn-success" data-toggle="modal" data-target="#TambahAdminPreventive"><i class="fas fa-plus-circle"></i> CREATE NEW</a>
+                <a href="#" class="btn btn-success" data-toggle="modal" data-target="#add_prev"><i class="fas fa-plus-circle"></i> CREATE NEW</a>
                 &nbsp;<button class="btn btn-info float-right" type="submit"  onclick="window.location.reload(true);"><i class="fas fa-sync-alt"></i></button>
                 <!--&nbsp;<button type="button" class="btn btn-warning" data-card-widget="card-refresh" data-source="<?= base_url('Home/AdminMutasi')?>" data-source-selector="#card-refresh-content" data-load-on-init="false"><i class="fas fa-sync-alt"></i> REFRESH</button>-->
               <hr>
-                <table id="TabelAdminPreventive" class="table table-bordered table-striped" cellspacing="0" width="150%">
+                <table id="tbl_prev" class="table table-bordered table-striped" cellspacing="0" width="150%">
                   <thead>
                   <tr>
                     <th>Date</th>
@@ -403,8 +403,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td> </td>
                     <td class="text-left py-1 align-middle">
                       <div class="btn-group btn-group-sm">
-                        <a href="#" class="btn btn-info" data-toggle="modal" data-target="#EditPreventive"><i class="fas fa-edit"></i></a>
-                        <a href="#" class="btn btn-default" data-toggle="modal" data-target="#ApprovePreventive"><i class="fas fa-share-square"></i></a>
+                        <a href="#" class="btn btn-default" data-toggle="modal" data-target="#approve_prev"><i class="fas fa-share-square"></i></a>
+                        <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#hapus_prev"><i class="fas fa-trash"></i></a>
                       </div>
                     </td>
                   </tr>
@@ -419,21 +419,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
   </section>
 
-<!--MODAL TAMBAH PREVENTIVE-->
-  <div class="modal fade" id="TambahAdminPreventive">
+<!--MODAL ADD DATA-->
+<div class="modal fade" id="add_prev">
         <div class="modal-dialog modal-xl">
           <div class="modal-content">
             <div class="modal-header">
               <h6 class="modal-title"><i>Detail Preventive / Maintenance</i></h6>
             </div>
             <div class="modal-body">
-            <div class="row">
+              <!--Form JOB REQUEST-->
+              <div class="row">
                   <div class="col-2">
                     <div class="form-group">
                     <label>Date</label>
-                        <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                            <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
-                              <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                        <div class="input-group date" id="tgl_prev" data-target-input="nearest">
+                            <input type="text" name="tgl_prev" class="form-control datetimepicker-input" data-target="#tgl_prev" disabled/>
+                              <div class="input-group-append" data-target="#tgl_prev" data-toggle="datetimepicker">
                                 <div class="input-group-text"><i class="fa fa-calendar-day"></i></div>
                               </div>
                         </div>
@@ -441,38 +442,38 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </div>
                   <div class="col-2">
                     <div class="form-group">
-                      <label for="timeReq">Time</label>
-                        <input type="time" id="timeReq" class="form-control">
+                      <label for="time_prev">Time</label>
+                        <input type="time" name="time_prev" id="time_prev" class="form-control" disabled>
                     </div>
                   </div>
                   <div class="col-4">
                         <div class="form-group">
-                          <label for="exampleSelectRounded0">Bussines Unit</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                          <label for="buss_unit">Bussines Unit</label>
+                          <select class="custom-select rounded-0" name="buss_unit" id="buss_unit">
                               <option> </option>
                           </select>
                         </div>
                   </div>
                   <div class="col-4">
                         <div class="form-group">
-                          <label for="exampleSelectRounded0">Depo</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                          <label for="depo">Depo</label>
+                          <select class="custom-select rounded-0" name="depo" id="depo">
                               <option> </option>
                           </select>
                         </div>
                   </div>
                   <div class="col-4">
                         <div class="form-group">
-                          <label for="exampleSelectRounded0">Department</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                          <label for="depart">Department</label>
+                          <select class="custom-select rounded-0" name="depart" id="depart">
                               <option> </option>
                           </select>
                         </div>
                   </div>
                   <div class="col-4">
                         <div class="form-group">
-                          <label for="exampleSelectRounded0">User</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0">
+                          <label for="username">User</label>
+                          <select class="custom-select rounded-0" name="username" id="username">
                               <option> </option>
                           </select>
                         </div>
@@ -480,29 +481,28 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <div class="col-4">
                     <div class="form-group">
                     <label>Next Date Preventive</label>
-                        <div class="input-group date" id="reservationdate2" data-target-input="nearest">
-                            <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate2"/>
-                              <div class="input-group-append" data-target="#reservationdate2" data-toggle="datetimepicker">
+                        <div class="input-group date" id="tgl_next_prev" data-target-input="nearest">
+                            <input type="text" name="tgl_next_prev" class="form-control datetimepicker-input" data-target="#tgl_next_prev" />
+                              <div class="input-group-append" data-target="#tgl_next_prev" data-toggle="datetimepicker">
                                 <div class="input-group-text"><i class="fa fa-calendar-day"></i></div>
                               </div>
                         </div>
                     </div>
                   </div>
               </div>
-           
             <hr>
-            <h6 align="center"><i class="fas fa-tasks"></i>&nbsp;<strong> CHECKLIST PREVENTIVE IT</strong><span></h6>
+            <h6 align="center"><i class="fas fa-tasks"></i>&nbsp;<strong> Checklist Preventive IT</strong><span></h6>
             <ul class="nav nav-tabs" id="custom-content-above-tab" role="tablist">
               <li class="nav-item">
-                <a class="nav-link active" id="custom-content-above-home-tab" data-toggle="pill" href="#custom-content-above-home" role="tab" aria-controls="custom-content-above-home" aria-selected="true"><strong>Perawatan Software</strong></a>
+                <a class="nav-link active" name="prev_soft" id="prev_soft" data-toggle="pill" href="#custom-content-above-home" role="tab" aria-controls="custom-content-above-home" aria-selected="true"><strong>Perawatan Software</strong></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="custom-content-above-profile-tab" data-toggle="pill" href="#custom-content-above-profile" role="tab" aria-controls="custom-content-above-profile" aria-selected="false"><strong>Perawatan Hardware</strong></a>
+                <a class="nav-link" name="prev_hard" id="prev_hard" data-toggle="pill" href="#custom-content-above-profile" role="tab" aria-controls="custom-content-above-profile" aria-selected="false"><strong>Perawatan Hardware</strong></a>
               </li>
             </ul>
             <div class="tab-content" id="custom-content-above-tabContent">
               <div class="tab-pane fade show active" id="custom-content-above-home" role="tabpanel" aria-labelledby="custom-content-above-home-tab">
-              <table id="tabel1" class="table table-bordered table-striped" cellspacing="0" width="150%">
+              <table id="tbl_prev_soft" class="table table-bordered table-striped" cellspacing="0" width="150%">
                   <thead>
                   <tr align="center">
                     <th width="10px">No.</th>
@@ -516,8 +516,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td><i>Disk clean up</i> </td>
                     <td align="left">
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
-                          <label for="customCheckbox1" class="custom-control-label">Selesai</label>
+                          <input class="custom-control-input" type="checkbox" name="chbx_prev_soft" id="chbx_prev_soft1" value="Disk clean up">
+                          <label for="chbx_prev_soft1" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
@@ -526,8 +526,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td><i>Memastikan space / ruang disc C < 50%</i></td>
                     <td align="right"> 
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option2">
-                          <label for="customCheckbox2" class="custom-control-label">Selesai</label>
+                          <input class="custom-control-input" type="checkbox" name="chbx_prev_soft" id="chbx_prev_soft2" value="Memastikan space / ruang dis C < 50%">
+                          <label for="chbx_prev_soft2" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
@@ -536,8 +536,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td><i>Melakukan disc defragmenter</i></td>
                     <td align="left"> 
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option3">
-                          <label for="customCheckbox3" class="custom-control-label">Selesai</label>
+                          <input class="custom-control-input" type="checkbox" name="chbx_prev_soft" id="chbx_prev_soft3" value="Melakukan disc defragmenter">
+                          <label for="chbx_prev_soft3" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
@@ -546,8 +546,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td><i>Uninstal program yang tidak perlu</i></td>
                     <td align="right"> 
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4">
-                          <label for="customCheckbox4" class="custom-control-label">Selesai</label>
+                          <input class="custom-control-input" type="checkbox" name="chbx_prev_soft" id="chbx_prev_soft4" value="Uninstal program yang tidak perlu">
+                          <label for="chbx_prev_soft4" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
@@ -556,8 +556,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td><i>Pembersihan recycle bin</i></td>
                     <td align="left"> 
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckbox5" value="option5">
-                          <label for="customCheckbox5" class="custom-control-label">Selesai</label>
+                          <input class="custom-control-input" type="checkbox" name="chbx_prev_soft" id="chbx_prev_soft5" value="Pembersihan recycle bin">
+                          <label for="chbx_prev_soft5" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
@@ -566,8 +566,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td><i>Melakukan scan antivirus</i></td>
                     <td align="right"> 
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckbox6" value="option6">
-                          <label for="customCheckbox6" class="custom-control-label">Selesai</label>
+                          <input class="custom-control-input" type="checkbox" name="chbx_prev_soft" id="chbx_prev_soft6" value="Melakukan scan antivirus">
+                          <label for="chbx_prev_soft6" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
@@ -576,8 +576,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td><i>Melakukan backup data</i></td>
                     <td align="left"> 
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckbox7" value="option7">
-                          <label for="customCheckbox7" class="custom-control-label">Selesai</label>
+                          <input class="custom-control-input" type="checkbox" name="chbx_prev_soft" id="chbx_prev_soft7" value="Melakukan backup data">
+                          <label for="chbx_prev_soft7" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
@@ -586,8 +586,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td><i>Performance secara umum</i></td>
                     <td align="right"> 
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckbox8" value="option8">
-                          <label for="customCheckbox8" class="custom-control-label">Selesai</label>
+                          <input class="custom-control-input" type="checkbox" name="chbx_prev_soft" id="chbx_prev_soft8" value="Performance secara umum">
+                          <label for="chbx_prev_soft8" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
@@ -596,8 +596,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td><i>File sharing</i></td>
                     <td align="left"> 
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckbox9" value="option9">
-                          <label for="customCheckbox9" class="custom-control-label">Selesai</label>
+                          <input class="custom-control-input" type="checkbox" name="chbx_prev_soft" id="chbx_prev_soft9" value="File sharing" di>
+                          <label for="chbx_prev_soft9" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
@@ -606,8 +606,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td><i>Check IP Address PC</i></td>
                     <td align="right"> 
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckbox10" value="option10">
-                          <label for="customCheckbox10" class="custom-control-label">Selesai</label>
+                          <input class="custom-control-input" type="checkbox" name="chbx_prev_soft" id="chbx_prev_soft10" value="Check ip address PC">
+                          <label for="chbx_prev_soft10" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
@@ -615,11 +615,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </table>
                 <div class="form-group">
                         <label>Keterangan</label>
-                        <textarea class="form-control" rows="3"></textarea>
+                        <textarea class="form-control" rows="3" name="ket_prev_soft" id="ket_prev_soft"></textarea>
                 </div>
               </div>
               <div class="tab-pane fade" id="custom-content-above-profile" role="tabpanel" aria-labelledby="custom-content-above-profile-tab">
-              <table id="tabel1" class="table table-bordered table-striped" cellspacing="0" width="150%">
+              <table id="tbl_prev_hard" class="table table-bordered table-striped" cellspacing="0" width="150%">
                   <thead>
                   <tr align="center">
                     <th width="10px">No.</th>
@@ -633,8 +633,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td><i>Pembersihan casing PC</i> </td>
                     <td align="left">
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxA" value="optionA">
-                          <label for="customCheckboxA" class="custom-control-label">Selesai</label>
+                          <input class="custom-control-input" type="checkbox" name="chbx_prev_hard" id="chbx_prev_hard" value="Pembersihan casing PC">
+                          <label for="chbx_prev_hard" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
@@ -643,8 +643,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td><i>Pembersihan motherboard</i></td>
                     <td align="right"> 
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxB" value="optionB">
-                          <label for="customCheckboxB" class="custom-control-label">Selesai</label>
+                          <input class="custom-control-input" type="checkbox" name="chbx_prev_hard" id="chbx_prev_hard2" value="Pembersihan motherboard">
+                          <label for="chbx_prev_hard2" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
@@ -653,8 +653,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td><i>Pembersihan keyboard</i></td>
                     <td align="left"> 
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxC" value="optionC">
-                          <label for="customCheckboxC" class="custom-control-label">Selesai</label>
+                          <input class="custom-control-input" type="checkbox" name="chbx_prev_hard" id="chbx_prev_hard3" value="Pembersihan keyboard">
+                          <label for="chbx_prev_hard3" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
@@ -663,8 +663,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td><i>Pembersihan RAM (Random Access Memory)</i></td>
                     <td align="right"> 
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxD" value="optionD">
-                          <label for="customCheckboxD" class="custom-control-label">Selesai</label>
+                          <input class="custom-control-input" type="checkbox" name="chbx_prev_hard" id="chbx_prev_hard4" value="Pembersihan RAM(Random Access Memory)">
+                          <label for="chbx_prev_hard4" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
@@ -673,8 +673,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td><i>Pembersihan power supply</i></td>
                     <td align="left"> 
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxE" value="optionE">
-                          <label for="customCheckboxE" class="custom-control-label">Selesai</label>
+                          <input class="custom-control-input" type="checkbox" name="chbx_prev_hard" id="chbx_prev_hard5" value="Pembersihan power supply">
+                          <label for="chbx_prev_hard5" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
@@ -683,8 +683,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td><i>Pembersihan monitor</i></td>
                     <td align="right"> 
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxF" value="optionF">
-                          <label for="customCheckboxF" class="custom-control-label">Selesai</label>
+                          <input class="custom-control-input" type="checkbox" name="chbx_prev_hard" id="chbx_prev_hard6" value="Pembersihan monitor">
+                          <label for="chbx_prev_hard6" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
@@ -693,8 +693,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td><i>Pengecekan kondisi keyboard</i></td>
                     <td align="left"> 
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxG" value="optionG">
-                          <label for="customCheckboxG" class="custom-control-label">Selesai</label>
+                          <input class="custom-control-input" type="checkbox" name="chbx_prev_hard" id="chbx_prev_hard7" value="Pengecekan kondisi keyboard">
+                          <label for="chbx_prev_hard7" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
@@ -703,78 +703,67 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td><i>Pengecekan network adapter</i></td>
                     <td align="right"> 
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxH" value="optionH">
-                          <label for="customCheckboxH" class="custom-control-label">Selesai</label>
+                          <input class="custom-control-input" type="checkbox" name="chbx_prev_hard" id="chbx_prev_hard8" value="Pengecekan network adapter">
+                          <label for="chbx_prev_hard8" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
                   <tr>
                     <td>9. </td>
-                    <td><i>Pengecekan network adapter</i></td>
+                    <td><i>Pengecekan kondisi mouse</i></td>
                     <td align="left"> 
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxI" value="optionI">
-                          <label for="customCheckboxI" class="custom-control-label">Selesai</label>
+                          <input class="custom-control-input" type="checkbox" name="chbx_prev_hard" id="chbx_prev_hard9" value="Pengecekan kondisi mouse">
+                          <label for="chbx_prev_hard9" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
                   <tr>
                     <td>10. </td>
-                    <td><i>Pengecekan kondisi mouse</i></td>
+                    <td><i>Pembersihan CD-ROM</i></td>
                     <td align="right"> 
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxJ" value="optionJ">
-                          <label for="customCheckboxJ" class="custom-control-label">Selesai</label>
+                          <input class="custom-control-input" type="checkbox" name="chbx_prev_hard" id="chbx_prev_hard10" value="Pembersihan CD-ROM">
+                          <label for="chbx_prev_hard10" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
                   <tr>
                     <td>11. </td>
-                    <td><i>Pembersihan CD-ROM</i></td>
+                    <td><i>Pembersihan fan processor</i></td>
                     <td align="left"> 
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxK" value="optionK">
-                          <label for="customCheckboxK" class="custom-control-label">Selesai</label>
+                          <input class="custom-control-input" type="checkbox" name="chbx_prev_hard" id="chbx_prev_hard11" value="Pembersihan fan processor">
+                          <label for="chbx_prev_hard11" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
                   <tr>
                     <td>12. </td>
-                    <td><i>Pembersihan fan processor</i></td>
+                    <td><i>Pengecekan baterai CMOS</i></td>
                     <td align="right"> 
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxL" value="optionL">
-                          <label for="customCheckboxL" class="custom-control-label">Selesai</label>
+                          <label for="chbx_prev_hard12" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
                   <tr>
                     <td>13. </td>
-                    <td><i>Pengecekan baterai CMOS</i></td>
+                    <td><i>Pembersihan heatsink</i></td>
                     <td align="left"> 
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxM" value="optionM">
-                          <label for="customCheckboxM" class="custom-control-label">Selesai</label>
+                          <input class="custom-control-input" type="checkbox" name="chbx_prev_hard" id="chbx_prev_hard13" value="Pembersihan heatsink">
+                          <label for="chbx_prev_hard13" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
                   <tr>
                     <td>14. </td>
-                    <td><i>Pembersihan heatsink</i></td>
+                    <td><i>Pembersihan mouse</i></td>
                     <td align="right"> 
                         <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxN" value="optionN">
-                          <label for="customCheckboxN" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>15. </td>
-                    <td><i>Pembersihan mouse</i></td>
-                    <td align="left"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxO" value="optionO">
-                          <label for="customCheckboxO" class="custom-control-label">Selesai</label>
+                          <input class="custom-control-input" type="checkbox" name="chbx_prev_hard" id="chbx_prev_hard14" value="Pembersihan mouse">
+                          <label for="chbx_prev_hard14" class="custom-control-label">Selesai</label>
                         </div>
                     </td>
                   </tr>
@@ -782,7 +771,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </table>
                 <div class="form-group">
                         <label>Keterangan</label>
-                        <textarea class="form-control" rows="3" ></textarea>
+                        <textarea class="form-control" rows="3" name="ket_chbx_prev_hard" id="ket_chbx_prev_hard"></textarea>
                 </div>
               </div>
             </div>
@@ -790,397 +779,40 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
             <div class="modal-footer justify-content-between">
               <div class="col text-center">
-                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-undo"></i>&nbsp;BACK</button>
-                <button type="button" class="btn btn-success"><i class="fas fa-save"></i>&nbsp; SAVE</button>
+                <button type="button" class="btn btn-default center-block" data-dismiss="modal">BACK</button>
               </div>
             </div>
           </div>
           <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->
-    </div>
+  </div>
+
+<!--END CONTENT-->
 </div>
 
-<!--EDIT DATA PREVENTIVE-->
-<div class="modal fade" id="EditPreventive">
-        <div class="modal-dialog modal-xl">
-          <div class="modal-content">
+
+<!--MODAL Hapus Data-->
+<div class="modal fade" id="hapus_prev">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content modal-dialog-centered">
             <div class="modal-header">
-              <h6 class="modal-title"><i>Edit Preventive / Maintenance</i></h6>
+              <h6 class="modal-title">Alert!</h6>
             </div>
             <div class="modal-body">
-            <div class="row">
-                  <div class="col-2">
-                    <div class="form-group">
-                    <label>Date</label>
-                        <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                            <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
-                              <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                                <div class="input-group-text"><i class="fa fa-calendar-day"></i></div>
-                              </div>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="col-2">
-                    <div class="form-group">
-                      <label for="timeReq">Time</label>
-                        <input type="time" id="timeReq" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-4">
-                        <div class="form-group">
-                          <label for="exampleSelectRounded0">Bussines Unit</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0">
-                              <option> </option>
-                          </select>
-                        </div>
-                  </div>
-                  <div class="col-4">
-                        <div class="form-group">
-                          <label for="exampleSelectRounded0">Depo</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0">
-                              <option> </option>
-                          </select>
-                        </div>
-                  </div>
-                  <div class="col-4">
-                        <div class="form-group">
-                          <label for="exampleSelectRounded0">Department</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0">
-                              <option> </option>
-                          </select>
-                        </div>
-                  </div>
-                  <div class="col-4">
-                        <div class="form-group">
-                          <label for="exampleSelectRounded0">User</label>
-                          <select class="custom-select rounded-0" id="exampleSelectRounded0">
-                              <option> </option>
-                          </select>
-                        </div>
-                  </div>
-                  <div class="col-4">
-                    <div class="form-group">
-                    <label>Next Date Preventive</label>
-                        <div class="input-group date" id="reservationdate2" data-target-input="nearest">
-                            <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate2"/>
-                              <div class="input-group-append" data-target="#reservationdate2" data-toggle="datetimepicker">
-                                <div class="input-group-text"><i class="fa fa-calendar-day"></i></div>
-                              </div>
-                        </div>
-                    </div>
-                  </div>
-              </div>
-           
-            <hr>
-            <h6 align="center"><i class="fas fa-tasks"></i>&nbsp;<strong> CHECKLIST PREVENTIVE IT</strong><span></h6>
-            <ul class="nav nav-tabs" id="custom-content-above-tab" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link active" id="custom-content-above-home-tab" data-toggle="pill" href="#custom-content-above-home" role="tab" aria-controls="custom-content-above-home" aria-selected="true"><strong>Perawatan Software</strong></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="custom-content-above-profile-tab" data-toggle="pill" href="#custom-content-above-profile" role="tab" aria-controls="custom-content-above-profile" aria-selected="false"><strong>Perawatan Hardware</strong></a>
-              </li>
-            </ul>
-            <div class="tab-content" id="custom-content-above-tabContent">
-              <div class="tab-pane fade show active" id="custom-content-above-home" role="tabpanel" aria-labelledby="custom-content-above-home-tab">
-              <table id="tabel1" class="table table-bordered table-striped" cellspacing="0" width="150%">
-                  <thead>
-                  <tr align="center">
-                    <th width="10px">No.</th>
-                    <th>Deskripsi Perawatan Software</th>
-                    <th>Checklist Pengerjaan</th>
-                  </tr>
-                  </thead>
-                  <tbody>   
-                  <tr>
-                    <td>1. </td>  
-                    <td><i>Disk clean up</i> </td>
-                    <td align="left">
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
-                          <label for="customCheckbox1" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>2. </td>
-                    <td><i>Memastikan space / ruang disc C < 50%</i></td>
-                    <td align="right"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option2">
-                          <label for="customCheckbox2" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>3. </td>
-                    <td><i>Melakukan disc defragmenter</i></td>
-                    <td align="left"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option3">
-                          <label for="customCheckbox3" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>4. </td>
-                    <td><i>Uninstal program yang tidak perlu</i></td>
-                    <td align="right"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4">
-                          <label for="customCheckbox4" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>5. </td>
-                    <td><i>Pembersihan recycle bin</i></td>
-                    <td align="left"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckbox5" value="option5">
-                          <label for="customCheckbox5" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>6. </td>
-                    <td><i>Melakukan scan antivirus</i></td>
-                    <td align="right"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckbox6" value="option6">
-                          <label for="customCheckbox6" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>7. </td>
-                    <td><i>Melakukan backup data</i></td>
-                    <td align="left"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckbox7" value="option7">
-                          <label for="customCheckbox7" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>8. </td>
-                    <td><i>Performance secara umum</i></td>
-                    <td align="right"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckbox8" value="option8">
-                          <label for="customCheckbox8" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>9. </td>
-                    <td><i>File sharing</i></td>
-                    <td align="left"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckbox9" value="option9">
-                          <label for="customCheckbox9" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>10. </td>
-                    <td><i>Check IP Address PC</i></td>
-                    <td align="right"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckbox10" value="option10">
-                          <label for="customCheckbox10" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  </tbody>
-                </table>
-                <div class="form-group">
-                        <label>Keterangan</label>
-                        <textarea class="form-control" rows="3"></textarea>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="custom-content-above-profile" role="tabpanel" aria-labelledby="custom-content-above-profile-tab">
-              <table id="tabel1" class="table table-bordered table-striped" cellspacing="0" width="150%">
-                  <thead>
-                  <tr align="center">
-                    <th width="10px">No.</th>
-                    <th>Deskripsi Perawatan Hardware</th>
-                    <th>Checklist Pengerjaan</th>
-                  </tr>
-                  </thead>
-                  <tbody>   
-                  <tr>
-                    <td>1. </td>  
-                    <td><i>Pembersihan casing PC</i> </td>
-                    <td align="left">
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxA" value="optionA">
-                          <label for="customCheckboxA" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>2. </td>
-                    <td><i>Pembersihan motherboard</i></td>
-                    <td align="right"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxB" value="optionB">
-                          <label for="customCheckboxB" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>3. </td>
-                    <td><i>Pembersihan keyboard</i></td>
-                    <td align="left"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxC" value="optionC">
-                          <label for="customCheckboxC" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>4. </td>
-                    <td><i>Pembersihan RAM (Random Access Memory)</i></td>
-                    <td align="right"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxD" value="optionD">
-                          <label for="customCheckboxD" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>5. </td>
-                    <td><i>Pembersihan power supply</i></td>
-                    <td align="left"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxE" value="optionE">
-                          <label for="customCheckboxE" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>6. </td>
-                    <td><i>Pembersihan monitor</i></td>
-                    <td align="right"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxF" value="optionF">
-                          <label for="customCheckboxF" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>7. </td>
-                    <td><i>Pengecekan kondisi keyboard</i></td>
-                    <td align="left"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxG" value="optionG">
-                          <label for="customCheckboxG" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>8. </td>
-                    <td><i>Pengecekan network adapter</i></td>
-                    <td align="right"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxH" value="optionH">
-                          <label for="customCheckboxH" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>9. </td>
-                    <td><i>Pengecekan network adapter</i></td>
-                    <td align="left"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxI" value="optionI">
-                          <label for="customCheckboxI" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>10. </td>
-                    <td><i>Pengecekan kondisi mouse</i></td>
-                    <td align="right"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxJ" value="optionJ">
-                          <label for="customCheckboxJ" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>11. </td>
-                    <td><i>Pembersihan CD-ROM</i></td>
-                    <td align="left"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxK" value="optionK">
-                          <label for="customCheckboxK" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>12. </td>
-                    <td><i>Pembersihan fan processor</i></td>
-                    <td align="right"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxL" value="optionL">
-                          <label for="customCheckboxL" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>13. </td>
-                    <td><i>Pengecekan baterai CMOS</i></td>
-                    <td align="left"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxM" value="optionM">
-                          <label for="customCheckboxM" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>14. </td>
-                    <td><i>Pembersihan heatsink</i></td>
-                    <td align="right"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxN" value="optionN">
-                          <label for="customCheckboxN" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>15. </td>
-                    <td><i>Pembersihan mouse</i></td>
-                    <td align="left"> 
-                        <div class="custom-control custom-checkbox">
-                          <input class="custom-control-input" type="checkbox" id="customCheckboxO" value="optionO">
-                          <label for="customCheckboxO" class="custom-control-label">Selesai</label>
-                        </div>
-                    </td>
-                  </tr>
-                  </tbody>
-                </table>
-                <div class="form-group">
-                        <label>Keterangan</label>
-                        <textarea class="form-control" rows="3" ></textarea>
-                </div>
-              </div>
-            </div>
-            <!--END MODAL PREVENTIVE-->
+              <p><strong><i>Data ini akan di HAPUS! Apakah anda yakin?</i></strong></p>
             </div>
             <div class="modal-footer justify-content-between">
-              <div class="col text-center">
-                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-undo"></i>&nbsp;BACK</button>
-                <button type="button" class="btn btn-success"><i class="fas fa-save"></i>&nbsp; SAVE</button>
-              </div>
+              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
+              <button type="button" class="btn btn-danger">YES</button>
             </div>
           </div>
           <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->
-</div>
+  </div>
+      <!-- /.modal -->
+
 
 <!--MODAL UBAH PASSWORD-->
   <div class="modal fade" id="modal-ubahpass">
@@ -1194,25 +826,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                   </div>
-                  <input type="username" class="form-control" placeholder="Username" disabled>
+                  <input type="text" class="form-control" name="username" id="username" placeholder="Username" disabled>
               </div>
               <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-unlock-alt"></i></span>
                   </div>
-                  <input type="password" class="form-control" placeholder="Password Lama">
+                  <input type="password" class="form-control" name="old_pass" id="old_pass" placeholder="Password Lama">
               </div>
               <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-lock"></i></span>
                   </div>
-                  <input type="password" class="form-control" placeholder="Password Baru">
+                  <input type="password" class="form-control" name="new_pass" id="new_pass" placeholder="Password Baru">
               </div>
               <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-check-circle"></i></span>
                   </div>
-                  <input type="password" class="form-control" placeholder="Konfirmasi Password">
+                  <input type="password" class="form-control" name="pass_conf" id="pass_conf" placeholder="Konfirmasi Password">
               </div>
             </div>
             <div class="modal-footer justify-content-between">
@@ -1256,9 +888,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </div>
 
 <!--MODAL APPROVE-->
-<div class="modal fade" id="ApprovePreventive">
+<div class="modal fade" id="approve_prev">
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
+          <div class="modal-content modal-dialog-centered">
             <div class="modal-header">
               <h6 class="modal-title">Alert!</h6>
             </div>
@@ -1275,31 +907,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- /.modal-dialog -->
   </div>
 
-<!--MODAL HAPUS DATA-->
-<div class="modal fade" id="HapusPreventive">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h6 class="modal-title">Alert!</h6>
-            </div>
-            <div class="modal-body">
-              <p><strong><i>Apakah yakin data yang anda masukan sudah benar?</i></strong></p>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
-              <button type="button" class="btn btn-danger">YES</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-  </div>
-      <!-- /.modal -->
-
 <!--MODAL LOG OUT-->
   <div class="modal fade" id="modal-logout">
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
+          <div class="modal-content modal-dialog-centered">
             <div class="modal-header">
               <h6 class="modal-title">Alert!</h6>
             </div>
@@ -1374,10 +985,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="<?= base_url('assets_adminlte/dist/js/demo.js')?>"></script>
 <script>
   $(function () {
-    $("#TabelAdminPreventive").DataTable({
+    $("#tbl_prev").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#TabelAdminPreventive_wrapper .col-md-6:eq(0)');
+    }).buttons().container().appendTo('#tbl_prev_wrapper .col-md-6:eq(0)');
     $('#example2').DataTable({
       "paging": true,
       "lengthChange": false,
@@ -1392,11 +1003,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <script type="text/javascript">
    //Date picker
-  $('#reservationdate').datetimepicker({
+  $('#date_prev').datetimepicker({
         format: 'L'
     });
 
-  $('#reservationdate2').datetimepicker({
+  $('#date_next_prev').datetimepicker({
         format: 'L'
     });
 
