@@ -779,7 +779,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
             <div class="modal-footer justify-content-between">
               <div class="col text-center">
-                <button type="button" class="btn btn-default center-block" data-dismiss="modal">BACK</button>
+                <button type="button" class="btn btn-default center-block" data-dismiss="modal"><i class="fas fa-times-circle"></i>&nbsp; BACK</button>
               </div>
             </div>
           </div>
@@ -803,8 +803,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <p><strong><i>Data ini akan di HAPUS! Apakah anda yakin?</i></strong></p>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
-              <button type="button" class="btn btn-danger">YES</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-times-circle"></i>&nbsp; BACK</button>
+              <button type="button" class="btn btn-danger"><i class="fas fa-thumbs-up"></i>&nbsp; YES</button>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -848,7 +848,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </div>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-times-circle"></i>&nbsp; BACK</button>
               <button type="button" class="btn btn-success"><i class="fas fa-save"></i>&nbsp; SAVE CHANGES</button>
             </div>
           </div>
@@ -881,7 +881,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </table>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-times-circle"></i>&nbsp; BACK</button>
             </div>
           </div>
         </div>
@@ -895,11 +895,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <h6 class="modal-title">Alert!</h6>
             </div>
             <div class="modal-body">
-              <p><strong><i>Data akan di APPROVE! Apakah anda yakin?</i></strong></p>
+              <p><strong><i>Data ini akan di APPROVE! Apakah data yang anda masukan sudah benar?</i></strong></p>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
-              <button type="button" class="btn btn-danger">YES</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-times-circle"></i>&nbsp; BACK</button>
+              <button type="button" class="btn btn-primary"><i class="fas fa-thumbs-up"></i>&nbsp; YES</button>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -918,8 +918,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <p><strong><i>Anda yakin akan keluar dari sistem ini?</i></strong></p>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
-              <button type="button" class="btn btn-danger">YES</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-times-circle"></i>&nbsp; BACK</button>
+              <button type="button" class="btn btn-danger"><i class="fas fa-thumbs-up"></i>&nbsp; YES</button>
             </div>
           </div>
           <!-- /.modal-content -->

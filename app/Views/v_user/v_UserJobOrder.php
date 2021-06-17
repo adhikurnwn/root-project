@@ -21,6 +21,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/fontawesome-free/css/all.min.css')?>">
   <!-- Tempusdominus Bootstrap 4 -->
   <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')?>">
+  <!-- dropzonejs -->
+  <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/dropzone/min/dropzone.min.css')?>">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')?>">
   <link rel="stylesheet" href="<?= base_url('assets_adminlte/plugins/fontawesome-free/css/all.min.css')?>">
@@ -216,11 +218,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <h5 class="modal-title" id="exampleModalCenterTitle">Alert!</h5>
       </div>
       <div class="modal-body">
-        <p><i><strong>Data akan di APPROVE! Apakah anda yakin?</strong></i></p>
+        <p><i><strong>Data ini akan di APPROVE! Apakah data yang anda masukan sudah benar?</strong></i></p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
-        <button type="button" class="btn btn-primary">YES</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-times-circle"></i>&nbsp; BACK</button>
+        <button type="button" class="btn btn-primary"><i class="fas fa-thumbs-up"></i>&nbsp; YES</button>
       </div>
     </div>
   </div>
@@ -228,7 +230,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!--MODAL TAMBAH DATA JOB ORDER-->
 <div class="modal fade" id="add_job_order">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-xl">
           <div class="modal-content">
             <div class="modal-header">
               <h6 class="modal-title"><i>Silahkan Lengkapi Data Dibawah ini!</i></h6>
@@ -316,6 +318,70 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           <textarea class="form-control" rows="3" name="prob_order" id="prob_order"></textarea>
                       </div>
                   </div>
+
+                <!--UPLOUD GAMBAR-->
+                    <div class="col-12">
+                      <div class="card card-default">
+                        <div class="card-header">
+                          <h3 class="card-title"><strong>Unggah Gambar Pendukung</strong></h3>
+                        </div>
+                        <div class="card-body">
+                          <div id="actions" class="row">
+                            <div class="col-lg-6">
+                              <div class="btn-group w-100">
+                                <span class="btn btn-primary col fileinput-button">
+                                  <i class="fas fa-plus-circle"></i>
+                                  <span>Add Photos</span>
+                                </span>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 d-flex align-items-center">
+                              <div class="fileupload-process w-100">
+                                <div id="total-progress" class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                  <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table table-striped files" id="previews">
+                            <div id="template" class="row mt-2">
+                              <div class="col-auto">
+                                  <span class="preview"><img src="data:," alt="" data-dz-thumbnail /></span>
+                              </div>
+                              <div class="col d-flex align-items-center">
+                                  <p class="mb-0">
+                                    <span class="lead" data-dz-name></span>
+                                    (<span data-dz-size></span>)
+                                  </p>
+                                  <strong class="error text-danger" data-dz-errormessage></strong>
+                              </div>
+                              <div class="col-4 d-flex align-items-center">
+                                  <div class="progress progress-striped active w-100" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                    <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+                                  </div>
+                              </div>
+                              <div class="col-auto d-flex align-items-center">
+                                <div class="btn-group">
+                                  <button class="btn btn-primary start">
+                                    <i class="fas fa-upload"></i>
+                                    <span>Start</span>
+                                  </button>
+                                  <button data-dz-remove class="btn btn-danger delete">
+                                    <i class="fas fa-trash"></i>
+                                    <span>Delete</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                      </div>
+                      <!-- /.card -->
+                    </div>
+                  </div>
+                  <!-- /.row -->
+                  <!--BATAS UPLOUD GAMBAR-->
+
                   <div class="col-4">
                     <div class="form-group">
                     <label>Date Complete</label>
@@ -352,7 +418,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
             <div class="modal-footer justify-content-between">
               <div class="col text-center">
-                <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-times-circle"></i>&nbsp; BACK</button>
                 <button type="button" class="btn btn-success"><i class="fas fa-save"></i>&nbsp; SAVE</button> 
               </div>
             </div>
@@ -488,7 +554,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
             <div class="modal-footer justify-content-between">
               <div class="col text-center">
-                <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button> 
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-times-circle"></i>&nbsp; BACK</button> 
               </div>
             </div>
           </div>
@@ -615,7 +681,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
             <div class="modal-footer justify-content-between">
               <div class="col text-center">
-                <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-times-circle"></i>&nbsp; BACK</button>
                 <button type="button" class="btn btn-success"><i class="fas fa-save"></i>&nbsp; SAVE CHANGES</button> 
               </div>
             </div>
@@ -659,7 +725,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </div>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-times-circle"></i>&nbsp; BACK</button>
               <button type="button" class="btn btn-success"><i class="fas fa-save"></i>&nbsp; SAVE CHANGES</button>
             </div>
           </div>
@@ -692,7 +758,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </table>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-times-circle"></i>&nbsp; BACK</button>
             </div>
           </div>
         </div>
@@ -709,8 +775,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <p><strong><i>Anda yakin akan keluar dari sistem ini?</i></strong></p>
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">BACK</button>
-              <button type="button" class="btn btn-danger">Yes</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-times-circle"></i>&nbsp; BACK</button>
+              <button type="button" class="btn btn-danger"><i class="fas fa-thumbs-up"></i>&nbsp; Yes</button>
             </div>
           </div>
           <!-- /.modal-content -->
@@ -764,6 +830,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="<?= base_url('assets_adminlte/plugins/datatables-buttons/js/buttons.html5.min.js')?>"></script>
 <script src="<?= base_url('assets_adminlte/plugins/datatables-buttons/js/buttons.print.min.js')?>"></script>
 <script src="<?= base_url('assets_adminlte/plugins/datatables-buttons/js/buttons.colVis.min.js')?>"></script>
+<!-- bs-custom-file-input -->
+<script src="<?= base_url('assets_adminlte/plugins/bs-custom-file-input/bs-custom-file-input.min.js')?>"></script>
+<!-- dropzonejs -->
+<script src="<?= base_url('assets_adminlte/plugins/dropzone/min/dropzone.min.js')?>"></script>
 <!-- AdminLTE App -->
 <script src="<?= base_url('assets_adminlte/dist/js/adminlte.min.js')?>"></script>
 <!-- AdminLTE for demo purposes -->
@@ -779,6 +849,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </script>
 
 <script type="text/javascript">
+
+  $(function () {
+    bsCustomFileInput.init();
+  });
+
    //Date picker
   $('#tgl_job_req').datetimepicker({
         format: 'L'
@@ -789,6 +864,59 @@ scratch. This page gets rid of all links and provides the needed markup only.
     });
 
   $('[data-mask]').inputmask()
+
+  // DropzoneJS Demo Code Start
+  Dropzone.autoDiscover = false
+
+  // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
+  var previewNode = document.querySelector("#template")
+  previewNode.id = ""
+  var previewTemplate = previewNode.parentNode.innerHTML
+  previewNode.parentNode.removeChild(previewNode)
+
+  var myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
+    url: "/target-url", // Set the url
+    thumbnailWidth: 80,
+    thumbnailHeight: 80,
+    parallelUploads: 20,
+    previewTemplate: previewTemplate,
+    autoQueue: false, // Make sure the files aren't queued until manually added
+    previewsContainer: "#previews", // Define the container to display the previews
+    clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
+  })
+
+  myDropzone.on("addedfile", function(file) {
+    // Hookup the start button
+    file.previewElement.querySelector(".start").onclick = function() { myDropzone.enqueueFile(file) }
+  })
+
+  // Update the total progress bar
+  myDropzone.on("totaluploadprogress", function(progress) {
+    document.querySelector("#total-progress .progress-bar").style.width = progress + "%"
+  })
+
+  myDropzone.on("sending", function(file) {
+    // Show the total progress bar when upload starts
+    document.querySelector("#total-progress").style.opacity = "1"
+    // And disable the start button
+    file.previewElement.querySelector(".start").setAttribute("disabled", "disabled")
+  })
+
+  // Hide the total progress bar when nothing's uploading anymore
+  myDropzone.on("queuecomplete", function(progress) {
+    document.querySelector("#total-progress").style.opacity = "0"
+  })
+
+  // Setup the buttons for all transfers
+  // The "add files" button doesn't need to be setup because the config
+  // `clickable` has already been specified.
+  document.querySelector("#actions .start").onclick = function() {
+    myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED))
+  }
+  document.querySelector("#actions .cancel").onclick = function() {
+    myDropzone.removeAllFiles(true)
+  }
+  // DropzoneJS Demo Code End
 </script>
 
 </body>
