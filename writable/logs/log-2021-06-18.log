@@ -1,0 +1,11 @@
+CRITICAL - 2021-06-18 01:51:17 --> Undefined variable: data
+#0 C:\xampp\htdocs\root-project\app\Views\v_register.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 82, Array)
+#1 C:\xampp\htdocs\root-project\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\root-project\system\Common.php(1119): CodeIgniter\View\View->render('v_register', Array, true)
+#3 C:\xampp\htdocs\root-project\app\Controllers\Register.php(14): view('v_register', Array)
+#4 C:\xampp\htdocs\root-project\system\CodeIgniter.php(918): App\Controllers\Register->index()
+#5 C:\xampp\htdocs\root-project\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#6 C:\xampp\htdocs\root-project\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\root-project\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\root-project\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}

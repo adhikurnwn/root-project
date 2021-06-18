@@ -323,7 +323,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="col-12">
                       <div class="card card-default">
                         <div class="card-header">
-                          <h3 class="card-title"><strong>Unggah Gambar Pendukung</strong></h3>
+                          <h3 class="card-title"><strong>Unggah Gambar / Dokumen Pendukung</strong></h3>
                         </div>
                         <div class="card-body">
                           <div id="actions" class="row">
@@ -351,7 +351,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                               <div class="col d-flex align-items-center">
                                   <p class="mb-0">
                                     <span class="lead" data-dz-name></span>
-                                    (<span data-dz-size></span>)
+                                    <span data-dz-size></span>
                                   </p>
                                   <strong class="error text-danger" data-dz-errormessage></strong>
                               </div>
